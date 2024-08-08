@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #cf000c;
+  --primary-color-hover: #b7000b;
+  --text-color: #020202;
+  --blue: #212173;
+  --white: white;
+  --white-hover: #fae5e7;
+  --core-sans: "Core Sans", "Roboto", sans-serif;
+  --content-padding: 4rem;
+  --container-width: 156rem;
+
+  @include breakpoint(mobile) {
+    --content-padding: 2rem;
+  }
+}

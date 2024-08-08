@@ -1,0 +1,686 @@
+.intro {
+  @include blockWrapper;
+  padding-bottom: 11rem;
+  color: white;
+  padding-top: 0.8rem;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+}
+
+.intro__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  grid-gap: 2.4rem;
+  min-height: 70rem;
+
+  @include breakpoint(mobile) {
+    min-height: auto;
+    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.intro__slider-item {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  grid-row: span 2;
+
+  @include breakpoint(mobile) {
+    border-radius: 1.2rem;
+  }
+}
+
+.intro__slider-item-cursor {
+  width: 10rem;
+  height: 10rem;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+
+  &.flipped {
+    .intro__slider-item-cursor-inner::before {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.intro__slider-item-cursor-inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transform: translateX(-50%) translateY(-100%);
+  border-radius: 50%;
+  border: 1px solid white;
+
+  &::before {
+    content: "";
+
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/project-intro/cursor.svg");
+    background-size: contain;
+    width: 3.1rem;
+    height: 2rem;
+  }
+}
+
+.intro__slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.intro__bg-slider-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  .swiper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .swiper-wrapper {
+    flex-grow: 1;
+  }
+
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+}
+
+.intro__bg-slider-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 20, 122, 0) 0%,
+      rgba(0, 20, 122, 0.5) 54.73%
+    );
+    opacity: 0.5;
+    height: 24rem;
+    pointer-events: none;
+    z-index: 2;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 18rem;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 24, 35, 0) 0%,
+      rgba(24, 24, 35, 0.5) 49.68%
+    );
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 2;
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+}
+
+.intro__bg-slider-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.intro__main-slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .swiper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .swiper-wrapper {
+    flex-grow: 1;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
+
+.intro__slider-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 4rem;
+  padding-top: 4.8rem;
+  gap: 3rem;
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    padding-top: 3.2rem;
+    padding-bottom: 4.8rem;
+    min-height: 55rem;
+    gap: 2rem;
+  }
+}
+
+.intro__slider-card-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  justify-content: space-between;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.intro__slider-card-left-col {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    margin-bottom: auto;
+  }
+}
+
+.intro__slider-card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.2rem;
+    letter-spacing: -0.03em;
+    text-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.25);
+    line-height: 100%;
+  }
+}
+
+.intro__slider-card-desc {
+  margin-top: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 115%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+    margin-top: 2rem;
+    max-width: 70%;
+  }
+}
+
+.intro__slider-card-tags-list {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 2.4rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 2rem;
+    gap: 0.4rem;
+  }
+}
+
+.intro__slider-card-tags-list-item {
+  flex-shrink: 0;
+}
+
+.intro__slider-card-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  height: 4rem;
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+  white-space: nowrap;
+  background: rgba(16, 16, 56, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  cursor: default;
+
+  @include breakpoint(mobile) {
+    height: 2.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    border-radius: 0.4rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
+  }
+}
+
+.intro__slider-card-tag-icon {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+
+  @include breakpoint(mobile) {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.intro__slider-card-link {
+  padding: 2.1rem 4.5rem;
+  align-self: flex-start;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: var(--primary-color);
+  transition: background-color 0.2s;
+  color: white;
+  line-height: 100%;
+  border-radius: 1.2rem;
+  transition: color 0.2s, background-color 0.2s;
+  margin-top: auto;
+  text-align: center;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+
+  @include breakpoint(mobile) {
+    align-self: stretch;
+    padding: 1.8rem 3.6rem;
+    border-radius: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 100%;
+    margin: 0;
+  }
+}
+
+.intro__slider-card-domrf {
+  width: 16.9rem;
+  margin-left: auto;
+  height: auto;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    width: 5rem;
+  }
+}
+
+.intro__promo-slider {
+  @include breakpointMF(small-tablet) {
+    display: contents;
+
+    .swiper,
+    .swiper-wrapper,
+    .swiper-slide {
+      display: contents;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    .swiper {
+      overflow: visible;
+    }
+
+    .swiper-slide {
+      width: 25rem;
+      box-sizing: border-box;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      margin-right: 0.8rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.intro__commercial-card {
+  position: relative;
+  isolation: isolate;
+  border-radius: 2rem;
+  overflow: hidden;
+  color: var(--primary-color);
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  background: #fff3f3;
+  border: 1px solid rgba(207, 0, 12, 0.1);
+  gap: 2rem;
+  box-sizing: border-box;
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      .intro__commercial-card-arrow {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    min-height: 10rem;
+    border: none;
+  }
+}
+
+.intro__commercial-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.intro__commercial-card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.intro__commercial-card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.4rem;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+}
+
+.intro__commercial-card-arrow {
+  margin-top: auto;
+  width: 6rem;
+  height: 6rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transition: opacity 0.2s;
+  opacity: 0;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
+  }
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.intro__mortgage-card {
+  position: relative;
+  border-radius: 2rem;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  @include breakpoint(mobile) {
+    min-height: 10rem;
+    border-radius: 0.8rem;
+  }
+}
+
+.intro__mortgage-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.intro__mortgage-card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.intro__mortgage-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 3.2rem;
+  gap: 1.2rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.5rem;
+    padding: 1.2rem;
+  }
+}
+.intro__mortgage-card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 105%;
+  letter-spacing: -0.02em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 100%;
+  }
+}
+
+.intro__mortgage-card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 120%;
+  color: rgba(white, 0.5);
+  transition: opacity 0.2s;
+  opacity: 0;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 120%;
+    opacity: 1;
+  }
+
+  @media (hover: hover) {
+    .intro__mortgage-card:hover & {
+      opacity: 1;
+    }
+  }
+}
+
+.intro__mortgage-card-bottom {
+  display: grid;
+  margin-top: auto;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.intro__mortgage-card-discount {
+  padding: 1.5rem 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  align-self: flex-end;
+  line-height: 130%;
+  transition: opacity 0.2s;
+  background: rgba(16, 16, 56, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  justify-self: flex-start;
+
+  @media (hover: hover) {
+    .intro__mortgage-card:hover & {
+      opacity: 0;
+    }
+  }
+}
+
+.intro__mortgage-card-more {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  align-self: flex-end;
+  padding: 2rem 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  border: 1px solid #ffffff;
+  border-radius: 1.2rem;
+  color: white;
+  line-height: 100%;
+  opacity: 0;
+  transition: opacity 0.2s;
+  justify-self: flex-start;
+  @media (hover: hover) {
+    .intro__mortgage-card:hover & {
+      opacity: 1;
+    }
+  }
+}
+
+.intro__slider-pagination {
+  position: absolute;
+  z-index: 20;
+  right: 4rem;
+  bottom: 5.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  @include breakpoint(mobile) {
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+  }
+}
+
+.intro__slider-pagination-bullet {
+  @include breakpointMF(small-tablet) {
+    flex-shrink: 0;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: rgba(white, 0.4);
+    transition: background-color 0.2s, transform 0.2s;
+
+    &.large {
+      background-color: white;
+      transform: scale(1.1);
+    }
+  }
+
+  @include breakpoint(mobile) {
+    flex-shrink: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    transition: background-color 0.2s, width 0.2s, height 0.2s;
+    border-radius: 10rem;
+    background-color: rgba(white, 0.7);
+
+    &.large {
+      background-color: white;
+      width: 2.4rem;
+      height: 0.8rem;
+    }
+
+    &.smaller {
+      width: 0.6rem;
+      height: 0.6rem;
+    }
+
+    &.small {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+  }
+}

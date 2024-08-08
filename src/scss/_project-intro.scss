@@ -1,0 +1,352 @@
+.project-intro {
+  position: relative;
+  isolation: isolate;
+  color: white;
+  @include blockWrapper;
+  margin-bottom: -2.4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 0;
+  }
+}
+
+.project-intro__site-container {
+  @include blockContent;
+}
+
+.project-intro__bg {
+  position: absolute;
+  inset: 0;
+
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .swiper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: auto;
+  }
+
+  .swiper-wrapper {
+    flex-grow: 1;
+  }
+
+  .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.project-intro__bg-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.project-intro__bg-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-intro__content {
+  min-height: 100vh;
+  padding-top: 16rem;
+  padding-bottom: 8.2rem;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    padding-top: 11.3rem;
+    padding-bottom: 2rem;
+    min-height: 51.6rem;
+  }
+}
+
+.project-intro__breadcrumbs {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 9.3rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 120%;
+    margin-bottom: 4.4rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(white, 0.5);
+    &:link,
+    &:visited {
+      color: rgba(white, 0.5);
+    }
+
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../images/project-intro/breadcrumbs-arrow.svg");
+      opacity: 0.5;
+
+      @include breakpoint(mobile) {
+        width: 1.4rem;
+        height: 1.4rem;
+        align-self: center;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &.active {
+      color: white;
+      &:link,
+      &:visited {
+        color: white;
+      }
+    }
+  }
+}
+
+.project-intro__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11rem;
+  line-height: 100%;
+  position: relative;
+  z-index: 5;
+  letter-spacing: -0.03em;
+  margin-bottom: 4.4rem;
+  user-select: none;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.2rem;
+    line-height: 100%;
+    margin-bottom: 2.4rem;
+    pointer-events: none;
+  }
+}
+
+.project-intro__tags-list {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 5;
+
+  @include breakpoint(mobile) {
+    gap: 0.4rem;
+    pointer-events: none;
+  }
+}
+
+.project-intro__tags-list-item {
+  flex-shrink: 0;
+}
+
+.project-intro__tag {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  height: 4rem;
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+  white-space: nowrap;
+  background: rgba(16, 16, 56, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  cursor: default;
+
+  @include breakpoint(mobile) {
+    height: 2.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    border-radius: 0.4rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
+  }
+}
+
+.project-intro__tag-icon {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+
+  @include breakpoint(mobile) {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.project-intro__cursor {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+  &::before {
+    content: "";
+
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/project-intro/cursor.svg");
+    background-size: contain;
+    width: 3.1rem;
+    height: 2rem;
+  }
+
+  &.flipped {
+    &::before {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.project-intro__pagination {
+  margin-top: auto;
+  margin-left: auto;
+  width: 7rem;
+  height: 7rem;
+
+  position: relative;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(15px);
+  border-radius: 50%;
+  z-index: 5;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.project-intro__pagination-inner {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+  color: white;
+  line-height: 130%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  & > * {
+    display: contents;
+  }
+}
+
+.project-intro__pagination-progress {
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  transform: rotate(-90deg);
+  --r: 45;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    circle {
+      &:nth-child(2) {
+        stroke-dasharray: calc(2 * 3.14 * var(--r, 0));
+        stroke-dashoffset: calc(
+          2 * 3.14 * var(--r, 0) * ((100 - var(--p, 0)) / 100)
+        );
+      }
+
+      &:nth-child(1) {
+        stroke: rgba(255, 255, 255, 0);
+      }
+
+      &:nth-child(2) {
+        stroke: white;
+      }
+    }
+  }
+}
+
+.project-intro__bullets {
+  display: none;
+
+  @include breakpoint(mobile) {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.project-intro__bullet {
+  flex-shrink: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  transition: background-color 0.2s, width 0.2s, height 0.2s;
+  border-radius: 10rem;
+  background-color: rgba(white, 0.7);
+
+  &.large {
+    background-color: white;
+    width: 2.4rem;
+    height: 0.8rem;
+  }
+
+  &.smaller {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  &.small {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+}

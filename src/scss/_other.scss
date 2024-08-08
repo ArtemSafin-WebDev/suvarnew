@@ -1,0 +1,199 @@
+.other {
+  @include blockWrapper;
+  background-color: #fff;
+  padding-bottom: 10rem;
+  @include breakpoint(mobile) {
+    padding-bottom: 4rem;
+  }
+}
+
+.other__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include breakpoint(mobile) {
+    gap: 2rem;
+  }
+}
+
+.other__heading {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  align-items: baseline;
+  justify-content: center;
+
+  @include breakpoint(mobile) {
+    justify-content: flex-start;
+    gap: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+  }
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.other__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 0.8rem;
+  }
+}
+
+.other__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.other__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "stack";
+  border-radius: 2.4rem;
+  overflow: hidden;
+  color: white;
+  background-color: var(--text-color);
+
+  @include breakpoint(mobile) {
+    border-radius: 1.2rem;
+  }
+  &:link,
+  &:visited {
+    color: white;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    grid-area: stack;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 66.2%;
+    }
+  }
+}
+.other__card-image-container {
+  grid-area: stack;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 13rem;
+    background: linear-gradient(
+      179.01deg,
+      rgba(24, 24, 35, 0) 0.93%,
+      rgba(24, 24, 35, 0.5) 63.68%
+    );
+
+    @include breakpoint(mobile) {
+      height: 8.2rem;
+      background: linear-gradient(
+        179.01deg,
+        rgba(24, 24, 35, 0) 0.93%,
+        rgba(24, 24, 35, 0.5) 63.68%
+      );
+    }
+  }
+}
+
+.other__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.other__card-content {
+  grid-area: stack;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  align-self: flex-end;
+  padding: 3.2rem;
+
+  @include breakpoint(mobile) {
+    padding: 2.4rem 2rem;
+  }
+}
+
+.other__card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: -0.04em;
+    line-height: 100%;
+  }
+}
+
+.other__card-arrow {
+  flex-shrink: 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.2s;
+
+  @include breakpoint(mobile) {
+    width: 5rem;
+    height: 5rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) {
+    .other__card:hover & {
+      background-color: white;
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
