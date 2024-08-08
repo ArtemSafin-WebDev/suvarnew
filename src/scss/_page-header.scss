@@ -2,9 +2,14 @@
   @include blockWrapper;
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 
   @include breakpoint(mobile) {
-    display: none;
+    padding: 2rem 0;
   }
 }
 
@@ -22,6 +27,9 @@
   z-index: 90;
 
   background: rgba(#020202, 0.3);
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
@@ -44,6 +52,14 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   border-radius: 1.6rem;
   position: relative;
   z-index: 100;
+
+  @include breakpoint(mobile) {
+    padding: 1.2rem 1.2rem;
+    background: #f5f5f5;
+    border-radius: 1.2rem;
+    gap: 2rem;
+    min-height: auto;
+  }
 }
 
 .page-header__logo {
@@ -54,12 +70,20 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   width: 16rem;
   height: auto;
   display: block;
+
+  @include breakpoint(mobile) {
+    width: 16.4rem;
+  }
 }
 
 .page-header__nav {
   align-self: stretch;
   display: flex;
   flex-direction: column;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .page-header__nav-list {
@@ -148,6 +172,10 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   flex-direction: column;
   gap: 0.4rem;
   align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .page-header__phone {
@@ -176,6 +204,10 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.6rem;
+  }
 }
 
 .page-header__button {
@@ -432,5 +464,17 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
         fill: #eaabaf;
       }
     }
+  }
+}
+
+.page-header__button--burger {
+  @include breakpointMF(small-tablet) {
+    display: none;
+  }
+}
+
+.page-header__button--user {
+  @include breakpoint(mobile) {
+    display: none;
   }
 }

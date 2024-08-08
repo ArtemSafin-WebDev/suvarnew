@@ -6,6 +6,7 @@ import mortgage from "./mortgage";
 import aboutProject from "./aboutProject";
 import projectIntro from "./projectIntro";
 import intro from "./intro";
+import header from "./header";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   aboutProject();
   projectIntro();
   intro();
+  header();
 });
 
 window.addEventListener("load", () => {

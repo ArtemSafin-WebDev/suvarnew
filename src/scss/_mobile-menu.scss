@@ -1,0 +1,147 @@
+.mobile-menu {
+  display: none;
+
+  @include breakpoint(mobile) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    z-index: 120;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    color: var(--text-color);
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+    @include blockWrapper;
+
+    .menu-open & {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+  }
+}
+
+.mobile-menu__inner {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu__top-row {
+  @include breakpoint(mobile) {
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.7rem;
+  }
+}
+
+.mobile-menu__logo {
+  flex-shrink: 0;
+}
+
+.mobile-menu__logo-image {
+  display: block;
+  height: auto;
+  width: 16.4rem;
+}
+
+.mobile-menu__close {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid rgba(2, 2, 2, 0.1);
+  transition: background-color 0.2s, border-color 0.2s;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+    transition: fill 0.2s;
+  }
+}
+
+.mobile-menu__nav {
+  margin-bottom: 4rem;
+}
+
+.mobile-menu__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.mobile-menu__nav-link {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+}
+
+.mobile-menu__contacts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.mobile-menu__contacts-phone {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 100%;
+}
+
+.mobile-menu__schedule {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: rgba(#020202, 0.6);
+  line-height: 120%;
+  margin-top: 0.8rem;
+}
+
+.mobile-menu__email {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 100%;
+  margin-top: 2.4rem;
+}
+
+.mobile-menu__social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: auto;
+}
+
+.mobile-menu__social-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 100%;
+
+  svg {
+    flex-shrink: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    fill: #b0b0b0;
+  }
+}
