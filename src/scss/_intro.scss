@@ -38,6 +38,7 @@
   flex-direction: column;
   isolation: isolate;
   grid-row: span 2;
+  cursor: none;
 
   @include breakpoint(mobile) {
     border-radius: 1.2rem;
@@ -298,7 +299,6 @@
   background: rgba(16, 16, 56, 0.3);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
-  cursor: default;
 
   @include breakpoint(mobile) {
     height: 2.8rem;
@@ -338,6 +338,7 @@
   transition: color 0.2s, background-color 0.2s;
   margin-top: auto;
   text-align: center;
+  cursor: none;
   &:link,
   &:visited {
     color: white;

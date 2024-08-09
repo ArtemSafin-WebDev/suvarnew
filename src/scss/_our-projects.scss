@@ -1,0 +1,452 @@
+.our-projects {
+  @include blockWrapper;
+  padding-bottom: 12.4rem;
+  background-color: #fff;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 5rem;
+  }
+}
+
+.our-projects__content {
+  @include blockContent;
+}
+
+.our-projects__top-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    gap: 2rem;
+  }
+}
+
+.our-projects__heading {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  align-items: baseline;
+  justify-content: center;
+
+  @include breakpoint(mobile) {
+    justify-content: flex-start;
+    gap: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    margin: 0;
+  }
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.our-projects__desktop-btns {
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 1.2rem;
+  flex-shrink: 0;
+  margin-left: auto;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.our-projects__desktop-btn {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  transition: color 0.2s, background-color 0.2s, padding 0.2s;
+  position: relative;
+  line-height: 150%;
+  border-radius: 0.8rem;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rem;
+    fill: currentColor;
+    transition: opacity 0.2s, transform 0.2s;
+    opacity: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &.active {
+    background-color: var(--blue);
+    color: white;
+    padding-left: 4.4rem;
+    svg {
+      opacity: 1;
+    }
+  }
+}
+
+.our-projects__mobile-btns {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 0.8rem;
+  }
+}
+
+.our-projects__mobile-btn {
+  padding: 1.7rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: var(--blue);
+  transition: background-color 0.2s, color 0.2s;
+  background-color: #f5f5f5;
+  border-radius: 0.8rem;
+  &:link,
+  &:visited {
+    color: var(--blue);
+  }
+
+  &.active {
+    background-color: var(--blue);
+    color: white;
+  }
+}
+
+.our-projects__layers {
+  position: relative;
+}
+
+.our-projects__list-view-layer {
+}
+
+.our-projects__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  grid-row-gap: 4rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 3rem;
+  }
+}
+
+.our-projects__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.our-projects__card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.our-projects__card-image-container {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-bottom: 2.4rem;
+  background-color: var(--blue);
+  color: white;
+
+  @include breakpoint(mobile) {
+    border-radius: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  &::before {
+    content: "";
+    padding-bottom: 103.1746%;
+    display: block;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 106%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, #020202 -28.75%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    height: 6rem;
+    opacity: 0;
+
+    @include breakpoint(mobile) {
+      opacity: 0.8;
+      height: 5rem;
+      background: linear-gradient(
+        to top,
+        rgba(2, 2, 2, 0.8) -28.75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .swiper {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+  }
+
+  .swiper-wrapper {
+    flex-grow: 1;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: auto;
+  }
+}
+
+.our-projects__card-pagination {
+  position: absolute;
+  z-index: 5;
+
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  bottom: 2.4rem;
+  transition: opacity 0.2s;
+  opacity: 0;
+
+  @media (hover: hover) {
+    .our-projects__card-image-container:hover & {
+      opacity: 1;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    bottom: 1.6rem;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet {
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin: 0;
+    opacity: 1;
+    transition: background-color 0.2s, transform 0.2s;
+    background-color: rgba(white, 0.4);
+    width: 0.6rem;
+    height: 0.6rem;
+    &.swiper-pagination-bullet-active {
+      background-color: white;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.our-projects__card-slide {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+}
+
+.our-projects__card-slide-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.our-projects__card-tags {
+  position: absolute;
+  left: 2.4rem;
+  top: 2.4rem;
+  right: 2.4rem;
+  z-index: 10;
+
+  @include breakpoint(mobile) {
+    top: 1.6rem;
+    left: 1.6rem;
+    right: 1.6rem;
+  }
+}
+
+.our-projects__card-tags-list {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+
+  @include breakpoint(mobile) {
+    gap: 0.4rem;
+  }
+}
+
+.our-projects__card-tags-list-item {
+  flex-shrink: 0;
+}
+
+.our-projects__card-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  height: 4rem;
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+  white-space: nowrap;
+  background: rgba(16, 16, 56, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+
+  &--dark {
+    background: #101038;
+    backdrop-filter: blur(10px);
+    color: white;
+  }
+
+  @include breakpoint(mobile) {
+    height: 2.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    border-radius: 0.4rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
+  }
+}
+
+.our-projects__card-tag-icon {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+
+  @include breakpoint(mobile) {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.our-projects__card-row {
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 1.2rem;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.our-projects__card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 100%;
+  }
+}
+
+.our-projects__card-price {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 120%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 100%;
+  }
+}
+
+.our-projects__card-location {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: rgba(#020202, 0.6);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 120%;
+  }
+  svg {
+    flex-shrink: 0;
+    fill: var(--primary-color);
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

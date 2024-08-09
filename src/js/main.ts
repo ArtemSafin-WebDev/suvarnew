@@ -7,6 +7,7 @@ import aboutProject from "./aboutProject";
 import projectIntro from "./projectIntro";
 import intro from "./intro";
 import header from "./header";
+import ourProjects from "./ourProjects";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   projectIntro();
   intro();
   header();
+  ourProjects();
 });
 
 window.addEventListener("load", () => {

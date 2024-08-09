@@ -52,6 +52,12 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   border-radius: 1.6rem;
   position: relative;
   z-index: 100;
+  transition: background-color 0.2s;
+
+  .page-header--transparent:not(.fixed) & {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+  }
 
   @include breakpoint(mobile) {
     padding: 1.2rem 1.2rem;
@@ -64,12 +70,32 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
 
 .page-header__logo {
   flex-shrink: 0;
+  position: relative;
 }
 
 .page-header__logo-image {
   width: 16rem;
   height: auto;
   display: block;
+  transition: opacity 0.2s;
+
+  &:nth-child(2) {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .page-header--transparent:not(.fixed) & {
+    &:nth-child(1) {
+      opacity: 0;
+    }
+
+    &:nth-child(2) {
+      opacity: 1;
+    }
+  }
 
   @include breakpoint(mobile) {
     width: 16.4rem;
@@ -147,6 +173,14 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
     color: var(--text-color);
   }
 
+  .page-header--transparent:not(.fixed) & {
+    color: white;
+
+    svg {
+      fill: white;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -184,6 +218,19 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   font-size: 1.4rem;
   transition: color 0.2s;
   line-height: 130%;
+  color: var(--text-color);
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  .page-header--transparent:not(.fixed) & {
+    color: white;
+    &:link,
+    &:visited {
+      color: white;
+    }
+  }
 
   @media (hover: hover) {
     &:hover {
@@ -198,6 +245,11 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   font-size: 1.2rem;
   line-height: 130%;
   color: rgba(2, 2, 2, 0.4);
+  transition: color 0.2s;
+
+  .page-header--transparent:not(.fixed) & {
+    color: rgba(white, 0.5);
+  }
 }
 
 .page-header__buttons {
@@ -217,6 +269,7 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   border-radius: 50%;
   border: 1px solid rgba(2, 2, 2, 0.1);
   transition: background-color 0.2s, border-color 0.2s;
+  background-clip: padding-box;
   svg {
     display: block;
     width: 100%;
@@ -229,6 +282,18 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
     &:hover {
       background-color: white;
       border-color: white;
+    }
+  }
+
+  .page-header--transparent:not(.fixed) & {
+    border-color: rgba(white, 0.1);
+    svg {
+      fill: white;
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgba(white, 0.1);
+      }
     }
   }
 }
