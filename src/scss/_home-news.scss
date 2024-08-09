@@ -82,7 +82,15 @@
   border: 1px solid rgba(#020202, 0.1);
   border-radius: 1.2rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  background-clip: padding-box;
 
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--white-hover);
+      border-color: var(--white-hover);
+      color: var(--primary-color);
+    }
+  }
   @include breakpoint(mobile) {
     order: 10;
     padding: 1.7rem 4rem;

@@ -79,11 +79,6 @@ textarea {
   display: block;
 }
 
-input:not([type="checkbox"]):not([type="radio"]) {
-  appearance: none;
-  -webkit-appearance: none;
-}
-
 textarea {
   resize: none;
   box-shadow: none;

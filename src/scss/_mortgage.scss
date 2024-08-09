@@ -198,6 +198,19 @@
       background: rgb(255, 192, 194);
       cursor: pointer;
       border-radius: 50%;
+      margin-top: 1px;
+    }
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      background: rgb(255, 192, 194);
+      cursor: pointer;
+      border-radius: 50%;
+      outline: none;
+      border: none;
     }
   }
 }

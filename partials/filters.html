@@ -1,0 +1,128 @@
+<div class="filters">
+    <div class="filters__content">
+        <form action="/" method="POST" class="filters__form">
+            <div class="filters__form-fields">
+                <div class="filters__form-field">
+                    <h3 class="filters__form-field-label">
+                        Проект
+                    </h3>
+                    <div class="filters__form-select" data-placeholder="Выбрать">
+                        <button class="filters__form-select-btn" type="button">
+                            <span class="filters__form-select-btn-text js-btn-text">
+                                Выбрать
+                            </span>
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#select-arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="filters__form-select-dropdown">
+                            <div class="filters__form-select-dropdown-inner">
+                                <ul class="filters__form-select-list">
+                                    <li class="filters__form-select-list-item">
+                                        <label class="filters__form-select-radio">
+                                            <input type="radio" name="project" class="filters__form-select-radio-input"
+                                                value="ЖК «Столичный»">
+                                            <span class="filters__form-select-radio-mark"></span>
+                                            <span class="filters__form-select-radio-text">
+                                                ЖК «Столичный»
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li class="filters__form-select-list-item">
+                                        <label class="filters__form-select-radio">
+                                            <input type="radio" name="project" class="filters__form-select-radio-input"
+                                                value="ЖК «Южный парк»">
+                                            <span class="filters__form-select-radio-mark"></span>
+                                            <span class="filters__form-select-radio-text">
+                                                ЖК «Южный парк»
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters__form-field">
+                    <h3 class="filters__form-field-label">
+                        Количество комнат
+                    </h3>
+                    <div class="filters__form-checkboxes-group">
+                        <label class="filters__form-checkboxes-group-item">
+                            <input type="checkbox" name="rooms" value="Студия"
+                                class="filters__form-checkboxes-group-item-input">
+                            <span class="filters__form-checkboxes-group-item-content">
+                                Студия
+                            </span>
+                        </label>
+                        <label class="filters__form-checkboxes-group-item">
+                            <input type="checkbox" name="rooms" value="1"
+                                class="filters__form-checkboxes-group-item-input">
+                            <span class="filters__form-checkboxes-group-item-content">
+                                1
+                            </span>
+                        </label>
+                        <label class="filters__form-checkboxes-group-item">
+                            <input type="checkbox" name="rooms" value="2"
+                                class="filters__form-checkboxes-group-item-input">
+                            <span class="filters__form-checkboxes-group-item-content">
+                                2
+                            </span>
+                        </label>
+                        <label class="filters__form-checkboxes-group-item">
+                            <input type="checkbox" name="rooms" value="3"
+                                class="filters__form-checkboxes-group-item-input">
+                            <span class="filters__form-checkboxes-group-item-content">
+                                3
+                            </span>
+                        </label>
+                        <label class="filters__form-checkboxes-group-item">
+                            <input type="checkbox" name="rooms" value="4+"
+                                class="filters__form-checkboxes-group-item-input">
+                            <span class="filters__form-checkboxes-group-item-content">
+                                4+
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="filters__form-field">
+                    <h3 class="filters__form-field-label">
+                        Стоимость, руб.
+                    </h3>
+                    <div class="filters__form-range-slider">
+                        <div class="filters__form-range-slider-wrapper">
+                            <div class="filters__form-range-slider-input-wrapper">
+                                <label class="filters__form-range-slider-input-label">
+                                    <span class="filters__form-range-slider-input-label-text">
+                                        от
+                                    </span>
+                                    <input type="number" class="filters__form-range-slider-numeric-input" value="0">
+                                </label>
+                            </div>
+                            <div class="filters__form-range-slider-input-wrapper">
+                                <label class="filters__form-range-slider-input-label">
+                                    <span class="filters__form-range-slider-input-label-text">
+                                        до
+                                    </span>
+                                    <input type="number" class="filters__form-range-slider-numeric-input"
+                                        value="20000000">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filters__form-range-slider-element">
+                            <div class="filters__form-range-slider-element-progress"></div>
+                        </div>
+                        <div class="filters__form-range-slider-range-inputs">
+                            <input type="range"
+                                class="filters__form-range-slider-range-input filters__form-range-slider-range-input--from"
+                                min="0" max="20000000" value="0" step="500000">
+                            <input type="range"
+                                class="filters__form-range-slider-range-input filters__form-range-slider-range-input--to"
+                                min="0" max="20000000" value="20000000" step="500000">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

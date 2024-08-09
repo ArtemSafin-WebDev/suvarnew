@@ -54,6 +54,8 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   z-index: 100;
   transition: background-color 0.2s;
 
+  background-color: #fff;
+
   .page-header--transparent:not(.fixed) & {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
@@ -538,7 +540,7 @@ body:has(.page-header__nav-list-item:hover .page-header__nav-submenu) {
   }
 }
 
-.page-header__button--user {
+.page-header__button--fav {
   @include breakpoint(mobile) {
     display: none;
   }

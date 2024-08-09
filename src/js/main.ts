@@ -8,6 +8,7 @@ import projectIntro from "./projectIntro";
 import intro from "./intro";
 import header from "./header";
 import ourProjects from "./ourProjects";
+import filters from "./filters";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   intro();
   header();
   ourProjects();
+  filters();
 });
 
 window.addEventListener("load", () => {
