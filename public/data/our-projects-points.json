@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Столичный",
+    "price": "от 14,34 млн руб.",
+    "image": {
+      "src": "/images/our-projects-map/1.webp"
+    },
+    "coords": {
+      "lat": 55.819012,
+      "lng": 49.146547
+    },
+    "balloon": {
+      "title": "Столичный",
+      "image": {
+        "src": "/images/our-projects-map/1-detail.webp"
+      },
+      "tags": [
+        {
+          "dark": true,
+          "text": "Бизнес класс"
+        },
+        {
+          "icon": "/images/project-intro/key.svg",
+          "text": "Сдача в 2026"
+        }
+      ],
+      "location": "Приволжский р-н, ул. Рауиса Гареева",
+      "specs": [
+        {
+          "key": "Студии",
+          "value": "5 кв."
+        },
+        {
+          "key": "1 комнатная",
+          "value": "4 кв."
+        },
+        {
+          "key": "3 комнатная",
+          "value": "3 кв."
+        },
+        {
+          "key": "4 комнатная",
+          "value": "5 кв."
+        }
+      ],
+      "detailUrl": "#"
+    }
+  }
+]

@@ -88,6 +88,10 @@
   font-size: 2rem;
   line-height: 100%;
   letter-spacing: -0.04em;
+
+  &:active {
+    color: rgba(#020202, 0.6);
+  }
 }
 
 .mobile-menu__contacts {
@@ -101,6 +105,9 @@
   font-weight: 500;
   font-size: 2rem;
   line-height: 100%;
+  &:active {
+    color: rgba(#020202, 0.6);
+  }
 }
 
 .mobile-menu__schedule {
@@ -118,6 +125,9 @@
   font-size: 2rem;
   line-height: 100%;
   margin-top: 2.4rem;
+  &:active {
+    color: rgba(#020202, 0.6);
+  }
 }
 
 .mobile-menu__social-list {

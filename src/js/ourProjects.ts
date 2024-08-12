@@ -12,11 +12,28 @@ export default function ourProjects() {
       element.querySelectorAll<HTMLButtonElement>(".our-projects__desktop-btn")
     );
 
+    const listViewLayer = element.querySelector<HTMLElement>(
+      ".our-projects__list-view-layer"
+    );
+    const mapViewLayer = element.querySelector<HTMLElement>(
+      ".our-projects__map-view-layer"
+    );
     viewModeBtns.forEach((btn) => {
       btn.addEventListener("click", (event) => {
         event.preventDefault();
         viewModeBtns.forEach((btn) => btn.classList.remove("active"));
         btn.classList.add("active");
+
+        const activeIndex = viewModeBtns.findIndex((btn) =>
+          btn.classList.contains("active")
+        );
+        if (activeIndex === 0) {
+          listViewLayer?.classList.remove("hidden");
+          mapViewLayer?.classList.remove("active");
+        } else {
+          listViewLayer?.classList.add("hidden");
+          mapViewLayer?.classList.add("active");
+        }
       });
     });
 

@@ -30,11 +30,11 @@ export default function mortgage() {
           format === "currency"
             ? value.toLocaleString("ru-RU").toString() + " руб."
             : value.toString() + ` ${getNoun(value, "год", "года", "лет")}`;
-        console.log("Formatted value", formattedValue);
+
         if (valueShown) valueShown.textContent = formattedValue;
         const range = +input.max - +input.min;
         const progress = (value - +input.min) / range;
-        console.log("Progress", progress);
+
         field.style.setProperty("--progress", progress.toString());
       };
 

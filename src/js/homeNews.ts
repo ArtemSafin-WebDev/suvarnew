@@ -2,6 +2,7 @@ import Swiper from "swiper";
 import "swiper/css";
 import "swiper/css/effect-creative";
 import { EffectCreative, Navigation } from "swiper/modules";
+import Validator from "./classes/Validator";
 
 export default function homeNews() {
   const elements = Array.from(
@@ -56,5 +57,38 @@ export default function homeNews() {
     mql.addEventListener("change", handleWidthChange);
 
     handleWidthChange(mql);
+
+    const showSubscribe = element.querySelector<HTMLLinkElement>(
+      ".home-news__subscribe-link"
+    );
+    const subscribeModal =
+      document.querySelector<HTMLElement>("#subscribe-modal");
+    const subscribeClose = subscribeModal?.querySelector<HTMLButtonElement>(
+      ".subscribe-modal__close"
+    );
+    showSubscribe?.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.body.classList.add("modal-open");
+      subscribeModal?.classList.add("active");
+    });
+    subscribeClose?.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.body.classList.remove("modal-open");
+      subscribeModal?.classList.remove("active");
+    });
+
+    const form = subscribeModal?.querySelector<HTMLFormElement>("form");
+    if (form) {
+      const formValidator = new Validator(form);
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        formValidator.validate();
+        if (formValidator.valid) {
+          const validSubmissionEvent = new CustomEvent("validsubmit");
+          form.dispatchEvent(validSubmissionEvent);
+        }
+      });
+    }
   });
 }

@@ -26,10 +26,11 @@ export default function footer() {
       const formValidator = new Validator(form);
       form.addEventListener("submit", (event) => {
         event.preventDefault();
+        event.stopPropagation();
         formValidator.validate();
-        if (!formValidator.valid) {
-          event.preventDefault();
-          event.stopPropagation();
+        if (formValidator.valid) {
+          const validSubmissionEvent = new CustomEvent("validsubmit");
+          form.dispatchEvent(validSubmissionEvent);
         }
       });
     }

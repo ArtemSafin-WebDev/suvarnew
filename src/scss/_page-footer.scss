@@ -246,6 +246,9 @@
     background-repeat: no-repeat;
     background-size: 2rem auto;
     background-position: right 2rem center;
+    &::placeholder {
+      color: #ff6266;
+    }
   }
 
   @include breakpoint(mobile) {

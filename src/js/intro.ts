@@ -100,7 +100,7 @@ export default function intro() {
         item.addEventListener("mousemove", (event) => {
           const e = event as MouseEvent;
           const itemMiddle =
-            item.getBoundingClientRect().left + item.offsetHeight / 2;
+            item.getBoundingClientRect().left + item.offsetWidth / 2;
           if (e.clientX > itemMiddle) {
             cursorDirection = "right";
             cursor.classList.remove("flipped");

@@ -9,6 +9,8 @@ import intro from "./intro";
 import header from "./header";
 import ourProjects from "./ourProjects";
 import filters from "./filters";
+import documents from "./documents";
+import planning from "./planning";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -20,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   header();
   ourProjects();
   filters();
+  documents();
+  planning();
 });
 
 window.addEventListener("load", () => {
