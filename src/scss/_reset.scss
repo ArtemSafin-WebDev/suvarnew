@@ -45,6 +45,7 @@ body.modal-open {
   overscroll-behavior: none;
 }
 
+body.map-modal-shown,
 body.map-card-shown {
   @include breakpoint(mobile) {
     touch-action: none;

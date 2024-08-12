@@ -25,7 +25,7 @@
                     </svg>
                     Фильтр
                 </button>
-                <button class="our-projects__mobile-btn">
+                <button class="our-projects__mobile-btn js-map-open">
                     <svg width="14" height="14" aria-hidden="true">
                         <use xlink:href="#map-view"></use>
                     </svg>
@@ -576,13 +576,23 @@
             </div>
             <div class="our-projects__map-view-layer">
                 <div class="our-projects__map">
+                    <div class="our-projects__map-modal">
 
 
-                    <div class="our-projects__map-container" data-lat="55.820548" data-lng="49.123778" data-zoom="14"
-                        data-theme-url="/data/map-styles.json" data-points-url="/data/our-projects-points.json">
-                        <div class="our-projects__map-inner">
+                        <button class="our-projects__map-close js-map-close" type="button">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#modal-close"></use>
+                            </svg>
+                        </button>
+                        <div class="our-projects__map-container" data-lat="55.819012" data-lng="49.146547"
+                            data-zoom="10" data-theme-url="/data/map-styles.json"
+                            data-points-url="/data/our-projects-points.json">
+                            <div class="our-projects__map-inner">
 
+                            </div>
                         </div>
+
+
                     </div>
 
                 </div>

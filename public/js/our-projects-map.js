@@ -58,7 +58,7 @@ async function initMap() {
   map.addChild(new YMapDefaultFeaturesLayer({ zIndex: 1800 }));
 
   const controls = new YMapControls({
-    position: "top right",
+    position: "bottom right",
     orientation: "vertical",
   });
   controls.addChild(
@@ -115,6 +115,7 @@ async function initMap() {
               const card = document.createElement("div");
               card.className = "our-projects__map-card";
               card.innerHTML = `
+              <div class="our-projects__map-card-mobile-wrapper">
               <button class="our-projects__map-card-close">
                 <svg width="14" height="14" aria-hidden="true">
                     <use xlink:href="#modal-close"></use>
@@ -195,6 +196,7 @@ async function initMap() {
                         О проекте
                     </a>
                 </div>
+            </div>
             </div>
               
               `;

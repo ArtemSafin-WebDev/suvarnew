@@ -18,6 +18,18 @@ export default function ourProjects() {
     const mapViewLayer = element.querySelector<HTMLElement>(
       ".our-projects__map-view-layer"
     );
+
+    const mobileMapOpen = element.querySelector<HTMLElement>(".js-map-open");
+    const mobileMapClose = element.querySelector<HTMLElement>(".js-map-close");
+
+    mobileMapOpen?.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.body.classList.add("map-modal-shown");
+    });
+    mobileMapClose?.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.body.classList.remove("map-modal-shown");
+    });
     viewModeBtns.forEach((btn) => {
       btn.addEventListener("click", (event) => {
         event.preventDefault();
@@ -35,6 +47,10 @@ export default function ourProjects() {
           mapViewLayer?.classList.add("active");
         }
       });
+    });
+
+    mobileMapOpen?.addEventListener("click", (event) => {
+      event.preventDefault();
     });
 
     const cards = Array.from(
