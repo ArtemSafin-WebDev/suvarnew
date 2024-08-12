@@ -77,6 +77,8 @@ class Select {
           this.btnTextElement.textContent = textElement.textContent;
         }
       } else {
+        if (this.btnTextElement)
+          this.btnTextElement.textContent = this.placeholderText;
         this.element.classList.remove("choice-selected");
       }
     } else {
