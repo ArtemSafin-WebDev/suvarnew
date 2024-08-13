@@ -11,6 +11,8 @@ import ourProjects from "./ourProjects";
 import filters from "./filters";
 import documents from "./documents";
 import planning from "./planning";
+import phase from "./phase";
+import constructionProgress from "./constructionProgress";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -24,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   filters();
   documents();
   planning();
+  phase();
+  constructionProgress();
 });
 
 window.addEventListener("load", () => {

@@ -4,7 +4,7 @@
             Ход строительства
         </h2>
         <div class="construction-progress__top-row">
-            <div class="construction-progress__filters">
+            <form method="POST" action="/" class="construction-progress__filters">
                 <button class="construction-progress__filters-mobile-btn" type="button">
                     Фильтр
                     <svg width="14" height="14" aria-hidden="true">
@@ -12,93 +12,280 @@
                     </svg>
                 </button>
                 <div class="construction-progress__filters-modal">
-                    <div class="construction-progress__filters-fields">
-                        <div class="construction-progress__filters-field">
-                            <h3 class="construction-progress__filters-field-label">
-                                Год
+                    <div class="construction-progress__filters-modal-inner">
+                        <div class="construction-progress__filters-top-row">
+                            <h3 class="construction-progress__filters-title">
+                                Фильтр
                             </h3>
-                            <div class="construction-progress__select" data-placeholder="Выбрать">
-                                <button class="construction-progress__select-btn" type="button">
-                                    <span class="construction-progress__select-btn-text js-btn-text">
-                                        Все
-                                    </span>
-                                    <svg width="14" height="14" aria-hidden="true">
-                                        <use xlink:href="#select-arrow"></use>
-                                    </svg>
-                                </button>
-                                <div class="construction-progress__select-dropdown">
-                                    <div class="construction-progress__select-dropdown-inner">
-                                        <ul class="construction-progress__select-list">
-                                            <li class="construction-progress__select-list-item">
-                                                <label class="construction-progress__select-radio">
-                                                    <input type="radio" name="year"
-                                                        class="construction-progress__select-radio-input" value=""
-                                                        checked="">
-                                                    <span class="construction-progress__select-radio-mark"></span>
-                                                    <span class="construction-progress__select-radio-text">
-                                                        Не выбрано
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="construction-progress__select-list-item">
-                                                <label class="construction-progress__select-radio">
-                                                    <input type="radio" name="year"
-                                                        class="construction-progress__select-radio-input" value="2024">
-                                                    <span class="construction-progress__select-radio-mark"></span>
-                                                    <span class="construction-progress__select-radio-text">
-                                                        2024
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="construction-progress__select-list-item">
-                                                <label class="construction-progress__select-radio">
-                                                    <input type="radio" name="year"
-                                                        class="construction-progress__select-radio-input" value="2023">
-                                                    <span class="construction-progress__select-radio-mark"></span>
-                                                    <span class="construction-progress__select-radio-text">
-                                                        2023
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="construction-progress__select-list-item">
-                                                <label class="construction-progress__select-radio">
-                                                    <input type="radio" name="year"
-                                                        class="construction-progress__select-radio-input" value="2022">
-                                                    <span class="construction-progress__select-radio-mark"></span>
-                                                    <span class="construction-progress__select-radio-text">
-                                                        2022
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="construction-progress__select-list-item">
-                                                <label class="construction-progress__select-radio">
-                                                    <input type="radio" name="year"
-                                                        class="construction-progress__select-radio-input" value="2021">
-                                                    <span class="construction-progress__select-radio-mark"></span>
-                                                    <span class="construction-progress__select-radio-text">
-                                                        2021
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="construction-progress__select-list-item">
-                                                <label class="construction-progress__select-radio">
-                                                    <input type="radio" name="year"
-                                                        class="construction-progress__select-radio-input" value="2020">
-                                                    <span class="construction-progress__select-radio-mark"></span>
-                                                    <span class="construction-progress__select-radio-text">
-                                                        2020
-                                                    </span>
-                                                </label>
-                                            </li>
+                            <button class="construction-progress__filters-close" type="button">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#modal-close"></use>
+                                </svg>
+                            </button>
+                        </div>
 
-                                        </ul>
+                        <div class="construction-progress__filters-fields">
+                            <div class="construction-progress__filters-field">
+                                <h3 class="construction-progress__filters-field-label">
+                                    Год
+                                </h3>
+                                <div class="construction-progress__select" data-placeholder="Выбрать">
+                                    <button class="construction-progress__select-btn" type="button">
+                                        <span class="construction-progress__select-btn-text js-btn-text">
+                                            Все
+                                        </span>
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#select-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="construction-progress__select-dropdown">
+                                        <div class="construction-progress__select-dropdown-inner">
+                                            <ul class="construction-progress__select-list">
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="year"
+                                                            class="construction-progress__select-radio-input" value=""
+                                                            checked="">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Не выбрано
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="year"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="2024">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            2024
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="year"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="2023">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            2023
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="year"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="2022">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            2022
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="year"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="2021">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            2021
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="year"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="2020">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            2020
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="construction-progress__filters-field">
+                                <h3 class="construction-progress__filters-field-label">
+                                    Месяц
+                                </h3>
+                                <div class="construction-progress__select" data-placeholder="Выбрать">
+                                    <button class="construction-progress__select-btn" type="button">
+                                        <span class="construction-progress__select-btn-text js-btn-text">
+                                            Все
+                                        </span>
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#select-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="construction-progress__select-dropdown">
+                                        <div class="construction-progress__select-dropdown-inner">
+                                            <ul class="construction-progress__select-list">
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="month"
+                                                            class="construction-progress__select-radio-input" value=""
+                                                            checked="">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Не выбрано
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="month"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="Январь">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Январь
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="month"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="Февраль">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Февраль
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="month"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="Март">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Март
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="month"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="Апрель">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Апрель
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="month"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="Май">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Май
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="construction-progress__filters-field">
+                                <h3 class="construction-progress__filters-field-label">
+                                    Корпус
+                                </h3>
+                                <div class="construction-progress__select" data-placeholder="Выбрать">
+                                    <button class="construction-progress__select-btn" type="button">
+                                        <span class="construction-progress__select-btn-text js-btn-text">
+                                            Все
+                                        </span>
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#select-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="construction-progress__select-dropdown">
+                                        <div class="construction-progress__select-dropdown-inner">
+                                            <ul class="construction-progress__select-list">
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="block"
+                                                            class="construction-progress__select-radio-input" value=""
+                                                            checked="">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Не выбрано
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="block"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="Корпус 1">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Корпус 1
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="block"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="Корпус 2">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Корпус 2
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="construction-progress__select-list-item">
+                                                    <label class="construction-progress__select-radio">
+                                                        <input type="radio" name="block"
+                                                            class="construction-progress__select-radio-input"
+                                                            value="Корпус 3">
+                                                        <span class="construction-progress__select-radio-mark"></span>
+                                                        <span class="construction-progress__select-radio-text">
+                                                            Корпус 3
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+
+
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="construction-progress__filters-btns">
+                            <button class="construction-progress__filters-submit" type="submit">
+                                Показать
+                            </button>
+                            <button class="construction-progress__filters-reset" type="reset">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#reset"></use>
+                                </svg>
+                                Сбросить фильтры
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
             <div class="construction-progress__arrows">
                 <button class="construction-progress__arrow construction-progress__arrow--prev">
                     <svg width="14" height="14" aria-hidden="true">

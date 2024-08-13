@@ -46,7 +46,9 @@ body.modal-open {
 }
 
 body.map-modal-shown,
-body.map-card-shown {
+body.map-card-shown,
+body.offices-mobile-map-shown,
+body.construction-filters-shown {
   @include breakpoint(mobile) {
     touch-action: none;
     -webkit-overflow-scrolling: none;

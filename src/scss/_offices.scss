@@ -1,0 +1,659 @@
+.offices {
+  @include blockWrapper;
+  background-color: #fff;
+  padding-bottom: 6rem;
+}
+
+.offices__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.offices__heading {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    justify-content: flex-start;
+    gap: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.offices__row {
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 2.4rem;
+  }
+}
+
+.offices__left-col {
+  @include breakpointMF(small-tablet) {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.offices__list-view {
+  @include breakpointMF(small-tablet) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% + 1.4rem);
+    height: 100%;
+    overflow-x: hidden;
+    padding-right: 1.4rem;
+
+    scrollbar-color: rgba(#020202, 0.1) white;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      background-color: white;
+      width: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(#020202, 0.1);
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: white;
+    }
+  }
+}
+
+.offices__right-col {
+  @include breakpointMF(small-tablet) {
+    grid-column: 5 / -1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.offices__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.8rem;
+  }
+}
+
+.offices__card {
+  display: flex;
+  align-items: center;
+  padding: 3.92rem 4.4rem;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+  background: #ffffff;
+  border: 1px solid rgba(2, 2, 2, 0.1);
+  border-radius: 1.6rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  gap: 2rem;
+
+  @include breakpointMF(small-tablet) {
+    &:hover {
+      border-color: rgba(2, 2, 2, 0.1);
+      background: #fff7f8;
+    }
+    &.active {
+      border: 1px solid rgba(207, 0, 12, 0.3);
+      cursor: default;
+      pointer-events: none;
+      background: #fff7f8;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    gap: 1.6rem;
+    border-radius: 1.2rem;
+    padding: 2rem;
+  }
+}
+
+.offices__card-image-container {
+  flex-shrink: 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    width: 5.2rem;
+    height: 5.2rem;
+  }
+}
+
+.offices__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offices__card-content {
+  width: 30%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.8rem;
+  }
+}
+
+.offices__card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 120%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 120%;
+  }
+}
+
+.offices__card-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: rgba(#020202, 0.6);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 120%;
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: #aeaeae;
+    margin-top: 0.35rem;
+
+    @include breakpoint(mobile) {
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-top: 0rem;
+    }
+  }
+}
+
+.offices__map-close {
+  display: none;
+
+  @include breakpoint(mobile) {
+    z-index: 10;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid rgba(2, 2, 2, 0.1);
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    svg {
+      fill: var(--text-color);
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.offices__map {
+  position: relative;
+
+  @include breakpoint(mobile) {
+    background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    opacity: 0;
+    visibility: hidden;
+    padding-bottom: 8rem;
+
+    .offices-mobile-map-shown & {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+
+    body:not(.loaded) & {
+      display: none;
+    }
+  }
+}
+
+.offices__map-wrapper {
+  display: contents;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+
+.offices__map-container {
+  position: relative;
+  aspect-ratio: 1032 / 640;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  background-color: lightgrey;
+  width: 100%;
+
+  @include breakpoint(mobile) {
+    aspect-ratio: 376 / 305;
+    border-radius: 0;
+    flex-shrink: 0;
+  }
+}
+
+.offices__map-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.offices__office-marker {
+  width: 10rem;
+  height: 10.8rem;
+  transform: translateX(-50%) translateY(-100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  transform-origin: center bottom;
+  transition: transform 0.2s;
+
+  &.scaled {
+    transform: translateX(-50%) translateY(-100%) scale(1.2);
+  }
+
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6.8rem;
+  }
+  &::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0.8rem 0.6rem 0 0.6rem;
+    border-color: var(--primary-color) transparent transparent transparent;
+    transform: rotate(0deg);
+    align-self: center;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.offices__office-marker-inner {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 0.4rem solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.offices__office-marker-inner-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    gap: 0.3rem;
+  }
+}
+
+.offices__office-marker-hash {
+  width: 2.4rem;
+  height: auto;
+
+  @include breakpoint(mobile) {
+    width: 1.6rem;
+  }
+}
+
+.offices__office-marker-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 130%;
+  color: rgba(white, 0.8);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 130%;
+  }
+}
+
+.offices__object-marker {
+  width: 10rem;
+  height: 10.8rem;
+  transform: translateX(-50%) translateY(-100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  transform-origin: center bottom;
+  transition: transform 0.2s;
+
+  &.scaled {
+    transform: translateX(-50%) translateY(-100%) scale(1.2);
+  }
+
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6.8rem;
+  }
+  &::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0.8rem 0.6rem 0 0.6rem;
+    border-color: var(--primary-color) transparent transparent transparent;
+    transform: rotate(0deg);
+    align-self: center;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.offices__object-marker-image-container {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.offices__object-marker-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offices__map-popup {
+  @include breakpointMF(small-tablet) {
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+    bottom: 3.2rem;
+    z-index: 40;
+    width: 42rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 0 var(--content-padding);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+}
+
+.offices__map-popup-inner {
+  @include breakpointMF(small-tablet) {
+    background: #ffffff;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    flex-grow: 1;
+  }
+}
+
+.offices__map-popup-btns {
+  display: flex;
+  align-items: center;
+  border-radius: 0.8rem;
+  background-color: #f5f5f5;
+  margin-bottom: 4rem;
+  align-self: flex-start;
+
+  @include breakpoint(mobile) {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 0;
+    padding: 0.4rem;
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+    border-radius: 0.8rem;
+  }
+}
+
+.offices__map-popup-btn {
+  flex-shrink: 0;
+  padding: 1.2rem 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 130%;
+  color: #020202;
+  border-radius: 0.8rem;
+  white-space: nowrap;
+  display: block;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    padding: 1.3rem 3.2rem;
+    border-radius: 0.8rem;
+  }
+
+  &.active {
+    background: #101038;
+    color: white;
+  }
+}
+
+.offices__map-popup-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.offices__map-popup-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 110%;
+  margin-bottom: 2rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.4rem;
+  }
+}
+
+.offices__map-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.8rem;
+    margin: 0;
+  }
+}
+
+.offices__map-contacts-card {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.offices__map-contacts-card-icon {
+  flex-shrink: 0;
+  width: 6rem;
+  height: 6rem;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid rgba(#020202, 0.1);
+
+  @include breakpoint(mobile) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.offices__map-contacts-card-icon-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.offices__map-contacts-card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+}
+
+.offices__map-contacts-link {
+  display: block;
+  padding: 2.2rem 4rem;
+  display: block;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: var(--primary-color);
+  line-height: 100%;
+  color: white;
+  border-radius: 1.2rem;
+  margin-top: auto;
+  transition: background-color 0.2s, color 0.2s;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+}
