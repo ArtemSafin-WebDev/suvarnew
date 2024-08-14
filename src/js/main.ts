@@ -13,6 +13,7 @@ import documents from "./documents";
 import planning from "./planning";
 import phase from "./phase";
 import constructionProgress from "./constructionProgress";
+import advantages from "./advantages";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   planning();
   phase();
   constructionProgress();
+  advantages();
 });
 
 window.addEventListener("load", () => {

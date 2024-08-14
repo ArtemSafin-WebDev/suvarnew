@@ -1,6 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import Select from "./classes/Select";
 
 export default function constructionProgress() {
