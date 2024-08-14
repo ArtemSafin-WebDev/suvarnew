@@ -1,0 +1,170 @@
+[
+  {
+    "title": "ЖК Столичный",
+    "location": "Казань, ул. Чистопольская 86/10 офис-287",
+    "image": "/images/offices/1.webp",
+    "office": {
+      "contacts": [
+        {
+          "icon": "/images/offices/contacts/1.svg",
+          "text": "Казань, ул. Чистопольская 86/10 офис-287"
+        },
+        {
+          "icon": "/images/offices/contacts/2.svg",
+          "text": "8-800-444-14-94"
+        },
+        {
+          "icon": "/images/offices/contacts/3.svg",
+          "text": "info@suvarstroit.ru"
+        },
+        {
+          "icon": "/images/offices/contacts/4.svg",
+          "text": "пн - пт  с  9:00  -  19:00<br> сб - вс  с  10:00 -  17:00"
+        }
+      ],
+      "coords": {
+        "lat": 55.818955,
+        "lng": 49.143232
+      }
+    },
+    "object": {
+      "mapIcon": "/images/offices/mapIcon.webp",
+      "coords": {
+        "lat": 55.81793,
+        "lng": 49.144949
+      },
+      "contacts": [
+        {
+          "icon": "/images/offices/contacts/1.svg",
+          "text": "Казань, ул. Чистопольская 86/10 офис-287"
+        }
+      ]
+    }
+  },
+  {
+    "title": "ЖК Манхэттен",
+    "location": "Казань, Оренбургский тракт 8д, 3 этаж",
+    "image": "/images/offices/2.webp",
+    "office": {
+      "contacts": [
+        {
+          "icon": "/images/offices/contacts/1.svg",
+          "text": "Казань, Оренбургский тракт 8д, 3 этаж"
+        },
+        {
+          "icon": "/images/offices/contacts/2.svg",
+          "text": "8-800-444-14-94"
+        },
+        {
+          "icon": "/images/offices/contacts/3.svg",
+          "text": "info@suvarstroit.ru"
+        },
+        {
+          "icon": "/images/offices/contacts/4.svg",
+          "text": "пн - пт  с  9:00  -  19:00<br> сб - вс  с  10:00 -  17:00"
+        }
+      ],
+      "coords": {
+        "lat": 55.760567,
+        "lng": 49.150167
+      }
+    },
+    "object": {
+      "mapIcon": "/images/offices/2.webp",
+      "coords": {
+        "lat": 55.761269,
+        "lng": 49.150819
+      },
+      "contacts": [
+        {
+          "icon": "/images/offices/contacts/1.svg",
+          "text": "Казань, Оренбургский тракт 8д, 3 этаж"
+        }
+      ]
+    }
+  },
+  {
+    "title": "ЖК Южный парк",
+    "location": "Казань, ул. Уютная,1",
+    "image": "/images/offices/3.webp",
+    "office": {
+      "contacts": [
+        {
+          "icon": "/images/offices/contacts/1.svg",
+          "text": "Казань, ул. Чистопольская 86/10 офис-287"
+        },
+        {
+          "icon": "/images/offices/contacts/2.svg",
+          "text": "8-800-444-14-94"
+        },
+        {
+          "icon": "/images/offices/contacts/3.svg",
+          "text": "info@suvarstroit.ru"
+        },
+        {
+          "icon": "/images/offices/contacts/4.svg",
+          "text": "пн - пт  с  9:00  -  19:00<br> сб - вс  с  10:00 -  17:00"
+        }
+      ],
+      "coords": {
+        "lat": 55.69014,
+        "lng": 49.201732
+      }
+    },
+    "object": {
+      "mapIcon": "/images/offices/3.webp",
+      "coords": {
+        "lat": 55.68915,
+        "lng": 49.201171
+      },
+      "contacts": [
+        {
+          "icon": "/images/offices/contacts/1.svg",
+          "text": "Казань, ул. Уютная,1"
+        }
+      ]
+    }
+  },
+  {
+    "title": "ЖК Палитра",
+    "location": "Казань, ул.Братьев Батталовых 20 к.1",
+    "image": "/images/offices/1.webp",
+    "office": {
+      "contacts": [
+        {
+          "icon": "/images/offices/contacts/1.svg",
+          "text": "Казань, ул. Чистопольская 86/10 офис-287"
+        },
+        {
+          "icon": "/images/offices/contacts/2.svg",
+          "text": "8-800-444-14-94"
+        },
+        {
+          "icon": "/images/offices/contacts/3.svg",
+          "text": "info@suvarstroit.ru"
+        },
+        {
+          "icon": "/images/offices/contacts/4.svg",
+          "text": "пн - пт  с  9:00  -  19:00<br> сб - вс  с  10:00 -  17:00"
+        }
+      ],
+      "coords": {
+        "lat": 55.818955,
+        "lng": 49.143232
+      }
+    },
+    "object": {
+      "mapIcon": "/images/offices/mapIcon.webp",
+      "coords": {
+        "lat": 55.81793,
+        "lng": 49.144949
+      },
+      "contacts": [
+        {
+          "icon": "/images/offices/contacts/1.svg",
+          "text": "Казань, ул. Чистопольская 86/10 офис-287"
+        }
+      ]
+    }
+  }
+]

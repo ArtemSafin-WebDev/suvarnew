@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Подключение к прослушиванию ползунков
     const rangeSliders = Array.from(
       filters.querySelectorAll(".filters__form-range-slider")
     );
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Ползунки в этом блоке
   const mortgage = document.querySelector(".mortgage");
   if (mortgage) {
     const ranges = Array.from(mortgage.querySelectorAll('input[type="range"]'));
@@ -39,15 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const pageFooterForm = document.querySelector(".page-footer__form");
 
-  // Событие при отправке формы, если она валидная, дальше можно писать аякс запрос
   pageFooterForm.addEventListener("validsubmit", () => {
     console.log("Form is valid");
   });
-
-  // Реинициализация слайдера после фильтрации
-  const constructionProgress = document.querySelector(".construction-progress");
-  if (constructionProgress) {
-    // const reinitEvent = new CustomEvent("reinitSlider");
-    // constructionProgress.dispatchEvent(reinitEvent);
-  }
 });

@@ -1,0 +1,216 @@
+.infra {
+  @include blockWrapper;
+
+  background-color: #fff;
+  padding-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.infra__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.infra__wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "stack";
+}
+.infra__map {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  border-radius: 2rem;
+  overflow: hidden;
+  grid-area: stack;
+}
+
+.infra__map-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+}
+
+.infra__map-overlay {
+  grid-area: stack;
+  display: grid;
+  grid-template-columns: minmax(0, 48rem) 1fr;
+  grid-gap: 3rem;
+  padding: 3rem;
+  z-index: 5;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  pointer-events: none;
+  grid-template-areas: "filters features";
+}
+
+.infra__map-filters {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 1.6rem;
+  grid-area: filters;
+  padding: 4rem;
+  pointer-events: all;
+}
+
+.infra__map-filters-heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  margin-bottom: 3.2rem;
+}
+
+.infra__map-filters-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.infra__map-filters-radio {
+  display: block;
+  user-select: none;
+  cursor: pointer;
+}
+
+.infra__map-filters-radio-input {
+  display: none;
+}
+
+.infra__map-filters-radio-content {
+  display: block;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.infra__map-filters-radio-icon {
+  flex-shrink: 0;
+  background: rgba(33, 33, 115, 0.07);
+  border: 1px solid rgba(33, 33, 115, 0.07);
+  border-radius: 100rem;
+  width: 4rem;
+  height: 4rem;
+  transition: background-color 0.2s, border-color 0.2s;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #212173;
+    transition: fill 0.2s;
+  }
+}
+
+.infra__map-filters-radio-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+.infra__map-filters-radio-input:checked ~ .infra__map-filters-radio-content {
+  .infra__map-filters-radio-icon {
+    background-color: #212173;
+    border-color: #212173;
+
+    svg {
+      fill: white;
+    }
+  }
+}
+
+.infra__map-filters-radio-count {
+  margin-left: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  letter-spacing: -0.02em;
+  color: rgba(#020202, 0.4);
+  line-height: 120%;
+}
+
+.infra__map-features {
+}
+
+.infra__map-features-list {
+  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.infra__map-features-card {
+  background: #ffffff;
+  border-radius: 1.2rem;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding-right: 2rem;
+  pointer-events: all;
+}
+
+.infra__map-features-card-number {
+  flex-shrink: 0;
+  background: rgba(165, 217, 255, 0.2);
+  border: 1px solid rgba(16, 16, 56, 0.05);
+  border-radius: 6rem;
+  width: 5.4rem;
+  height: 5.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0rem;
+}
+
+.infra__map-features-card-number-about {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: #212173;
+}
+
+.infra__map-features-card-number-unit {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: rgba(#212173, 0.6);
+  line-height: 120%;
+}
+
+.infra__map-features-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.infra__map-features-card-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: #212173;
+}
+
+.infra__map-features-card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 120%;
+  color: rgba(2, 2, 2, 0.4);
+}

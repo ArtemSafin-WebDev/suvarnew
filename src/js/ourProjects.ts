@@ -2,6 +2,12 @@ import Swiper from "swiper";
 import "swiper/css";
 import { EffectFade, Pagination } from "swiper/modules";
 
+import gsap from "gsap";
+import { Flip } from "gsap/Flip";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger, Flip);
+
 export default function ourProjects() {
   const elements = Array.from(
     document.querySelectorAll<HTMLElement>(".our-projects")
@@ -14,10 +20,10 @@ export default function ourProjects() {
 
     const listViewLayer = element.querySelector<HTMLElement>(
       ".our-projects__list-view-layer"
-    );
+    )!;
     const mapViewLayer = element.querySelector<HTMLElement>(
       ".our-projects__map-view-layer"
-    );
+    )!;
 
     const mobileMapOpen = element.querySelector<HTMLElement>(".js-map-open");
     const mobileMapClose = element.querySelector<HTMLElement>(".js-map-close");
@@ -39,6 +45,7 @@ export default function ourProjects() {
         const activeIndex = viewModeBtns.findIndex((btn) =>
           btn.classList.contains("active")
         );
+        const state = Flip.getState(listViewLayer.parentElement);
         if (activeIndex === 0) {
           listViewLayer?.classList.remove("hidden");
           mapViewLayer?.classList.remove("active");
@@ -46,6 +53,13 @@ export default function ourProjects() {
           listViewLayer?.classList.add("hidden");
           mapViewLayer?.classList.add("active");
         }
+        Flip.from(state, {
+          ease: "power1.inOut",
+          duration: 0.4,
+          onComplete: () => {
+            ScrollTrigger.refresh();
+          },
+        });
       });
     });
 
@@ -53,48 +67,83 @@ export default function ourProjects() {
       event.preventDefault();
     });
 
-    const cards = Array.from(
-      element.querySelectorAll<HTMLElement>(".our-projects__card")
-    );
-    cards.forEach((card) => {
-      const container = card.querySelector<HTMLElement>(".swiper");
-      const imageContainer = card.querySelector<HTMLElement>(
-        ".our-projects__card-image-container"
+    type CardSlider = {
+      instance: Swiper;
+      container: HTMLElement;
+      mouseMoveHandler: (event: MouseEvent) => void;
+      mouseLeaveHandler: (event: MouseEvent) => void;
+    };
+
+    let sliders: CardSlider[] = [];
+    const initGallerySliders = (): CardSlider[] => {
+      const cards = Array.from(
+        element.querySelectorAll<HTMLElement>(".our-projects__card")
       );
-      if (!container || !imageContainer) return;
+      const sliders = cards.map((card) => {
+        const container = card.querySelector<HTMLElement>(".swiper")!;
+        const imageContainer = card.querySelector<HTMLElement>(
+          ".our-projects__card-image-container"
+        )!;
 
-      const slides = Array.from(
-        card.querySelectorAll<HTMLElement>(".swiper-slide")
-      );
-
-      const instance = new Swiper(container, {
-        slidesPerView: 1,
-        speed: 600,
-        effect: "fade",
-        fadeEffect: {
-          crossFade: false,
-        },
-        modules: [EffectFade, Pagination],
-        pagination: {
-          el: card.querySelector<HTMLElement>(".our-projects__card-pagination"),
-        },
-      });
-
-      imageContainer.addEventListener("mousemove", (event) => {
-        let progress = Math.ceil(
-          Math.abs(event.offsetX / imageContainer.offsetWidth) * slides.length
+        const slides = Array.from(
+          card.querySelectorAll<HTMLElement>(".swiper-slide")
         );
 
-        if (progress <= 0) progress = 1;
+        const instance = new Swiper(container, {
+          slidesPerView: 1,
+          speed: 600,
+          effect: "fade",
+          fadeEffect: {
+            crossFade: false,
+          },
+          modules: [EffectFade, Pagination],
+          pagination: {
+            el: card.querySelector<HTMLElement>(
+              ".our-projects__card-pagination"
+            ),
+          },
+        });
 
-        instance.slideTo(progress - 1);
+        const mouseMoveHandler = (event: MouseEvent) => {
+          let progress = Math.ceil(
+            Math.abs(event.offsetX / imageContainer.offsetWidth) * slides.length
+          );
 
-        // console.log("progress", progress);
+          if (progress <= 0) progress = 1;
+
+          instance.slideTo(progress - 1);
+        };
+
+        const mouseLeaveHandler = () => {
+          instance.slideTo(0);
+        };
+
+        imageContainer.addEventListener("mousemove", mouseMoveHandler);
+
+        imageContainer.addEventListener("mouseleave", mouseLeaveHandler);
+
+        return {
+          instance,
+          mouseMoveHandler,
+          mouseLeaveHandler,
+          container: imageContainer,
+        };
       });
 
-      imageContainer.addEventListener("mouseleave", () => {
-        instance.slideTo(0);
-      });
+      return sliders;
+    };
+
+    sliders = initGallerySliders();
+
+    element.addEventListener("reinitSlider", () => {
+      sliders.forEach(
+        ({ instance, mouseMoveHandler, mouseLeaveHandler, container }) => {
+          instance.destroy();
+          container.removeEventListener("mouseleave", mouseLeaveHandler);
+          container.removeEventListener("mousemove", mouseMoveHandler);
+        }
+      );
+      sliders = initGallerySliders();
     });
   });
 }
