@@ -27,6 +27,7 @@
     "inputmask": "^5.0.8",
     "lodash": "^4.17.21",
     "nouislider": "^15.8.1",
+    "plyr": "^3.7.8",
     "swiper": "^11.1.9",
     "validator": "^13.11.0"
   }

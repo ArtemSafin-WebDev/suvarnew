@@ -630,7 +630,25 @@
                   </div>
               </div>
           </div>
+          <div class="about-project__modal">
+              <div class="about-project__modal-inner">
+                  <div class="about-project__modal-video-wrapper">
+                      <button class="about-project__modal-close" type="button">
+                          <svg width="14" height="14" aria-hidden="true">
+                              <use xlink:href="#modal-close"></use>
+                          </svg>
+                      </button>
+                      <div class="about-project__modal-player">
       
+      
+                          <video playsinline="" controls="">
+                              <source src="/video/sample-video.mp4" type="video/mp4" />
+      
+                          </video>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </section>      <section class="phase">
           <div class="phase__content">
               <h2 class="phase__heading">
@@ -1403,6 +1421,304 @@
                                   </div>
                               </div>
                           </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>      <section class="infra">
+          <div class="infra__content">
+              <h2 class="infra__heading">
+                  Инфраструктура<br>
+                  и расположение
+              </h2>
+              <div class="infra__wrapper">
+      
+      
+                  <div class="infra__map" data-lat="55.819012" data-lng="49.146547" data-zoom="16"
+                      data-theme-url="/data/map-styles.json" data-points-url="/data/infra-map.json">
+                      <div class="infra__map-inner">
+      
+                      </div>
+                  </div>
+                  <div class="infra__map-overlay">
+                      <div class="infra__map-filters">
+                          <button class="infra__map-filters-mobile-btn">
+                              <svg width="14" height="14" aria-hidden="true">
+                                  <use xlink:href="#filter"></use>
+                              </svg>
+                              Фильтр
+                          </button>
+                          <div class="infra__map-filters-modal">
+                              <div class="infra__map-filters-modal-inner">
+                                  <div class="infra__map-filters-modal-header">
+                                      <h3 class="infra__map-filters-modal-title">
+                                          Фильтр
+                                      </h3>
+                                      <button class="infra__map-filters-modal-close">
+                                          <svg width="14" height="14" aria-hidden="true">
+                                              <use xlink:href="#modal-close"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                                  <form action="/" method="POST" class="infra__map-filters-form">
+                                      <h2 class="infra__map-filters-heading">
+                                          Инфраструктура и расположение
+                                      </h2>
+                                      <ul class="infra__map-filters-list">
+                                          <li class="infra__map-filters-list-item">
+                                              <label class="infra__map-filters-radio">
+                                                  <input type="radio" class="infra__map-filters-radio-input" name="filter"
+                                                      value="all" checked="">
+      
+                                                  <span class="infra__map-filters-radio-content">
+                                                      <span class="infra__map-filters-radio-icon">
+                                                          <svg width="14" height="14" aria-hidden="true">
+                                                              <use xlink:href="#star"></use>
+                                                          </svg>
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-text">
+                                                          Все объекты
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-count">
+                                                          45
+                                                      </span>
+                                                  </span>
+                                              </label>
+                                          </li>
+                                          <li class="infra__map-filters-list-item">
+                                              <label class="infra__map-filters-radio">
+                                                  <input type="radio" class="infra__map-filters-radio-input" name="filter"
+                                                      value="school">
+                                                  <span class="infra__map-filters-radio-content">
+                                                      <span class="infra__map-filters-radio-icon">
+                                                          <svg width="14" height="14" aria-hidden="true">
+                                                              <use xlink:href="#school"></use>
+                                                          </svg>
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-text">
+                                                          Школы и детские сады
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-count">
+                                                          6
+                                                      </span>
+                                                  </span>
+                                              </label>
+                                          </li>
+                                          <li class="infra__map-filters-list-item">
+                                              <label class="infra__map-filters-radio">
+                                                  <input type="radio" class="infra__map-filters-radio-input" name="filter"
+                                                      value="shops">
+                                                  <span class="infra__map-filters-radio-content">
+                                                      <span class="infra__map-filters-radio-icon">
+                                                          <svg width="14" height="14" aria-hidden="true">
+                                                              <use xlink:href="#shops"></use>
+                                                          </svg>
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-text">
+                                                          Магазины и торговые центры
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-count">
+                                                          2
+                                                      </span>
+                                                  </span>
+                                              </label>
+                                          </li>
+                                          <li class="infra__map-filters-list-item">
+                                              <label class="infra__map-filters-radio">
+                                                  <input type="radio" class="infra__map-filters-radio-input" name="filter"
+                                                      value="sport">
+                                                  <span class="infra__map-filters-radio-content">
+                                                      <span class="infra__map-filters-radio-icon">
+                                                          <svg width="14" height="14" aria-hidden="true">
+                                                              <use xlink:href="#sport"></use>
+                                                          </svg>
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-text">
+                                                          Спортивные залы и площадки
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-count">
+                                                          8
+                                                      </span>
+                                                  </span>
+                                              </label>
+                                          </li>
+                                          <li class="infra__map-filters-list-item">
+                                              <label class="infra__map-filters-radio">
+                                                  <input type="radio" class="infra__map-filters-radio-input" name="filter"
+                                                      value="bank">
+                                                  <span class="infra__map-filters-radio-content">
+                                                      <span class="infra__map-filters-radio-icon">
+                                                          <svg width="14" height="14" aria-hidden="true">
+                                                              <use xlink:href="#bank"></use>
+                                                          </svg>
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-text">
+                                                          Банки
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-count">
+                                                          5
+                                                      </span>
+                                                  </span>
+                                              </label>
+                                          </li>
+                                          <li class="infra__map-filters-list-item">
+                                              <label class="infra__map-filters-radio">
+                                                  <input type="radio" class="infra__map-filters-radio-input" name="filter"
+                                                      value="health">
+                                                  <span class="infra__map-filters-radio-content">
+                                                      <span class="infra__map-filters-radio-icon">
+                                                          <svg width="14" height="14" aria-hidden="true">
+                                                              <use xlink:href="#health"></use>
+                                                          </svg>
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-text">
+                                                          Больницы и аптеки
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-count">
+                                                          2
+                                                      </span>
+                                                  </span>
+                                              </label>
+                                          </li>
+                                          <li class="infra__map-filters-list-item">
+                                              <label class="infra__map-filters-radio">
+                                                  <input type="radio" class="infra__map-filters-radio-input" name="filter"
+                                                      value="cafe">
+                                                  <span class="infra__map-filters-radio-content">
+                                                      <span class="infra__map-filters-radio-icon">
+                                                          <svg width="14" height="14" aria-hidden="true">
+                                                              <use xlink:href="#cafe"></use>
+                                                          </svg>
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-text">
+                                                          Кафе и рестораны
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-count">
+                                                          15
+                                                      </span>
+                                                  </span>
+                                              </label>
+                                          </li>
+                                          <li class="infra__map-filters-list-item">
+                                              <label class="infra__map-filters-radio">
+                                                  <input type="radio" class="infra__map-filters-radio-input" name="filter"
+                                                      value="cinema">
+                                                  <span class="infra__map-filters-radio-content">
+                                                      <span class="infra__map-filters-radio-icon">
+                                                          <svg width="14" height="14" aria-hidden="true">
+                                                              <use xlink:href="#cinema"></use>
+                                                          </svg>
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-text">
+                                                          Кино, театры, музеи
+                                                      </span>
+                                                      <span class="infra__map-filters-radio-count">
+                                                          4
+                                                      </span>
+                                                  </span>
+                                              </label>
+                                          </li>
+                                      </ul>
+                                      <div class="infra__map-filters-mobile-btns">
+                                          <button class="infra__map-filters-show-btn" type="submit">
+                                              Показать
+                                          </button>
+                                          <button class="infra__map-filters-reset-btn" type="reset">
+                                              <svg width="14" height="14" aria-hidden="true">
+                                                  <use xlink:href="#reset"></use>
+                                              </svg>
+                                              Сбросить фильтры
+                                          </button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+      
+      
+                      </div>
+                      <div class="infra__map-features">
+                          <ul class="infra__map-features-list">
+                              <li class="infra__map-features-list-item">
+                                  <div class="infra__map-features-card">
+                                      <div class="infra__map-features-card-number">
+                                          <div class="infra__map-features-card-number-about">
+                                              17
+                                          </div>
+                                          <div class="infra__map-features-card-number-unit">
+                                              мин
+                                          </div>
+                                      </div>
+                                      <div class="infra__map-features-card-content">
+                                          <h3 class="infra__map-features-card-title">
+                                              До центра города
+                                          </h3>
+                                          <div class="infra__map-features-card-text">
+                                              на автомобиле
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="infra__map-features-list-item">
+                                  <div class="infra__map-features-card">
+                                      <div class="infra__map-features-card-number">
+                                          <div class="infra__map-features-card-number-about">
+                                              16
+                                          </div>
+                                          <div class="infra__map-features-card-number-unit">
+                                              мин
+                                          </div>
+                                      </div>
+                                      <div class="infra__map-features-card-content">
+                                          <h3 class="infra__map-features-card-title">
+                                              До аэропорта
+                                          </h3>
+                                          <div class="infra__map-features-card-text">
+                                              на автомобиле
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="infra__map-features-list-item">
+                                  <div class="infra__map-features-card">
+                                      <div class="infra__map-features-card-number">
+                                          <div class="infra__map-features-card-number-about">
+                                              4
+                                          </div>
+                                          <div class="infra__map-features-card-number-unit">
+                                              мин
+                                          </div>
+                                      </div>
+                                      <div class="infra__map-features-card-content">
+                                          <h3 class="infra__map-features-card-title">
+                                              До ж/д станции
+                                          </h3>
+                                          <div class="infra__map-features-card-text">
+                                              пешком
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="infra__map-features-list-item">
+                                  <div class="infra__map-features-card">
+                                      <div class="infra__map-features-card-number">
+                                          <div class="infra__map-features-card-number-about">
+                                              16
+                                          </div>
+                                          <div class="infra__map-features-card-number-unit">
+                                              мин
+                                          </div>
+                                      </div>
+                                      <div class="infra__map-features-card-content">
+                                          <h3 class="infra__map-features-card-title">
+                                              До метро «Горки»
+                                          </h3>
+                                          <div class="infra__map-features-card-text">
+                                              на автомобиле
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
                       </div>
                   </div>
               </div>
@@ -2987,6 +3303,7 @@
     <script src="/assets/js/backend.js"></script>
     <script src="https://api-maps.yandex.ru/v3/?apikey=f02ed68d-66b3-4bd2-b8eb-c88edc899a8f&lang=ru_RU"></script>
     <script src="/js/offices-map.js"></script>
+    <script src="/js/infra-map.js"></script>
   </body>
 
 </html>

@@ -1,0 +1,73 @@
+{
+  "object": {
+    "coords": {
+      "lat": 55.818801,
+      "lng": 49.14482
+    },
+    "image": "/images/our-projects-map/1.webp"
+  },
+  "poi": [
+    {
+      "coords": {
+        "lat": 55.816888,
+        "lng": 49.143895
+      },
+      "title": "Гимназия 107",
+      "desc": "Школа",
+      "category": "school"
+    },
+    {
+      "title": "Перекресток",
+      "desc": "Продуктовый магазин",
+      "coords": {
+        "lat": 55.819918,
+        "lng": 49.141411
+      },
+      "category": "shops"
+    },
+    {
+      "title": "Итле кулинария",
+      "coords": {
+        "lat": 55.818381,
+        "lng": 49.143084
+      },
+      "category": "cafe"
+    },
+    {
+      "title": "Олимп",
+      "desc": "Спортивный зал",
+      "coords": {
+        "lat": 55.820202,
+        "lng": 49.139295
+      },
+      "category": "sport"
+    },
+    {
+      "title": "Фармленд",
+      "desc": "Аптека",
+      "coords": {
+        "lat": 55.819712,
+        "lng": 49.145984
+      },
+      "category": "health"
+    },
+    {
+      "title": "Noname bank",
+      "desc": "Банк",
+      "coords": {
+        "lat": 55.819008,
+        "lng": 49.140971
+      },
+      "category": "bank"
+    },
+    {
+      "title": "Top cinema",
+      "desc": "Кинотеатр",
+      "coords": {
+        "lat": 55.816676,
+        "lng": 49.140285
+      },
+      "category": "cinema"
+    }
+  ]
+}
