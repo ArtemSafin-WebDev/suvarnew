@@ -1,0 +1,297 @@
+.callback-modal {
+  background: rgba(#020202, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: contain;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  opacity: 0;
+  visibility: hidden;
+
+  @include breakpointMF(small-tablet) {
+    padding: 4rem 0;
+    @include blockWrapper;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  body:not(.loaded) & {
+    display: none;
+  }
+}
+
+.callback-modal__inner {
+  @include blockContent;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+  max-width: 57rem;
+  background-color: #fff;
+  border-radius: 2.4rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: var(--text-color);
+
+  @include breakpoint(mobile) {
+    margin-top: auto;
+    padding: 2rem;
+    border-radius: 1.2rem 1.2rem 0px 0px;
+    max-width: none;
+  }
+}
+
+.callback-modal__close {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  background-color: #fff;
+  margin-left: 1.2rem;
+
+  @include breakpoint(mobile) {
+    position: static;
+    margin: 0;
+    width: 4.4rem;
+    height: 4.4rem;
+    background-color: #f8f8f8;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--white-hover);
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
+
+.callback-modal__heading-wrapper {
+  display: contents;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.callback-modal__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 105%;
+  letter-spacing: -0.02em;
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: -0.05em;
+    line-height: 100%;
+  }
+}
+
+.callback-modal__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: rgba(#020202, 0.6);
+  line-height: 150%;
+  margin-top: 1.6rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+}
+
+.callback-modal__form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    margin-top: 2.4rem;
+  }
+}
+
+.callback-modal__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.callback-modal__field {
+  position: relative;
+  .validation-error {
+    position: absolute;
+    padding: 0.6rem 0.8rem;
+    background-color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    right: 0;
+    top: 5rem;
+    line-height: 130%;
+    color: #cf000c;
+    border: 1px solid rgba(2, 2, 2, 0.1);
+    border-radius: 0.8rem;
+    margin-top: -0.1rem;
+    pointer-events: none;
+    z-index: 10;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 0.8rem;
+      right: 2.6rem;
+      bottom: 100%;
+      margin-bottom: -0.1rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../images/error-tail.svg");
+    }
+  }
+}
+
+.callback-modal__input {
+  display: block;
+  width: 100%;
+  height: 6rem;
+  padding: 0 2rem;
+  border: 1px solid rgba(2, 2, 2, 0.3);
+  border-radius: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--text-color);
+  transition: border-color 0.2s, color 0.2s;
+  &::placeholder {
+    color: rgba(#020202, 0.4);
+  }
+
+  &:hover {
+    border-color: rgba(#020202, 0.3);
+  }
+
+  &:focus {
+    border-color: rgba(#020202, 0.1);
+  }
+
+  &.not-valid {
+    color: #cf000c;
+    background-image: url("../images/error-red.svg");
+    background-repeat: no-repeat;
+    background-size: 2rem auto;
+    background-position: right 2rem center;
+    border-color: rgba(#020202, 0.1);
+    &::placeholder {
+      color: #cf000c;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    height: 5rem;
+    padding: 0 2rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+    border: 1px solid rgba(2, 2, 2, 0.1);
+    border-radius: 0.8rem;
+  }
+}
+
+.callback-modal__submit {
+  padding: 2rem 4rem;
+  display: block;
+  text-align: center;
+  color: white;
+  transition: background-color 0.2s, color 0.2s;
+  margin-top: 2.4rem;
+  border-radius: 1.2rem;
+  background-color: var(--primary-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 100%;
+
+  @include breakpoint(mobile) {
+    padding: 1.8rem 3.6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 100%;
+    text-align: center;
+    margin-top: 1.6rem;
+  }
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+}
+
+.callback-modal__policy {
+  margin-top: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: rgba(2, 2, 2, 0.5);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+  }
+
+  a {
+    color: var(--text-color);
+    &:link,
+    &:visited {
+      color: var(--text-color);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

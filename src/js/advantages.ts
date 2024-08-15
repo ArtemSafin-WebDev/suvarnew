@@ -47,7 +47,9 @@ export default function advantages() {
     });
 
     tabItems.forEach((item) => {
-      let autoplayDisabled = false;
+      let autoplayDisabled = window.matchMedia("(max-width: 640px)").matches
+        ? true
+        : false;
       const AUTOPLAY_DURATION = 15;
       const container = item.querySelector<HTMLElement>(".swiper");
       if (!container) return;

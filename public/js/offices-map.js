@@ -206,7 +206,7 @@ async function initMap() {
                 )
                 .join("")}
             </ul>
-            <a class="offices__map-contacts-link" href="#">
+            <a class="offices__map-contacts-link js-open-callback-modal" href="#">
               Заказать обратный звонок
             </a>
           </div>
