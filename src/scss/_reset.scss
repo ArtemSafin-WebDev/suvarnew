@@ -48,7 +48,8 @@ body.modal-open {
 body.map-modal-shown,
 body.map-card-shown,
 body.offices-mobile-map-shown,
-body.construction-filters-shown {
+body.construction-filters-shown,
+body.infra-filters-shown {
   @include breakpoint(mobile) {
     touch-action: none;
     -webkit-overflow-scrolling: none;
@@ -236,4 +237,8 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   overflow-x: hidden;
   overflow: clip;
+}
+
+.ymaps3x0--controls {
+  z-index: 70 !important;
 }

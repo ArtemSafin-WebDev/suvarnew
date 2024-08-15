@@ -113,6 +113,7 @@ export default function advantages() {
         speed: 600,
         init: false,
         modules: [Navigation],
+        loop: true,
         navigation: {
           prevEl: item.querySelector<HTMLButtonElement>(
             ".advantages__card-slider__arrow--prev"

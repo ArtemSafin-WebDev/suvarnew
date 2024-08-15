@@ -5,7 +5,7 @@
   padding-bottom: 12rem;
 
   @include breakpoint(mobile) {
-    display: none;
+    padding-bottom: 5.4rem;
   }
 }
 
@@ -15,10 +15,57 @@
   flex-direction: column;
 }
 
+.infra__heading {
+  display: block;
+  gap: 0.6rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  margin-bottom: 4rem;
+  display: none;
+  @include breakpoint(mobile) {
+    justify-content: flex-start;
+    gap: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    margin-bottom: 2rem;
+    display: block;
+  }
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    vertical-align: baseline;
+    display: inline-block;
+    margin-left: -0.15em;
+
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin-left: -0.05em;
+    }
+  }
+}
+
 .infra__wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas: "stack";
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2rem;
+  }
 }
 .infra__map {
   position: relative;
@@ -27,6 +74,12 @@
   border-radius: 2rem;
   overflow: hidden;
   grid-area: stack;
+  aspect-ratio: 1560 / 779;
+
+  @include breakpoint(mobile) {
+    aspect-ratio: 335 / 550;
+    border-radius: 1.2rem;
+  }
 }
 
 .infra__map-inner {
@@ -49,16 +102,23 @@
   grid-row: 1 / 2;
   pointer-events: none;
   grid-template-areas: "filters features";
+
+  @include breakpoint(mobile) {
+    display: contents;
+    pointer-events: all;
+  }
 }
 
 .infra__map-filters {
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  border-radius: 1.6rem;
-  grid-area: filters;
-  padding: 4rem;
-  pointer-events: all;
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 1.6rem;
+    grid-area: filters;
+    padding: 4rem;
+    pointer-events: all;
+  }
 }
 
 .infra__map-filters-heading {
@@ -68,6 +128,29 @@
   line-height: 100%;
   letter-spacing: -0.03em;
   margin-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+
+    order: -40;
+    display: none;
+
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      vertical-align: baseline;
+      display: inline-block;
+      margin-left: -0.15em;
+    }
+  }
 }
 
 .infra__map-filters-list {
@@ -91,6 +174,11 @@
   display: flex;
   align-items: center;
   gap: 1.6rem;
+
+  @include breakpoint(mobile) {
+    gap: 1rem;
+    padding: 0.6rem 0;
+  }
 }
 
 .infra__map-filters-radio-icon {
@@ -101,6 +189,11 @@
   width: 4rem;
   height: 4rem;
   transition: background-color 0.2s, border-color 0.2s;
+
+  @include breakpoint(mobile) {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
 
   svg {
     display: block;
@@ -117,6 +210,14 @@
   font-size: 1.8rem;
   line-height: 120%;
   letter-spacing: -0.02em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    line-height: 120%;
+  }
 }
 
 .infra__map-filters-radio-input:checked ~ .infra__map-filters-radio-content {
@@ -138,9 +239,19 @@
   letter-spacing: -0.02em;
   color: rgba(#020202, 0.4);
   line-height: 120%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
 }
 
 .infra__map-features {
+  @include breakpoint(mobile) {
+    order: -30;
+  }
 }
 
 .infra__map-features-list {
@@ -148,6 +259,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+    flex-wrap: nowrap;
+  }
 }
 
 .infra__map-features-card {
@@ -159,6 +276,11 @@
   gap: 1.2rem;
   padding-right: 2rem;
   pointer-events: all;
+
+  @include breakpoint(mobile) {
+    padding: 0.8rem;
+    background-color: #f5f5f5;
+  }
 }
 
 .infra__map-features-card-number {
@@ -213,4 +335,283 @@
   font-size: 1.2rem;
   line-height: 120%;
   color: rgba(2, 2, 2, 0.4);
+}
+
+.infra__map-marker {
+  width: 10rem;
+  height: 10.8rem;
+  transform: translateX(-50%) translateY(-100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6.8rem;
+  }
+  &::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0.8rem 0.6rem 0 0.6rem;
+    border-color: var(--primary-color) transparent transparent transparent;
+    transform: rotate(0deg);
+    align-self: center;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.infra__map-marker-image-container {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.infra__map-marker-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infra__poe-marker {
+  transform: translate(-50%, -50%);
+  width: 4rem;
+  height: 4rem;
+  background-color: #212173;
+  border-radius: 50%;
+  border: 0.2rem solid white;
+  transition: background-color 0.2s;
+  position: relative;
+
+  .infra__poe-marker-inner {
+    width: 100%;
+    height: 100%;
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: white;
+    }
+  }
+
+  &:hover {
+    background-color: #5a5adf;
+
+    .infra__poe-marker-label {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+  }
+}
+.infra__poe-marker-label {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #ffffff;
+  border-radius: 0.8rem;
+  width: max-content;
+  margin-left: 1.6rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0s linear 0.2s;
+
+  @include breakpoint(mobile) {
+    padding: 0.6rem 1.6rem;
+  }
+}
+
+.infra__poe-marker-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #020202;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+  }
+}
+
+.infra__poe-marker-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: rgba(2, 2, 2, 0.5);
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+  }
+}
+
+.infra__map-filters-mobile-btn {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.6rem 3.6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    border-radius: 0.8rem;
+    background-color: var(--blue);
+    color: white;
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.infra__map-filters-modal {
+}
+
+.infra__map-filters-modal-header {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.infra__map-filters-modal-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 110%;
+  letter-spacing: -0.05em;
+}
+
+.infra__map-filters-modal-close {
+  flex-shrink: 0;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  margin-left: auto;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+  }
+}
+
+.infra__map-filters-modal-inner {
+  display: contents;
+
+  @include breakpoint(mobile) {
+    background-color: #fff;
+    padding: 2rem;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+  }
+}
+
+.infra__map-filters-modal {
+  display: contents;
+  @include breakpoint(mobile) {
+    background: rgba(#020202, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    opacity: 0;
+    visibility: hidden;
+    .infra-filters-shown & {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+
+    body:not(.loaded) & {
+      display: none;
+    }
+  }
+}
+
+.infra__map-filters-mobile-btns {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 3.2rem;
+  }
+}
+
+.infra__map-filters-show-btn {
+  display: block;
+  text-align: center;
+  padding: 1.8rem 3.6rem;
+  background-color: var(--blue);
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  border-radius: 0.8rem;
+}
+
+.infra__map-filters-reset-btn {
+  display: block;
+  text-align: center;
+  padding: 1.8rem 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  border-radius: 0.8rem;
+  gap: 0.4rem;
+  color: rgba(2, 2, 2, 0.5);
+
+  svg {
+    flex-shrink: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: currentColor;
+  }
 }
