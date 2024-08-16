@@ -50,4 +50,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // const reinitEvent = new CustomEvent("reinitSlider");
     // constructionProgress.dispatchEvent(reinitEvent);
   }
+
+  const callbackModal = document.querySelector("#callback-modal");
+  if (callbackModal) {
+    const form = callbackModal.querySelector("form");
+    form.addEventListener("validsubmit", () => {
+      console.log("Form is valid");
+      callbackModal.classList.remove("active");
+      // AJAX
+      const successModal = document.querySelector("#success-modal");
+      successModal.classList.add("active");
+    });
+  }
 });
