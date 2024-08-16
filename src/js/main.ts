@@ -15,6 +15,7 @@ import phase from "./phase";
 import constructionProgress from "./constructionProgress";
 import advantages from "./advantages";
 import callbackModal from "./callbackModal";
+import plan from "./plan";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   constructionProgress();
   advantages();
   callbackModal();
+  plan();
 });
 
 window.addEventListener("load", () => {
