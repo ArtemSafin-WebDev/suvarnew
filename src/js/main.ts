@@ -17,6 +17,9 @@ import advantages from "./advantages";
 import callbackModal from "./callbackModal";
 import plan from "./plan";
 import catalog from "./catalog";
+import gallery from "./gallery";
+import flatPlan from "./flatPlan";
+import similarFlats from "./similar-flats";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -36,6 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
   callbackModal();
   plan();
   catalog();
+  gallery();
+  flatPlan();
+  similarFlats();
 });
 
 window.addEventListener("load", () => {

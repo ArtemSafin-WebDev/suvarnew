@@ -242,6 +242,26 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   overflow-x: hidden;
   overflow: clip;
+
+  &.footer--gray {
+    + footer {
+      background: var(--light-gray);
+    }
+  }
+}
+
+.bg-gray {
+  background: var(--light-gray);
+  &--round {
+    border-radius: 3.2rem 3.2rem 0 0;
+    padding-top: 6rem;
+    @include breakpoint(mobile) {
+      padding-top: 4rem;
+    }
+  }
+  section {
+    background: transparent;
+  }
 }
 
 .ymaps3x0--controls {

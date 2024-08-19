@@ -1,0 +1,251 @@
+﻿.gallery {
+    @include blockWrapper;
+    padding-top: 10rem;
+    padding-bottom: 11.5232rem;
+    margin-top: -2.4rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        display: block;
+        padding-bottom: 6rem;
+    }
+
+    &__content {
+        @include blockContent;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        @include breakpoint(mobile) {
+            gap: 2rem;
+        }
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5.4rem;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        display: flex;
+        align-items: baseline;
+        gap: 0.8rem;
+
+        @include breakpoint(mobile) {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 3rem;
+            line-height: 110%;
+            letter-spacing: -0.05em;
+            gap: 0.6rem;
+            margin-left: 1.6rem;
+            margin-right: 1.6rem;
+        }
+
+        &:after {
+            content: "";
+            width: 1.1rem;
+            height: 1.1rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background-color: #cf000c;
+
+            @include breakpoint(mobile) {
+                width: 0.8rem;
+                height: 0.8rem;
+            }
+        }
+    }
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.6rem;
+        position: relative;
+
+        @include breakpoint(mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &-tabs {
+        &__buttons {
+            &.swiper {
+                display: inline-flex;
+                position: absolute;
+                z-index: 20;
+                top: 3rem;
+                left: 3rem;
+                @include breakpoint(mobile) {
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    display: flex;
+                    margin: 0 0 2rem;
+                }
+            }
+        }
+
+        &__button {
+            &.swiper-slide {
+                width: auto;
+                padding-top: 0.8rem;
+                padding-bottom: 0.8rem;
+                background: #F5F5F5;
+                height: auto;
+                @include breakpoint(mobile) {
+                    padding-top: 0.4rem;
+                    padding-bottom: 0.4rem;
+                }
+                &:first-child {
+                    border-radius: 1.2rem 0 0 1.2rem;
+                    padding-left: 0.8rem;
+                    @include breakpoint(mobile) {
+                        padding-left: 0.4rem;
+                        border-radius: 0.8rem 0 0 0.8rem;
+                    }
+                }
+                &:last-child {
+                    border-radius: 0 1.2rem 1.2rem 0;
+                    padding-right: 0.8rem;
+                    @include breakpoint(mobile) {
+                        padding-right: 0.4rem;
+                        border-radius: 0 0.8rem 0.8rem 0;
+                    }
+                }
+                .gallery-tabs__button-text {
+                    padding: 0.46rem 2rem;
+                    background-color: transparent;
+                    color: #666;
+                    border: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s, color 0.3s;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.8rem;
+                    height: 5rem;
+                    border-radius: 0.8rem;
+                    font-size: 1.6rem;
+                    @include breakpoint(mobile) {
+                        white-space: nowrap;
+                        height: 4.2rem;
+                        padding: 0 2rem;
+                        font-size: 1.4rem;
+                    }
+                }
+
+                &.gallery-tabs__button--active,
+                &:focus,
+                &:hover {
+                    .gallery-tabs__button-text {
+                        background-color: #101038;
+                        color: #FFF;
+                    }
+                }
+            }
+
+
+        }
+
+        &__list {
+            &.swiper-wrapper {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                @include breakpoint(mobile) {
+                    height: auto;
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        &__slider {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            visibility: hidden;
+            @include breakpoint(mobile) {
+                max-height: 20rem;
+            }
+            .swiper-slide {
+                width: auto;
+            }
+
+            &-card {
+                display: block;
+                justify-content: center;
+                align-items: center;
+                @include breakpoint(mobile) {
+                    width: 300px;
+                }
+
+                &-image {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 0.8rem;
+                    @include breakpoint(mobile) {
+                        max-width: unset;
+                        height: 200px;
+                        width: 100%;
+                    }
+                }
+            }
+
+            &--active {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &-nav {
+        margin-bottom: 2rem;
+        position: absolute;
+        z-index: 20;
+        right: 3rem;
+        top: 3rem;
+        background: #FFF;
+        padding: 0.8rem;
+        border-radius: 0.8rem;
+        @include breakpoint(mobile) {
+          display: none;
+        }
+
+        &__swipper {
+            width: 100%;
+        }
+
+        &__wrapper {
+            display: flex;
+        }
+
+        &__slide {
+            width: auto;
+            height: 7rem;
+            opacity: 0.6;
+            cursor: pointer;
+
+            &-content {
+                width: 10rem;
+                height: 7rem;
+            }
+
+            &-image {
+                width: 10rem;
+                height: 7rem;
+                object-fit: cover;
+                border-radius: 0.4rem;
+            }
+
+            &.active,
+            &.swiper-slide-thumb-active {
+                opacity: 1;
+            }
+        }
+    }
+}
