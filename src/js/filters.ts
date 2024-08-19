@@ -4,7 +4,9 @@ import "nouislider/dist/nouislider.css";
 
 export default function filters() {
   const elements = Array.from(
-    document.querySelectorAll<HTMLElement>(".filters")
+    document.querySelectorAll<HTMLElement>(
+      ".filters, .catalog__short-filters, .catalog__all-filters-modal-form"
+    )
   );
 
   elements.forEach((element) => {

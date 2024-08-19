@@ -5,25 +5,39 @@ class Select {
   private choices: HTMLInputElement[];
   private placeholderText: string = "";
   private resetBtns: HTMLButtonElement[] = [];
+  private multiSelect = false;
+  private form: HTMLFormElement | null = null;
   constructor(private element: HTMLElement) {
     this.element = element;
     this.btn = this.element.querySelector<HTMLButtonElement>(
       'button[type="button"]'
     );
 
+    this.form = this.element.closest("form");
     this.resetBtns = Array.from(this.element.querySelectorAll(".js-reset-btn"));
     if (this.btn) {
       this.btnTextElement =
         this.btn.querySelector<HTMLSpanElement>(".js-btn-text");
     }
     this.choices = Array.from(
-      this.element.querySelectorAll<HTMLInputElement>('input[type="radio"]')
+      this.element.querySelectorAll<HTMLInputElement>(
+        'input[type="radio"], input[type="checkbox"]'
+      )
     );
+
+    if (this.choices.find((choice) => choice.matches('input[type="checkbox"]')))
+      this.multiSelect = true;
+
     document.documentElement.addEventListener("click", this.handleOutsideClick);
     this.btn?.addEventListener("click", this.handleBtnClick);
 
     this.choices.forEach((choice) =>
-      choice.addEventListener("change", this.handleSelection)
+      choice.addEventListener(
+        "change",
+        this.multiSelect
+          ? this.handleMultipleSelection
+          : this.handleSingleSelection
+      )
     );
 
     const dataPlaceholder = this.element.getAttribute("data-placeholder");
@@ -39,7 +53,15 @@ class Select {
       });
     });
 
-    this.handleSelection();
+    this.form?.addEventListener("reset", () => {
+      this.reset();
+    });
+
+    if (this.multiSelect) {
+      this.handleMultipleSelection();
+    } else {
+      this.handleSingleSelection();
+    }
   }
 
   public open = () => {
@@ -63,7 +85,31 @@ class Select {
     }
   };
 
-  private handleSelection = () => {
+  private handleMultipleSelection = () => {
+    if (!this.choices.length) return;
+    const activeChoices = this.choices.filter((choice) => choice.checked);
+    console.log("Active choices", activeChoices);
+    if (activeChoices.length) {
+      this.element.classList.add("choice-selected");
+      const choicesText = activeChoices.map((choice) => {
+        const textElement =
+          choice.parentElement?.querySelector("span:last-of-type");
+        return textElement?.textContent?.trim();
+      });
+      console.log("Choices text", choicesText);
+      if (this.btnTextElement) {
+        this.btnTextElement.textContent = choicesText.join(", ");
+      }
+    } else {
+      this.element.classList.remove("choice-selected");
+      if (this.btnTextElement) {
+        this.btnTextElement.textContent = this.placeholderText;
+      }
+    }
+    this.close();
+  };
+
+  private handleSingleSelection = () => {
     if (!this.choices.length) return;
     let activeChoice = this.choices.find((choice) => choice.checked);
 
@@ -114,7 +160,12 @@ class Select {
       this.handleOutsideClick
     );
     this.choices.forEach((choice) =>
-      choice.removeEventListener("change", this.handleSelection)
+      choice.removeEventListener(
+        "change",
+        this.multiSelect
+          ? this.handleMultipleSelection
+          : this.handleSingleSelection
+      )
     );
     this.btn?.removeEventListener("click", this.handleBtnClick);
   }

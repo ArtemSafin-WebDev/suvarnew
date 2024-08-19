@@ -35,6 +35,10 @@ body {
   font-family: var(--core-sans);
   overscroll-behavior: none;
   overflow-anchor: none;
+
+  &.grey-bg {
+    background-color: #f5f5f5;
+  }
 }
 
 body.menu-open,

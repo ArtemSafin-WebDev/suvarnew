@@ -2,6 +2,9 @@
   @include blockWrapper;
   padding-bottom: 1.5rem;
   background-color: #fff;
+  .grey-bg & {
+    background-color: #f5f5f5;
+  }
 
   @include breakpoint(mobile) {
     padding-bottom: 2rem;

@@ -16,6 +16,7 @@ import constructionProgress from "./constructionProgress";
 import advantages from "./advantages";
 import callbackModal from "./callbackModal";
 import plan from "./plan";
+import catalog from "./catalog";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   advantages();
   callbackModal();
   plan();
+  catalog();
 });
 
 window.addEventListener("load", () => {
