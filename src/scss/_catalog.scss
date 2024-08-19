@@ -1615,3 +1615,382 @@
     display: block;
   }
 }
+
+.catalog__table-view-header {
+  margin-bottom: 2.4rem;
+  display: grid;
+  grid-gap: 4rem;
+  padding: 0 3rem;
+  padding-right: 4rem;
+  border: 1px solid transparent;
+  grid-template-columns:
+    minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 0.6fr) minmax(0, 0.7fr)
+    minmax(0, 0.64fr) minmax(0, 1.5fr) minmax(0, 0.3fr) minmax(0, 0.42fr) minmax(0, 2fr);
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.catalog__table-view-header-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: rgba(#020202, 0.6);
+}
+
+.catalog__table-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.8rem;
+  }
+}
+
+.catalog__table-card {
+  @include breakpointMF(small-tablet) {
+    padding: 4rem;
+    padding-left: 3rem;
+    background-color: #fff;
+    position: relative;
+    border: 1px solid white;
+    transition: background-color 0.2s, border-color 0.2s;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 9.4fr);
+    grid-gap: 4rem;
+    grid-template-areas: "image main";
+    align-items: center;
+
+    .catalog__add-to-fav {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    background-color: #fff;
+    border-radius: 1.6rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 2.8rem) 1fr;
+    grid-gap: 1.2rem;
+    align-items: flex-start;
+    grid-template-areas: "image main";
+    position: relative;
+
+    .catalog__add-to-fav {
+      display: none;
+    }
+  }
+}
+
+.catalog__table-list-card-main-wrapper {
+  @include breakpointMF(small-tablet) {
+    grid-area: main;
+    display: grid;
+
+    grid-gap: 4rem;
+    grid-template-columns:
+      minmax(0, 1.2fr) minmax(0, 0.6fr) minmax(0, 0.7fr)
+      minmax(0, 0.64fr) minmax(0, 1.5fr) minmax(0, 0.3fr) minmax(0, 0.42fr) minmax(0, 2fr);
+    grid-template-areas: "titlewrapper area date condition project section floor pricewrapper";
+  }
+
+  @include breakpoint(mobile) {
+    grid-area: main;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
+
+.catalog__table-list-item--fullwidth {
+  grid-column: 1 / -1;
+}
+
+.catalog__table-card-mobile-not-price-wrapper {
+  display: contents;
+  @include breakpoint(mobile) {
+    display: block;
+    width: 30%;
+    flex-grow: 1;
+  }
+}
+
+.catalog__table-list-card-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.catalog__table-list-card-image-wrapper {
+  position: relative;
+  grid-area: image;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.catalog__table-list-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.catalog__table-card-title-wrapper {
+  @include breakpointMF(small-tablet) {
+    grid-area: titlewrapper;
+    display: flex;
+    flex-direction: column;
+    min-height: 10rem;
+    gap: 2rem;
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.catalog__table-card-mobile-title-wrapper {
+  display: contents;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.2rem;
+    .catalog__tags {
+      display: none;
+    }
+  }
+}
+
+.catalog__table-card-mobile-section-wrapper {
+  display: contents;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0.1rem;
+    row-gap: 0.2rem;
+  }
+}
+
+.catalog__table-card-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  margin-bottom: auto;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 130%;
+    letter-spacing: 0;
+  }
+}
+
+.catalog__table-card-area {
+  grid-area: area;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+  @include breakpoint(mobile) {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 130%;
+    letter-spacing: 0;
+  }
+}
+
+.catalog__table-card-date {
+  grid-area: date;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.catalog__table-card-condition {
+  grid-area: condition;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.catalog__table-card-project {
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    flex-direction: column;
+    min-height: 10rem;
+    padding-left: 2.4rem;
+    border-left: 1px solid rgba(#020202, 0.1);
+    gap: 1.4rem;
+    grid-area: project;
+    margin-left: -2.4rem;
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.catalog__table-card-project-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+  color: #212173;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 130%;
+  }
+}
+
+.catalog__table-card-project-stage {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 130%;
+    color: rgba(#020202, 0.5);
+
+    &::after {
+      content: ", ";
+    }
+  }
+}
+
+.catalog__table-card-section {
+  grid-area: section;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 130%;
+    color: rgba(#020202, 0.5);
+    &::before {
+      content: "Секция ";
+    }
+  }
+}
+.catalog__table-card-floor {
+  grid-area: floor;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.catalog__table-card-price-wrapper {
+  @include breakpointMF(small-tablet) {
+    grid-area: pricewrapper;
+    padding-left: 2.4rem;
+    margin-left: -2.4rem;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    gap: 1.2rem;
+    border-left: 1px solid rgba(#020202, 0.1);
+  }
+
+  @include breakpoint(mobile) {
+    flex-shrink: 0;
+  }
+}
+
+.catalog__table-card-price-wrapper-content {
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 30%;
+    flex-grow: 1;
+  }
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-end;
+  }
+}
+
+.catalog__table-card-price {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: var(--blue);
+
+  .catalog__table-card:has(.catalog__table-card-discount) & {
+    color: var(--primary-color);
+  }
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 100%;
+  }
+}
+
+.catalog__table-card-discount {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 120%;
+  color: rgba(#020202, 0.4);
+  text-decoration: line-through;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 120%;
+  }
+}

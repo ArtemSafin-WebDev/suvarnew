@@ -19,7 +19,9 @@ export default function intro() {
       const mainContainer = item.querySelector<HTMLElement>(
         ".intro__main-slider-wrapper .swiper"
       );
-      const cursor = element.querySelector(".intro__slider-item-cursor");
+      const cursor = element.querySelector<HTMLElement>(
+        ".intro__slider-item-cursor"
+      );
       const slides = Array.from(
         element.querySelectorAll(".intro__main-slider-wrapper .swiper-slide")
       );
@@ -92,37 +94,45 @@ export default function intro() {
       });
 
       if (cursor) {
-        gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+        // let xTo = gsap.quickTo(cursor, "x", { duration: 0.2, ease: "power3" }),
+        //   yTo = gsap.quickTo(cursor, "y", { duration: 0.2, ease: "power3" });
 
-        let xTo = gsap.quickTo(cursor, "x", { duration: 0.6, ease: "power3" }),
-          yTo = gsap.quickTo(cursor, "y", { duration: 0.6, ease: "power3" });
+        let rect = item.getBoundingClientRect();
+
+        window.addEventListener("resize", () => {
+          rect = item.getBoundingClientRect();
+        });
 
         item.addEventListener("mousemove", (event) => {
           const e = event as MouseEvent;
-          const itemMiddle =
-            item.getBoundingClientRect().left + item.offsetWidth / 2;
-          if (e.clientX > itemMiddle) {
+          const x = e.pageX - rect.left;
+          const y = e.pageY - rect.top;
+
+          console.log({
+            x,
+            y,
+            width: rect.width,
+          });
+          if (x > rect.width / 2) {
             cursorDirection = "right";
             cursor.classList.remove("flipped");
           } else {
             cursorDirection = "left";
             cursor.classList.add("flipped");
           }
-          xTo(e.clientX);
-          yTo(e.clientY + window.scrollY);
+
+          cursor.style.top = `${y}px`;
+          cursor.style.left = `${x}px`;
+
+          // xTo(x);
+          // yTo(y);
         });
 
         item.addEventListener("mouseenter", () => {
-          gsap.to(cursor, {
-            autoAlpha: 1,
-            duration: 0.2,
-          });
+          cursor.classList.add("shown");
         });
         item.addEventListener("mouseleave", () => {
-          gsap.to(cursor, {
-            autoAlpha: 0,
-            duration: 0.2,
-          });
+          cursor.classList.remove("shown");
         });
 
         element.addEventListener("click", () => {

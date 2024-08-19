@@ -673,6 +673,18 @@
 .our-projects__list-item {
   display: flex;
   flex-direction: column;
+
+  @include breakpointMF(small-tablet) {
+    &--wide {
+      grid-column: span 2;
+
+      .our-projects__card-image-container {
+        &::before {
+          padding-bottom: 50.387%;
+        }
+      }
+    }
+  }
 }
 
 .our-projects__card {

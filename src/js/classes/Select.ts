@@ -106,7 +106,7 @@ class Select {
         this.btnTextElement.textContent = this.placeholderText;
       }
     }
-    this.close();
+    // this.close();
   };
 
   private handleSingleSelection = () => {

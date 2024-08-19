@@ -38,6 +38,7 @@
   flex-direction: column;
   isolation: isolate;
   grid-row: span 2;
+
   cursor: none;
 
   &:has(.intro__slider-card-link:hover) .intro__slider-item-cursor-inner {
@@ -55,6 +56,13 @@
   pointer-events: none;
   position: absolute;
   z-index: 2;
+  transform: translateX(0%) translateY(50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  &.shown {
+    opacity: 1;
+  }
 
   @include breakpoint(mobile) {
     display: none;
