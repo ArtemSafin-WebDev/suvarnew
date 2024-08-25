@@ -1,0 +1,291 @@
+.contacts {
+  @include blockWrapper;
+  background-color: #fff;
+
+  & + section {
+    padding-top: 10rem;
+    position: relative;
+    z-index: 10;
+    border-top-left-radius: 3.2rem;
+    border-top-right-radius: 3.2rem;
+    margin-top: -3.2rem;
+
+    @include breakpoint(mobile) {
+      padding-top: 4rem;
+      border-top-left-radius: 1.2rem;
+      border-top-right-radius: 1.2rem;
+      margin-top: -1.2rem;
+    }
+  }
+}
+
+.contacts__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12.8rem;
+  padding-bottom: 16rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 9rem;
+    padding-bottom: 7.2rem;
+  }
+}
+
+.contacts__breadcrumbs {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 5rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 120%;
+    margin-bottom: 3.2rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(#020202, 0.5);
+    &:link,
+    &:visited {
+      color: rgba(#020202, 0.5);
+    }
+
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../images/breadcrumbs-arrow-dark.svg");
+      opacity: 0.5;
+
+      @include breakpoint(mobile) {
+        width: 1.4rem;
+        height: 1.4rem;
+        align-self: center;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &.active {
+      color: #020202;
+      &:link,
+      &:visited {
+        color: #020202;
+      }
+    }
+  }
+}
+
+.contacts__heading {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10rem;
+  line-height: 100%;
+  margin-bottom: 9rem;
+
+  @include breakpoint(mobile) {
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.contacts__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 0.8rem;
+  }
+}
+
+.contacts__card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    border: 1px solid rgba(2, 2, 2, 0.1);
+    border-radius: 1.2rem;
+    gap: 2rem;
+  }
+}
+
+.contacts__card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: rgba(#020202, 0.5);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+}
+
+.contacts__card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__card-link {
+  align-self: flex-start;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: -0.04em;
+    line-height: 100%;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.contacts__card-remark {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  display: block;
+  line-height: 130%;
+  color: rgba(#020202, 0.5);
+  margin-top: 1.2rem;
+  max-width: 25rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+}
+
+.contacts__card-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contacts__card-schedule-card {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  @include breakpoint(mobile) {
+    gap: 1.2rem;
+  }
+}
+
+.contacts__card-schedule-card-key {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: rgba(#020202, 0.6);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+}
+
+.contacts__card-schedule-card-value {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: -0.04em;
+    line-height: 100%;
+  }
+}
+
+.contacts__card-social-list {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.contacts__card-social-list-item {
+  flex-shrink: 0;
+}
+.contacts__card-social-link {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 1px solid rgba(2, 2, 2, 0.1);
+  transition: background-color 0.2s, border-color 0.2s;
+
+  @include breakpoint(mobile) {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-color);
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: var(--primary-color);
+      background-color: var(--primary-color);
+      svg {
+        fill: white;
+      }
+    }
+  }
+}

@@ -22,6 +22,7 @@ import flatPlan from "./flatPlan";
 import similarFlats from "./similar-flats";
 import faq from "./faq";
 import mortgageModal from "./mortgageModal";
+import excursion from "./excursion";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   similarFlats();
   faq();
   mortgageModal();
+  excursion();
 });
 
 window.addEventListener("load", () => {
