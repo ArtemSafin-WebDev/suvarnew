@@ -1,0 +1,252 @@
+.has-questions {
+  @include blockWrapper;
+  background-color: #f5f5f5;
+  padding-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+}
+
+.has-questions__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.has-questions__card {
+  background-color: var(--blue);
+  color: white;
+  padding: 6rem;
+  border-radius: 2rem;
+  padding-bottom: 13.4rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1.5fr;
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    padding-top: 2.8rem;
+    padding-bottom: 4rem;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+}
+
+.has-questions__card-bg {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  width: 105%;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%) translateY(38%);
+  max-width: none;
+}
+
+.has-questions__card-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.has-questions__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 105%;
+  letter-spacing: -0.02em;
+  color: #a5d9ff;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+  }
+}
+
+.has-questions__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 125%;
+  letter-spacing: -0.02em;
+  margin-top: 1.6rem;
+  max-width: 42rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    margin-top: 1rem;
+  }
+}
+
+.has-questions__link {
+  align-self: flex-start;
+  display: block;
+  text-align: center;
+  padding: 2.2rem 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  border-radius: 1.2rem;
+  line-height: 100%;
+  background-color: #fff;
+  color: var(--text-color);
+  transition: color 0.2s, background-color 0.2s;
+  margin-top: 4rem;
+
+  @include breakpoint(mobile) {
+    padding: 1.8rem 3.6rem;
+    border-radius: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-top: 3.5rem;
+    align-self: stretch;
+    line-height: 100%;
+  }
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-color);
+      background-color: var(--white-hover);
+    }
+  }
+}
+
+.has-questions__card-contacts {
+  display: grid;
+  grid-gap: 5.4rem;
+  grid-template-columns: minmax(0, 37.1rem);
+  grid-template-areas: "image content";
+  align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    align-items: stretch;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "image" "content";
+    grid-gap: 2.8rem;
+  }
+}
+
+.has-questions__card-contacts-image-container {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  grid-area: image;
+
+  @include breakpoint(mobile) {
+    border-radius: 0.8rem;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 63.8%;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 67%;
+    }
+  }
+}
+
+.has-questions__card-contacts-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.has-questions__card-contacts-content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+}
+
+.has-questions__card-contacts-name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 120%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+  }
+}
+
+.has-questions__card-contacts-role {
+  margin-top: 0.4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: rgba(white, 0.6);
+  line-height: 150%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+}
+
+.has-questions__card-contacts-text {
+  margin-top: 2.8rem;
+  max-width: 33.4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+    margin-top: 2.6rem;
+  }
+}
+
+.has-questions__card-contacts-phone {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  margin-top: 4rem;
+  color: #a5d9ff;
+  align-self: flex-start;
+  display: block;
+
+  @include breakpoint(mobile) {
+    margin-top: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+  }
+  &:link,
+  &:visited {
+    color: #a5d9ff;
+  }
+}

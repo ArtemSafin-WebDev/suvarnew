@@ -1,0 +1,325 @@
+.mortgage-variants {
+  @include blockWrapper;
+  padding-bottom: 12rem;
+  padding-top: 6rem;
+  background-color: #f5f5f5;
+  border-top-left-radius: 3.2rem;
+  border-top-right-radius: 3.2rem;
+  position: relative;
+  z-index: 10;
+  margin-top: -3.2rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    margin-top: -1.2rem;
+  }
+}
+
+.mortgage-variants__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.mortgage-variants__tabs-nav {
+  margin-bottom: 3.2rem;
+  align-self: flex-start;
+
+  @include breakpoint(mobile) {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 calc(-1 * var(--content-padding));
+    padding: 0 var(--content-padding);
+    margin-bottom: 2rem;
+
+    @include noScrollbar;
+  }
+}
+
+.mortgage-variants__tabs-nav-list {
+  padding: 0.8rem;
+  background: #ffffff;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(mobile) {
+    padding: 0.4rem;
+    border-radius: 0.8rem;
+    flex-shrink: 0;
+  }
+}
+
+.mortgage-variants__tabs-nav-list-item {
+  flex-shrink: 0;
+}
+
+.mortgage-variants__tabs-nav-link {
+  padding: 1.7rem 2rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  transition: color 0.2s, background-color 0.2s;
+
+  color: var(--text-color);
+
+  @include breakpoint(mobile) {
+    padding: 1.3rem 2rem;
+    border-radius: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+  }
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  &.active {
+    background-color: #101038;
+    color: white;
+  }
+}
+
+.mortgage-variants__tabs-items {
+  position: relative;
+}
+
+.mortgage-variants__card {
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 2rem;
+    grid-gap: 2rem;
+    border-radius: 1.2rem;
+  }
+}
+
+.mortgage-variants__card-left-col {
+  display: flex;
+  flex-direction: column;
+  max-width: 62rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+  }
+}
+
+.mortgage-variants__card-top {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include breakpoint(mobile) {
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.mortgage-variants__card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: var(--blue);
+  max-width: 58rem;
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+  }
+}
+
+.mortgage-variants__card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: rgba(#020202, 0.7);
+  max-width: 37rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+}
+
+.mortgage-variants__card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  border-top: 1px solid rgba(#020202, 0.2);
+  margin-top: auto;
+  padding-top: 3rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 2.8rem;
+    margin: 0;
+    gap: 2.8rem;
+    border-color: rgba(#020202, 0.1);
+  }
+}
+
+.mortgage-variants__card-features-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  row-gap: 3rem;
+  justify-content: space-between;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+    grid-gap: 0.8rem;
+    grid-row-gap: 2.8rem;
+  }
+}
+
+.mortgage-variants__card-features-list-item {
+}
+
+.mortgage-variants__card-features-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  @include breakpoint(mobile) {
+    gap: 1rem;
+  }
+}
+
+.mortgage-variants__card-features-card-key {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: rgba(#020202, 0.6);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 120%;
+    max-width: 10rem;
+  }
+}
+
+.mortgage-variants__card-features-card-value {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: -0.04em;
+    line-height: 100%;
+  }
+}
+
+.mortgage-variants__card-features-card-value-small-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    line-height: 120%;
+  }
+}
+
+.mortgage-variants__card-link {
+  display: block;
+  text-align: center;
+  padding: 2.2rem 7rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1.2rem;
+  align-self: flex-start;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--primary-color);
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding: 1.7rem 3.6rem;
+    border-radius: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 100%;
+    align-self: stretch;
+  }
+}
+
+.mortgage-variants__card-image-container {
+  position: relative;
+  border-radius: 1.6rem;
+  overflow: hidden;
+
+  @include breakpoint(mobile) {
+    border-radius: 0.8rem;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 61.8%;
+    @include breakpoint(mobile) {
+      padding-bottom: 67.7%;
+    }
+  }
+}
+
+.mortgage-variants__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,15 +1,16 @@
-<section class="mortgage">
+<section class="mortgage mortgage--calculator" id="mortgage-calculator">
     <div class="mortgage__content">
         <div class="mortgage__top-row">
             <h2 class="mortgage__heading">
-                Ипотечные программы
+                Калькулятор ипотеки
             </h2>
-            <a href="#" class="mortgage__show-all">
-                Смотреть все
-            </a>
+
         </div>
         <div class="mortgage__bottom-row">
             <div class="mortgage__left-col">
+                <h3 class="mortgage__calculator-heading">
+                    Рассчитайте выгодные<br> условия по&nbsp;ипотеке
+                </h3>
                 <form action="/" method="POST" class="mortgage__form">
                     <div class="mortgage__form-fields">
                         <div class="mortgage__form-field">
@@ -133,229 +134,388 @@
                             Ежемесячный платеж
                         </div>
                         <div class="mortgage__form-result-value">
-
-                            20 000 ₽
+                            <span class="mortgage__form-result-value-from">
+                                от
+                            </span>
+                            39 713 ₽
                         </div>
                     </div>
-                    <button class="mortgage__form-submit" type="submit">
+                    <button class="mortgage__form-submit js-open-mortgage-modal" type="submit">
                         Отправить онлайн-заявку
                     </button>
                 </form>
             </div>
             <div class="mortgage__right-col">
-                <div class="mortgage__slider">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#" class="mortgage__card">
-                                    <div class="mortgage__card-title-wrapper">
-                                        <div class="mortgage__card-icon">
-                                            <img src="/images/mortgage/1.svg" alt="" class="mortgage__card-icon-image">
-                                        </div>
-                                        <h3 class="mortgage__card-title">
-                                            Семейная<br>
-                                            ипотека
-                                        </h3>
-                                    </div>
-                                    <ul class="mortgage__card-features-list">
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    <span>от</span> 15%
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    первоначальный взнос
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    6%
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    процентная ставка
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    30 <span>лет</span>
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    макс. cрок кредита
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    6 <span>млн</span>
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    макс. сумма кредита
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="mortgage__card">
-                                    <div class="mortgage__card-title-wrapper">
-                                        <div class="mortgage__card-icon">
-                                            <img src="/images/mortgage/2.svg" alt="" class="mortgage__card-icon-image">
-                                        </div>
-                                        <h3 class="mortgage__card-title">
-                                            Ипотека для IT специалистов
-                                        </h3>
-                                    </div>
-                                    <ul class="mortgage__card-features-list">
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    <span>от</span> 15%
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    первоначальный взнос
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    5%
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    процентная ставка
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    30 <span>лет</span>
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    срок кредита
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    9 <span>млн</span>
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    сумма кредита
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="mortgage__card">
-                                    <div class="mortgage__card-title-wrapper">
-                                        <div class="mortgage__card-icon">
-                                            <img src="/images/mortgage/3.svg" alt="" class="mortgage__card-icon-image">
-                                        </div>
-                                        <h3 class="mortgage__card-title">
-                                            Ипотека с&nbsp;господдержкой
-                                        </h3>
-                                    </div>
-                                    <ul class="mortgage__card-features-list">
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    <span>от</span> 15%
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    первоначальный взнос
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    5%
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    процентная ставка
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    30 <span>лет</span>
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    срок кредита
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    6 <span>млн</span>
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    сумма кредита
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="mortgage__card">
-                                    <div class="mortgage__card-title-wrapper">
-                                        <div class="mortgage__card-icon">
-                                            <img src="/images/mortgage/4.svg" alt="" class="mortgage__card-icon-image">
-                                        </div>
-                                        <h3 class="mortgage__card-title">
-                                            Губернаторская ипотека
-                                        </h3>
-                                    </div>
-                                    <ul class="mortgage__card-features-list">
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
+                <div class="mortgage__results">
+                    <div class="mortgage__results-header">
+                        <div class="mortgage__results-header-inner">
 
-                                                <div class="mortgage__card-features-card-text">
-                                                    Субсидирование из областного бюджета
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    &lt; 8% </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    процентная ставка&nbsp;не&nbsp;выше&nbsp;8%
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mortgage__card-features-list-item">
-                                            <div class="mortgage__card-features-card mortgage__card-features-card--row">
-                                                <div class="mortgage__card-features-card-amount">
-                                                    6%
-                                                </div>
-                                                <div class="mortgage__card-features-card-text">
-                                                    в течение первых 5 лет для работников бюджетной сферы
-                                                </div>
-                                            </div>
-                                        </li>
 
-                                    </ul>
-                                </a>
+                            <div class="mortgage__results-header-item">
+                                Ставка процента
+                            </div>
+                            <div class="mortgage__results-header-item">
+                                Срок кредита
+                            </div>
+                            <div class="mortgage__results-header-item">
+                                Первый взнос
+                            </div>
+                            <div class="mortgage__results-header-item">
+                                Платёж в месяц
                             </div>
                         </div>
                     </div>
+                    <div class="mortgage__results-scroll-wrapper">
+                        <ul class="mortgage__results-list">
+                            <li class="mortgage__results-list-item">
+                                <a href="#" class="mortgage__card">
+                                    <div class="mortgage__card-title-wrapper">
+                                        <div class="mortgage__card-icon">
+                                            <img src="/images/mortgage-calculator/1.webp" alt=""
+                                                class="mortgage__card-icon-image">
+                                        </div>
+                                        <h3 class="mortgage__card-title">
+                                            Дом РФ
+                                        </h3>
+                                    </div>
+                                    <ul class="mortgage__card-features-list">
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 4,6 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Ставка процента
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    до 25 лет
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Срок кредита
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 15 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Первый взнос
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    14 000 ₽/мес
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Платёж в месяц
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="mortgage__results-list-item">
+                                <a href="#" class="mortgage__card">
+                                    <div class="mortgage__card-title-wrapper">
+                                        <div class="mortgage__card-icon">
+                                            <img src="/images/mortgage-calculator/2.webp" alt=""
+                                                class="mortgage__card-icon-image">
+                                        </div>
+                                        <h3 class="mortgage__card-title">
+                                            Сбер
+                                        </h3>
+                                    </div>
+                                    <ul class="mortgage__card-features-list">
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 4,6 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Ставка процента
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    до 25 лет
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Срок кредита
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 15 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Первый взнос
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    14 000 ₽/мес
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Платёж в месяц
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="mortgage__results-list-item">
+                                <a href="#" class="mortgage__card">
+                                    <div class="mortgage__card-title-wrapper">
+                                        <div class="mortgage__card-icon">
+                                            <img src="/images/mortgage-calculator/3.webp" alt=""
+                                                class="mortgage__card-icon-image">
+                                        </div>
+                                        <h3 class="mortgage__card-title">
+                                            ВТБ
+                                        </h3>
+                                    </div>
+                                    <ul class="mortgage__card-features-list">
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 4,6 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Ставка процента
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    до 25 лет
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Срок кредита
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 15 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Первый взнос
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    14 000 ₽/мес
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Платёж в месяц
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="mortgage__results-list-item">
+                                <a href="#" class="mortgage__card">
+                                    <div class="mortgage__card-title-wrapper">
+                                        <div class="mortgage__card-icon">
+                                            <img src="/images/mortgage-calculator/4.webp" alt=""
+                                                class="mortgage__card-icon-image">
+                                        </div>
+                                        <h3 class="mortgage__card-title">
+                                            Металлинвестбанк
+                                        </h3>
+                                    </div>
+                                    <ul class="mortgage__card-features-list">
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 4,6 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Ставка процента
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    до 25 лет
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Срок кредита
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 15 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Первый взнос
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    14 000 ₽/мес
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Платёж в месяц
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="mortgage__results-list-item">
+                                <a href="#" class="mortgage__card">
+                                    <div class="mortgage__card-title-wrapper">
+                                        <div class="mortgage__card-icon">
+                                            <img src="/images/mortgage-calculator/5.webp" alt=""
+                                                class="mortgage__card-icon-image">
+                                        </div>
+                                        <h3 class="mortgage__card-title">
+                                            Совкомбанк
+                                        </h3>
+                                    </div>
+                                    <ul class="mortgage__card-features-list">
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 4,6 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Ставка процента
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    до 25 лет
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Срок кредита
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 15 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Первый взнос
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    14 000 ₽/мес
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Платёж в месяц
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="mortgage__results-list-item">
+                                <a href="#" class="mortgage__card">
+                                    <div class="mortgage__card-title-wrapper">
+                                        <div class="mortgage__card-icon">
+                                            <img src="/images/mortgage-calculator/6.webp" alt=""
+                                                class="mortgage__card-icon-image">
+                                        </div>
+                                        <h3 class="mortgage__card-title">
+                                            Альфа-Банк
+                                        </h3>
+                                    </div>
+                                    <ul class="mortgage__card-features-list">
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 4,6 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Ставка процента
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    до 25 лет
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Срок кредита
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    от 15 %
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Первый взнос
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mortgage__card-features-list-item">
+                                            <div class="mortgage__card-features-card">
+                                                <div class="mortgage__card-features-card-amount">
+                                                    14 000 ₽/мес
+                                                </div>
+                                                <div class="mortgage__card-features-card-text">
+                                                    Платёж в месяц
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <a href="#" class="mortgage__results-show-more">
+                            Показать еще 8 предложений из 20
+                        </a>
+                    </div>
                 </div>
 
+
             </div>
+        </div>
+        <div class="mortgage__remark">
+            Расчёт примерный, не является публичной офертой
         </div>
     </div>
 </section>

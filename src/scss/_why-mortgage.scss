@@ -1,0 +1,194 @@
+.why-mortgage {
+  @include blockWrapper;
+  background-color: #f5f5f5;
+  padding-bottom: 14rem;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 5.4rem;
+  }
+}
+
+.why-mortgage__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-mortgage__heading {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+
+  line-height: 100%;
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
+
+.why-mortgage__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 0.8rem;
+    grid-auto-rows: 1fr;
+  }
+}
+
+.why-mortgage__list-item {
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    display: none;
+  }
+}
+
+.why-mortgage__card {
+  flex-grow: 1;
+  background-color: #fff;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "stack";
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  @include breakpoint(mobile) {
+    border-radius: 1.2rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(153.28deg, #ffecec 13.46%, #ffffff 51.11%);
+    width: 37rem;
+    height: 37rem;
+    border-radius: 50%;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    transform: translate(50%, 50%);
+    pointer-events: none;
+    margin-right: 4rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+      margin: 0;
+      width: 19rem;
+      height: 19rem;
+      transform: translateY(-50%);
+      top: 50%;
+      bottom: 0;
+      right: 0;
+      margin-right: -9.5rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    grid-area: stack;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+}
+
+.why-mortgage__card-content {
+  grid-area: stack;
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem;
+  gap: 3rem;
+  flex-grow: 1;
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "title image" "counter image";
+    grid-gap: 2rem;
+    grid-row-gap: 0.5rem;
+
+    &::before {
+      content: counter(ordered-list, decimal-leading-zero);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      grid-area: counter;
+      line-height: 130%;
+      color: rgba(#020202, 0.2);
+      align-self: flex-end;
+      justify-self: flex-start;
+    }
+  }
+}
+
+.why-mortage__card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 125%;
+  letter-spacing: -0.02em;
+  @include breakpoint(mobile) {
+    grid-area: title;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 120%;
+  }
+}
+
+.why-mortgage__card-bottom-row {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  justify-content: space-between;
+
+  @include breakpointMF(small-tablet) {
+    &::before {
+      content: counter(ordered-list, decimal-leading-zero);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 130%;
+      color: rgba(#020202, 0.2);
+    }
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.why-mortage__card-image {
+  flex-shrink: 0;
+  width: 11rem;
+  height: 11rem;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+
+  @include breakpoint(mobile) {
+    justify-self: flex-end;
+    align-self: center;
+    grid-area: image;
+    width: 5rem;
+    height: 5rem;
+  }
+}

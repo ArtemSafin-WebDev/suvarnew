@@ -73,6 +73,44 @@
         </form>
     </div>
 </div>
+<div class="callback-modal" id="mortgage-modal">
+    <div class="callback-modal__inner">
+        <div class="callback-modal__heading-wrapper">
+            <h3 class="callback-modal__heading">
+                Заявка на ипотеку
+            </h3>
+            <button class="callback-modal__close" type="button">
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#modal-close"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="callback-modal__text">
+            Менеджер свяжется с вами для подтверждения заявки и согласует время консультации
+        </div>
+        <form action="/" class="callback-modal__form" method="POST">
+            <div class="callback-modal__fields">
+                <div class="callback-modal__field">
+                    <div class="callback-modal__input-wrapper">
+                        <input type="text" name="your-name" class="callback-modal__input" placeholder="Имя" required="">
+                    </div>
+                </div>
+                <div class="callback-modal__field">
+                    <div class="callback-modal__input-wrapper">
+                        <input type="tel" name="your-phone" class="callback-modal__input" placeholder="Телефон"
+                            required="">
+                    </div>
+                </div>
+            </div>
+            <button class="callback-modal__submit" type="submit">
+                Отставить заявку
+            </button>
+            <div class="callback-modal__policy">
+                Нажимая "Отставить заявку", вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+            </div>
+        </form>
+    </div>
+</div>
 <div class="callback-modal" id="success-modal">
     <div class="callback-modal__inner">
         <div class="callback-modal__heading-wrapper">

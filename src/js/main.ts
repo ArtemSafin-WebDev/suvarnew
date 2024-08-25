@@ -20,6 +20,8 @@ import catalog from "./catalog";
 import gallery from "./gallery";
 import flatPlan from "./flatPlan";
 import similarFlats from "./similar-flats";
+import faq from "./faq";
+import mortgageModal from "./mortgageModal";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -42,6 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
   gallery();
   flatPlan();
   similarFlats();
+  faq();
+  mortgageModal();
 });
 
 window.addEventListener("load", () => {

@@ -1,0 +1,151 @@
+.faq {
+  @include blockWrapper;
+  padding-bottom: 12rem;
+  background-color: #f5f5f5;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 2rem;
+  }
+}
+
+.faq__content {
+  @include blockContent;
+  display: grid;
+  grid-gap: 2.4rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.faq__left-col {
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__right-col {
+  grid-column: 4 / -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  letter-spacing: -0.03em;
+  line-height: 100%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.8rem;
+  }
+}
+
+.faq__accordion {
+  background: #ffffff;
+  border-radius: 1.6rem;
+
+  @include breakpoint(mobile) {
+    border-radius: 1.6rem;
+  }
+}
+
+.faq__accordion-btn {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  text-align: left;
+  padding: 3.5rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 120%;
+  color: #020202;
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 120%;
+  }
+  svg {
+    flex-shrink: 0;
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+    transition: transform 0.2s;
+
+    @include breakpoint(mobile) {
+      width: 1.4rem;
+      height: 1.4rem;
+      align-self: flex-start;
+      margin-top: 1rem;
+    }
+  }
+
+  .faq__accordion.active & {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.faq__accordion-btn-text {
+  width: 30%;
+  flex-grow: 1;
+}
+
+.faq__accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+
+  .faq__accordion.active & {
+    grid-template-rows: 1fr;
+  }
+}
+
+.faq__accordion-content-inner {
+  overflow: hidden;
+}
+
+.faq__accordion-text {
+  padding: 3.5rem;
+  padding-top: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: rgba(#020202, 0.6);
+  max-width: 80rem;
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    padding-top: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 120%;
+    max-width: none;
+  }
+}
