@@ -242,12 +242,6 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   overflow-x: hidden;
   overflow: clip;
-
-  &.footer--gray {
-    + footer {
-      background: var(--light-gray);
-    }
-  }
 }
 
 .bg-gray {
@@ -261,6 +255,12 @@ select:-webkit-autofill:focus {
   }
   section {
     background: transparent;
+  }
+
+  &--footer {
+    footer {
+      background-color: var(--light-gray);
+    }
   }
 }
 

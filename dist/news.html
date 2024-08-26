@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="format-detection" content="telephone=no">
     <title>
-        
+        Страница Новостей и Акций
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="/assets/main.css">
   </head>
 
-  <body class="grey-bg">
+  <body class="bg-gray--footer">
     <div class="submenu-overlay"></div>
-    <header class="page-header ">
+    <header class="page-header  page-header--transparent ">
         <div class="page-header__inner">
             <a href="#" class="page-header__logo">
                 <img src="/images/dark-logo.svg" alt="" class="page-header__logo-image">
@@ -388,106 +388,447 @@
             </ul>
         </div>
     </div>    <main class="page-main">
-      <section class="contacts">
-          <div class="contacts__content">
-              <div class="contacts__breadcrumbs">
-                  <a href="#">
+      <section class="breadcrumbs bg-white">
+          <ul class="breadcrumbs-nav">
+              <li class="breadcrumbs__item">
+                  <a href="/" class="breadcrumbs__link">
                       Главная
                   </a>
-                  <a href="#" class="active">
-                      Контакты
-                  </a>
-              </div>
-              <h1 class="contacts__heading">
-                  Контакты
-              </h1>
-              <div class="contacts__cards">
-                  <div class="contacts__card">
-                      <h2 class="contacts__card-title">
-                          Телефон
-                      </h2>
-                      <div class="contacts__card-content">
-                          <a href="tel:+78004441494" class="contacts__card-link">8-800-444-14-94</a>
-                          <div class="contacts__card-remark">
-                              звонок по РФ бесплатный
-                          </div>
-                      </div>
+                  <span class="breadcrumbs__divider">
+                      <svg width="6" height="10" aria-hidden="true">
+                           <use xlink:href="#breadcrumbs-arrow-right"></use>
+                      </svg>
+                  </span>
+              </li>
+              <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__text">
+                      Новости и акции
+                  </span>
+              </li>
+          </ul>
+      </section>
+      <section class="news">
+          <div class="news__head news-head">
+              <div class="news-head__content">
+                  <div class="news-head__titles">
+                      <a href="#" class="news-head__title active">Новости</a>
+                      <a href="#" class="news-head__title">Акции</a>
+                      <a href="#" class="news-head__title">СМИ о нас</a>
                   </div>
-                  <div class="contacts__card">
-                      <h2 class="contacts__card-title">
-                          Почта
-                      </h2>
-                      <div class="contacts__card-content">
-                          <a href="mailto:info@suvarstroit.ru" class="contacts__card-link">info@suvarstroit.ru</a>
-                      </div>
-                  </div>
-                  <div class="contacts__card">
-                      <h2 class="contacts__card-title">
-                          Режим работы
-                      </h2>
-                      <div class="contacts__card-content">
-                          <ul class="contacts__card-schedule-list">
-                              <li class="contacts__card-schedule-list-item">
-                                  <div class="contacts__card-schedule-card">
-                                      <div class="contacts__card-schedule-card-key">
-                                          пн-пт
-                                      </div>
-                                      <div class="contacts__card-schedule-card-value">
-                                          10:00 - 19:00
+                  <div class="news-head__filters">
+                      <div class="news-head__filters-fields">
+                          <div class="news-head__form-fields filters__form-fields">
+                              <div class="filters__form-field news-head__form-field">
+                                  <div class="filters__form-select" data-placeholder="Все проекты">
+                                      <button class="filters__form-select-btn" type="button">
+                                          <span class="filters__form-select-btn-text js-btn-text">
+                                              Все проекты
+                                          </span>
+                                          <svg width="14" height="14" aria-hidden="true">
+                                              <use xlink:href="#select-arrow"></use>
+                                          </svg>
+                                      </button>
+                                      <div class="filters__form-select-dropdown">
+                                          <div class="filters__form-select-dropdown-inner">
+                                              <button class="filters__form-reset-btn js-reset-btn" type="button">
+                                                  <svg width="14" height="14" aria-hidden="true">
+                                                      <use xlink:href="#reset-btn"></use>
+                                                  </svg>
+                                                  Все проекты
+                                              </button>
+                                              <ul class="filters__form-select-list">
+      
+                                                  <li class="filters__form-select-list-item">
+                                                      <label class="filters__form-select-radio">
+                                                          <input type="checkbox" name="project"
+                                                                 class="filters__form-select-radio-input" value="Станция Спортивная">
+                                                          <span class="filters__form-select-radio-mark"></span>
+                                                          <span class="filters__form-select-radio-text">
+                                                              Станция Спортивная
+                                                          </span>
+                                                      </label>
+                                                  </li>
+                                                  <li class="filters__form-select-list-item">
+                                                      <label class="filters__form-select-radio">
+                                                          <input type="checkbox" name="project"
+                                                                 class="filters__form-select-radio-input" value="Времена года">
+                                                          <span class="filters__form-select-radio-mark"></span>
+                                                          <span class="filters__form-select-radio-text">
+                                                              Времена года
+                                                          </span>
+                                                      </label>
+                                                  </li>
+                                                  <li class="filters__form-select-list-item">
+                                                      <label class="filters__form-select-radio">
+                                                          <input type="checkbox" name="project"
+                                                                 class="filters__form-select-radio-input" value="Отражение">
+                                                          <span class="filters__form-select-radio-mark"></span>
+                                                          <span class="filters__form-select-radio-text">
+                                                              Отражение
+                                                          </span>
+                                                      </label>
+                                                  </li>
+                                              </ul>
+                                          </div>
                                       </div>
                                   </div>
-                              </li>
-                              <li class="contacts__card-schedule-list-item">
-                                  <div class="contacts__card-schedule-card">
-                                      <div class="contacts__card-schedule-card-key">
-                                          сб-вс
+                              </div>
+                              <div class="news-head__sort">
+                                      <button class="news-head__sort-btn" type="button">
+                                          <svg width="14" height="14" aria-hidden="true">
+                                              <use xlink:href="#sort"></use>
+                                          </svg>
+                                           <span class="news-head__sort-btn-text js-btn-text">
+                                               Сначала новые
+                                           </span>
+                                          <svg width="14" height="14" aria-hidden="true">
+                                              <use xlink:href="#accordion-arrow"></use>
+                                          </svg>
+                                      </button>
+                                      <div class="filters__form-select-dropdown">
+                                          <div class="filters__form-select-dropdown-inner">
+      
+                                              <ul class="filters__form-select-list">
+      
+                                                  <li class="filters__form-select-list-item">
+                                                      <label class="filters__form-select-radio">
+                                                          <input type="radio" name="sort" class="filters__form-select-radio-input"
+                                                                 value="Сначала новые" checked="">
+                                                          <span class="filters__form-select-radio-mark"></span>
+                                                          <span class="filters__form-select-radio-text">
+                                                      Сначала новые
+                                                  </span>
+                                                      </label>
+                                                  </li>
+                                                  <li class="filters__form-select-list-item">
+                                                      <label class="filters__form-select-radio">
+                                                          <input type="radio" name="sort" class="filters__form-select-radio-input"
+                                                                 value="Сначала старые">
+                                                          <span class="filters__form-select-radio-mark"></span>
+                                                          <span class="filters__form-select-radio-text">
+                                                      Сначала старые
+                                                  </span>
+                                                      </label>
+                                                  </li>
+      
+                                              </ul>
+                                          </div>
                                       </div>
-                                      <div class="contacts__card-schedule-card-value">
-                                          10:00 - 17:00
-                                      </div>
-                                  </div>
-                              </li>
-                          </ul>
-                          <div class="contacts__card-remark">
-                              Режим работы в праздничные дни уточняйте по телефону
+                              </div>
                           </div>
-      
-                      </div>
-                  </div>
-                  <div class="contacts__card">
-                      <h2 class="contacts__card-title">
-                          Мы в соц. сетях
-                      </h2>
-                      <div class="contacts__card-content">
-                          <ul class="contacts__card-social-list">
-                              <li class="contacts__card-social-list-item">
-                                  <a href="#" class="contacts__card-social-link">
-                                      <svg width="14" height="14" aria-hidden="true">
-                                          <use xlink:href="#vk"></use>
-                                      </svg>
-                                  </a>
-                              </li>
-                              <li class="contacts__card-social-list-item">
-                                  <a href="#" class="contacts__card-social-link">
-                                      <svg width="14" height="14" aria-hidden="true">
-                                          <use xlink:href="#telegram"></use>
-                                      </svg>
-                                  </a>
-                              </li>
-                              <li class="contacts__card-social-list-item">
-                                  <a href="#" class="contacts__card-social-link">
-                                      <svg width="14" height="14" aria-hidden="true">
-                                          <use xlink:href="#ok"></use>
-                                      </svg>
-                                  </a>
-                              </li>
-                          </ul>
-      
                       </div>
                   </div>
               </div>
           </div>
-      </section>      <section class="offices">
+          <div class="news__content">
+              <div class="news-content__wrapper">
+                  <div class="news__list news-list">
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <div class="subscribe-block">
+                          <div class="subscribe-block__content">
+                              <div class="subscribe-form">
+                                  <div class="subscribe-form__left">
+                                      <p class="subscribe-form__text">Подпишитесь на e-mail рассылку <span>и узнавайте об обновлениях первыми</span></p>
+                                  </div>
+                                  <div class="subscribe-form__right">
+                                      <form action="/" method="POST" class="subscribe-form__form" novalidate="">
+                                          <div class="subscribe-form__row">
+                                              <div class="subscribe-form__fields">
+                                                  <div class="subscribe-form__field">
+                                                      <div class="subscribe-form__input-wrapper">
+                                                          <input type="text" name="your-email" class="subscribe-form__input" required="" placeholder="E-mail" inputmode="email">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <button class="subscribe-form__submit" type="submit">
+                                                  Подписаться
+                                              </button>
+                                          </div>
+                                          <div class="subscribe-form__policy">
+                                              Нажимая "Подписаться", вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+                                          </div>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                      <a href="#" class="news-card">
+                          <div class="news-card__image-container">
+                              <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                          </div>
+                          <div class="news-card__content">
+                              <h3 class="news-card__title">
+                                  Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                              </h3>
+                              <div class="news-card__bottom-row">
+                                  <div class="news-card__date">
+                                      11.01.2024
+                                  </div>
+                                  <div class="news-card__arrow">
+                                      <svg width="14" height="14" aria-hidden="true">
+                                          <use xlink:href="#arrow-right"></use>
+                                      </svg>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <a href="#" class="news__show-more">
+                      Показать еще 16 из 214
+                  </a>
+                  <div class="news__bottom">
+                  <div class="subscribe-block">
+                      <div class="subscribe-block__content">
+                          <div class="subscribe-form">
+                              <div class="subscribe-form__left">
+                                  <p class="subscribe-form__text">Подпишитесь на e-mail рассылку <span>и узнавайте об обновлениях первыми</span></p>
+                              </div>
+                              <div class="subscribe-form__right">
+                                  <form action="/" method="POST" class="subscribe-form__form" novalidate="">
+                                      <div class="subscribe-form__row">
+                                          <div class="subscribe-form__fields">
+                                              <div class="subscribe-form__field">
+                                                  <div class="subscribe-form__input-wrapper">
+                                                      <input type="text" name="your-email" class="subscribe-form__input" required="" placeholder="E-mail" inputmode="email">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <button class="subscribe-form__submit" type="submit">
+                                              Подписаться
+                                          </button>
+                                      </div>
+                                      <div class="subscribe-form__policy">
+                                          Нажимая "Подписаться", вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="offices">
           <div class="offices__content">
               <h2 class="offices__heading">
                   Офисы продаж
@@ -520,52 +861,6 @@
       
                       </div>
                   </div>
-              </div>
-          </div>
-      </section>      <section class="excursion">
-          <div class="excursion__content">
-              <div class="excursion__card">
-                  <div class="excursion__card-image-container">
-                      <img src="/images/excursion-author.webp" alt="" class="excursion__card-image">
-                  </div>
-                  <div class="excursion__card-text-content">
-                      <h2 class="excursion__card-heading">
-                          Запишитесь на&nbsp;экскурсию
-                      </h2>
-                      <div class="excursion__card-text">
-                          Ждем вас в офисе продаж на объекте, с радостью ответим на все ваши вопросы
-                      </div>
-                      <div class="excursion__card-author">
-                          <div class="excursion__card-author-name">
-                              Питер Друкер
-                          </div>
-                          <div class="excursion__card-author-role">
-                              Руководитель отдела продаж
-                          </div>
-                      </div>
-                  </div>
-                  <form action="/" class="excursion__card-form" method="POST">
-                      <div class="excursion__card-fields">
-                          <div class="excursion__card-field">
-                              <div class="excursion__card-input-wrapper">
-                                  <input type="text" name="your-name" class="excursion__card-input" placeholder="Имя"
-                                      required="">
-                              </div>
-                          </div>
-                          <div class="excursion__card-field">
-                              <div class="excursion__card-input-wrapper">
-                                  <input type="tel" name="your-phone" class="excursion__card-input" placeholder="Телефон"
-                                      required="">
-                              </div>
-                          </div>
-                      </div>
-                      <button class="excursion__card-submit" type="submit">
-                          Отставить заявку
-                      </button>
-                      <div class="excursion__card-policy">
-                          Нажимая "Отставить заявку", вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
-                      </div>
-                  </form>
               </div>
           </div>
       </section>    </main>
@@ -911,7 +1206,7 @@
     <script src="/assets/js/backend.js"></script>
     <script src="https://api-maps.yandex.ru/v3/?apikey=f02ed68d-66b3-4bd2-b8eb-c88edc899a8f&lang=ru_RU"></script>
     <script src="/js/offices-map.js"></script>
-
+    <script src="/js/infra-map.js"></script>
   </body>
 
 </html>

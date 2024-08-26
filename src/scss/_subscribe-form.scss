@@ -1,0 +1,204 @@
+.subscribe {
+  &-block {
+    display: flex;
+    width: 100%;
+    margin-top: 8rem;
+    &__content{
+      width: 100%;
+    }
+
+    ~ section  {
+      background: var(--light-gray);
+    }
+  }
+  &-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4rem;
+    gap: 14rem;
+    background: var(--blue);
+    border-radius: 1.6rem;
+    color: var(--white);
+    @include breakpoint(mobile) {
+      padding: 2.8rem 2rem;
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    &__left {
+      max-width: 51.4rem;
+      width: 100%;
+    }
+
+    &__right {
+      max-width: calc(100% - 65.4rem);
+      width: 100%;
+      @include breakpoint(mobile) {
+        max-width: 100%;
+      }
+    }
+
+    &__text {
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 110%;
+      @include breakpoint(mobile) {
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        font-size: 2.6rem;
+      }
+
+      span {
+        @include breakpoint(mobile) {
+          display: block;
+          font-size: 1.4rem;
+          line-height: 130%;
+          margin-top: 1.2rem;
+        }
+      }
+    }
+
+    &__fields {
+      width: 100%;
+      z-index: 10;
+    }
+
+    &__field {
+      display: block;
+      position: relative;
+      .validation-error {
+        position: absolute;
+        padding: 0.6rem 0.8rem;
+        background-color: #fff;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        right: 0;
+        top: 5rem;
+        line-height: 130%;
+        color: #cf000c;
+        border: 1px solid rgba(2, 2, 2, 0.1);
+        border-radius: 0.8rem;
+        margin-top: -0.1rem;
+        pointer-events: none;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1rem;
+          height: 0.8rem;
+          right: 2.6rem;
+          bottom: 100%;
+          margin-bottom: -0.1rem;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("../images/error-tail.svg");
+        }
+      }
+    }
+
+    &__input-wrapper {
+      position: relative;
+    }
+
+    &__row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      @include breakpoint(mobile) {
+        flex-direction: column;
+      }
+    }
+
+    &__input {
+      display: block;
+      width: 100%;
+      height: 6rem;
+      padding: 0 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.2rem;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: white;
+      line-height: 150%;
+      transition: border-color 0.2s, color 0.2s;
+      @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        height: 5rem;
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      &:focus {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+
+      &.not-valid {
+        color: #ff6266;
+        background-image: url("../images/error.svg");
+        background-repeat: no-repeat;
+        background-size: 2rem auto;
+        background-position: right 2rem center;
+        &::placeholder {
+          color: #ff6266;
+        }
+      }
+    }
+
+    &__submit {
+      flex-shrink: 0;
+      user-select: none;
+      white-space: nowrap;
+      padding: 2.2rem 4.5rem;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      background-color: white;
+      color: var(--text-color);
+      line-height: 100%;
+      border-radius: 1.2rem;
+      text-align: center;
+      transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+      display: block;
+      width: 26rem;
+      @include breakpoint(mobile) {
+        width: 100%;
+        padding: 1.7rem 4.5rem;
+      }
+
+      &:link,
+      &:visited {
+        color: var(--text-color);
+      }
+
+      &:hover {
+        background-color: var(--white-hover);
+        color: var(--primary-color);
+      }
+    }
+
+    &__policy {
+      margin-top: 2.4rem;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 130%;
+      color: rgba(255, 255, 255, 0.5);
+      @include breakpoint(mobile) {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+      }
+
+      a {
+        color: var(--white);
+        &:hover {
+          color: #a5d9ff;
+        }
+      }
+    }
+  }
+}
+
+

@@ -815,6 +815,11 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    &:hover {
+      border-color: rgba(2, 2, 2, 0.1);
+      background: rgba(207, 0, 12, 0.05)
+    }
   }
 }
 

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="format-detection" content="telephone=no">
     <title>
-        
+        Страница Новости детальная
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="/assets/main.css">
   </head>
 
-  <body class="grey-bg">
+  <body class="bg-gray--footer">
     <div class="submenu-overlay"></div>
-    <header class="page-header ">
+    <header class="page-header  page-header--transparent ">
         <div class="page-header__inner">
             <a href="#" class="page-header__logo">
                 <img src="/images/dark-logo.svg" alt="" class="page-header__logo-image">
@@ -388,106 +388,448 @@
             </ul>
         </div>
     </div>    <main class="page-main">
-      <section class="contacts">
-          <div class="contacts__content">
-              <div class="contacts__breadcrumbs">
-                  <a href="#">
-                      Главная
-                  </a>
-                  <a href="#" class="active">
-                      Контакты
-                  </a>
+      <section class="breadcrumbs bg-white">
+        <ul class="breadcrumbs-nav">
+          <li class="breadcrumbs__item">
+            <a href="/" class="breadcrumbs__link">
+              Главная
+            </a>
+            <span class="breadcrumbs__divider">
+                      <svg width="6" height="10" aria-hidden="true">
+                           <use xlink:href="#breadcrumbs-arrow-right"></use>
+                      </svg>
+                  </span>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">
+              Новости и акции
+            </a>
+            <span class="breadcrumbs__divider">
+                      <svg width="6" height="10" aria-hidden="true">
+                           <use xlink:href="#breadcrumbs-arrow-right"></use>
+                      </svg>
+                  </span>
+          </li>
+          <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__text">
+                      Инструкция по эксплуатации жилых помещений для собственников ЖК "Южный Парк" домов 3.1-3.5
+                  </span>
+          </li>
+        </ul>
+      </section>
+      <section class="news-detail">
+        <div class="news-detail__wrapper">
+          <div class="news-detail__left">
+              <a href="#" class="news-detail__link-back">
+                  <svg width="6" height="10" aria-hidden="true">
+                      <use xlink:href="#breadcrumbs-arrow-right"></use>
+                  </svg>
+                  <span>Ко всем новостям</span>
+              </a>
+              <div class="news-detail__date">17.01.2024</div>
+              <div class="news-detail__left-bottom">
+                  <button class="button-share news-detail__share">
+                      <svg width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#share"></use>
+                      </svg>
+                  </button>
+                  <div class="share-content">
+                      <a href="#" class="share-content__link">
+                          <svg width="16" height="16" aria-hidden="true">
+                              <use xlink:href="#link"></use>
+                          </svg>
+                          <span>Скопировать ссылку</span>
+                      </a>
+                      <a href="#" class="share-content__link">
+                          <svg width="16" height="16" aria-hidden="true">
+                              <use xlink:href="#whatsapp"></use>
+                          </svg>
+                          <span>WhatsApp</span>
+                      </a>
+                      <a href="#" class="share-content__link">
+                          <svg width="16" height="16" aria-hidden="true">
+                              <use xlink:href="#telegram"></use>
+                          </svg>
+                          <span>Telegram</span>
+                      </a>
+                      <a href="#" class="share-content__link">
+                          <svg width="16" height="16" aria-hidden="true">
+                              <use xlink:href="#vk"></use>
+                          </svg>
+                          <span>ВКонтакте</span>
+                      </a>
+                      <a href="#" class="share-content__link">
+                          <svg width="16" height="16" aria-hidden="true">
+                              <use xlink:href="#ok"></use>
+                          </svg>
+                          <span>Одноклассники</span>
+                      </a>
+                  </div>
               </div>
-              <h1 class="contacts__heading">
-                  Контакты
-              </h1>
-              <div class="contacts__cards">
-                  <div class="contacts__card">
-                      <h2 class="contacts__card-title">
-                          Телефон
-                      </h2>
-                      <div class="contacts__card-content">
-                          <a href="tel:+78004441494" class="contacts__card-link">8-800-444-14-94</a>
-                          <div class="contacts__card-remark">
-                              звонок по РФ бесплатный
+          </div>
+      
+          <div class="news-detail__right">
+                <div class="news-detail__content">
+                    <h1 class="news-detail__title-text">Инструкция по эксплуатации жилых помещений для собственников ЖК «Южный Парк» домов 3.1-3.5</h1>
+                    <div class="news-detail__image">
+                          <img src="/images/news-detail/1.png" alt="" />
+                          <div>Подпись к фото, если потребуется</div>
+                    </div>
+                    <div class="news-detail__announce">«Правильная ипотека» предоставляет заемщику на период строительства объекта недвижимости льготную процентную ставку 1,99% по ипотеке без удорожания стоимости. </div>
+                    <p>Простой абзац текста. Длина строки ориентировочно 70 символов. С другой стороны, высокотехнологичная концепция общественного уклада требует анализа поэтапного и последовательного развития общества. Простой абзац допускает использование <strong>выделений</strong>, акцентов, можно размещать <a href="#">ссылки.</a></p>
+                    <h2>Подзаголовки (уровень 1) </h2>
+                    <p>#Суварстроит выбрал дату для начала продаж неслучайно: она перекликается с названием нового жилого комплекса, «Отражение», и символизирует идею проекта — создание комфортного жилья для семей с детьми. Квартиры в жилом комплексе будут интересны семейным парам, которые хотят жить в современном районе Казани с благоприятной экологией и инфраструктурой, а также инвесторам, желающим выгодно вложить и сохранить капитал, так как на старте продаж ценовое предложение значительно интереснее по сравнению со строящимися на рынке проектами.</p>
+                    <div class="news-detail__image">
+                      <img src="/images/news-detail/2.png" alt="">
+                      <div>Подпись к фото, если потребуется</div>
+                    </div>
+                    <h3>Подзаголовки (уровень 2) </h3>
+                    <p>Простой абзац текста. Длина строки ориентировочно 70 символов. С другой стороны, высокотехнологичная концепция общественного уклада требует анализа поэтапного и последовательного развития общества. Простой абзац допускает использование <strong>выделений</strong>, акцентов, можно размещать <a href="#">ссылки.</a></p>
+                    <p>Давайте добавим к новости список, например преимущества:</p>
+                    <ul>
+                      <li>без увеличения стоимости за пользование программой;</li>
+                      <li>льготная ставка 1,99% до сдачи дома;</li>
+                      <li>после сдачи ставка согласно программам «семейная ипотека», «господдержка»</li>
+                      <li>возможно использование с «Комбо-ипотекой»</li>
+                    </ul>
+                    <div class="news-detail__video">
+                        <a href="#" class="news-detail__video-wrapper">
+                            <img src="/images/news-detail/3.png" alt="" class="news-detail__video-preview">
+                            <div class="news-detail__video-play">
+                                <svg width="100" height="101" viewBox="0 0 100 101" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M57.334 49.832L46.6673 57.832L46.6673 41.832L57.334 49.832Z"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <p>Нумерованный список лежит тут:</p>
+                    <ol>
+                        <li>без увеличения стоимости за пользование программой;</li>
+                        <li>льготная ставка 1,99% до сдачи дома;</li>
+                        <li>после сдачи ставка согласно программам «семейная ипотека», «господдержка»</li>
+                        <li>возможно использование с «Комбо-ипотекой»</li>
+                    </ol>
+                    <div class="news-detail__blockquote">
+                        <div class="news-detail__blockquote-img">
+                            <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#quotes"></use>
+                            </svg>
+                        </div>
+                        <blockquote>
+                            <p>В планировку двора мы внедрили много разных
+                                зон отдыха, подчеркнув их различными приемами ландшафтного благоустройства – это и сложные композиции из растений, геопластика,
+                                адаптивная подсветка, малые архитектурные
+                                формы и много другое.</p>
+                        </blockquote>
+                        <div class="news-detail__blockquote-avatar">
+                            <div class="news-detail__blockquote-avatar-img">
+                                  <img src="/images/news-detail/avatar.png" alt="">
+                            </div>
+                            <p>Питер Друкер <span>Главный менеджер</span></p>
+                        </div>
+                    </div>
+                    <p>Простой абзац текста. Длина строки ориентировочно 70 символов. С другой стороны, высокотехнологичная концепция общественного уклада требует анализа поэтапного и последовательного развития общества. Простой абзац допускает использование <strong>выделений</strong>, акцентов, можно размещать <a href="#">ссылки.</a></p>
+                    <div class="news-detail__slider">
+                        <div class="news-detail__slider-swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="news-detaill__slider-card">
+                                        <img src="/images/news-detail/4.png" alt="" class="news-detaill__slider-image">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news-detaill__slider-card">
+                                        <img src="/images/news-detail/4.png" alt="" class="news-detaill__slider-image">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news-detaill__slider-card">
+                                        <img src="/images/news-detail/4.png" alt="" class="news-detaill__slider-image">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news-detaill__slider-card">
+                                        <img src="/images/news-detail/4.png" alt="" class="news-detaill__slider-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-detail__slider-pagination"></div>
+      
+                        <div class="news-detail__slider-fraction-pagination">
+                            <div class="news-detail__slider-fraction-pagination-inner">
+      
+                            </div>
+                            <div class="news-detail__slider-fraction-pagination-progress">
+                                <svg width="100" height="100" viewBox="0 0 100 100"
+                                     vector-effect="non-scaling-stroke">
+                                    <circle r="45" cx="50" cy="50" fill="transparent" stroke-width="1px">
+                                    </circle>
+                                    <circle r="45" cx="50" cy="50" fill="transparent" stroke-width="1px">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <button class="news-detail__slider-fullscreen-btn">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#fullscreen"></use>
+                            </svg>
+                        </button>
+                        <div class="news-detail__slider__arrows">
+                            <button class="news-detail__slider__arrow news-detail__slider__arrow--prev">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#slider-arrow-left"></use>
+                                </svg>
+                            </button>
+                            <button class="news-detail__slider__arrow news-detail__slider__arrow--next">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#slider-arrow-right"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+              <div class="news-detail__bottom">
+                  <div class="news-detail__bottom-share">
+                      <div class="news-detail__bottom-share-title">Поделиться:</div>
+                      <div class="news-detail__bottom-share-buttons">
+                          <div class="news-detail__bottom-share-button">
+                              <a href="#" class="news-detail__bottom-share-button-link">
+                                  <svg width="16" height="16" aria-hidden="true">
+                                      <use xlink:href="#link"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                          <div class="news-detail__bottom-share-button">
+                              <a href="#" class="news-detail__bottom-share-button-link">
+                                  <svg width="16" height="16" aria-hidden="true">
+                                      <use xlink:href="#whatsapp"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                          <div class="news-detail__bottom-share-button">
+                              <a href="#" class="news-detail__bottom-share-button-link">
+                                  <svg width="16" height="16" aria-hidden="true">
+                                      <use xlink:href="#telegram"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                          <div class="news-detail__bottom-share-button">
+                              <a href="#" class="news-detail__bottom-share-button-link">
+                                  <svg width="16" height="16" aria-hidden="true">
+                                      <use xlink:href="#vk"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                          <div class="news-detail__bottom-share-button">
+                              <a href="#" class="news-detail__bottom-share-button-link">
+                                  <svg width="16" height="16" aria-hidden="true">
+                                      <use xlink:href="#ok"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </div>
-                  </div>
-                  <div class="contacts__card">
-                      <h2 class="contacts__card-title">
-                          Почта
-                      </h2>
-                      <div class="contacts__card-content">
-                          <a href="mailto:info@suvarstroit.ru" class="contacts__card-link">info@suvarstroit.ru</a>
+                      <div class="news-detail__bottom-up">
+                          <a href="#" class="news-detail__bottom-up-link">
+                              <span>Наверх</span>
+                              <svg width="14" height="14" aria-hidden="true">
+                                  <use xlink:href="#fat-arrow"></use>
+                              </svg>
+                          </a>
                       </div>
                   </div>
-                  <div class="contacts__card">
-                      <h2 class="contacts__card-title">
-                          Режим работы
-                      </h2>
-                      <div class="contacts__card-content">
-                          <ul class="contacts__card-schedule-list">
-                              <li class="contacts__card-schedule-list-item">
-                                  <div class="contacts__card-schedule-card">
-                                      <div class="contacts__card-schedule-card-key">
-                                          пн-пт
+              </div>
+              <div class="news-detail-form">
+                  <div class="news-detail-form__image">
+                      <img src="/images/news-detail/left-form.png" alt="">
+                  </div>
+                  <div class="subscribe-block">
+                      <div class="subscribe-block__content">
+                          <div class="subscribe-form">
+                              <div class="subscribe-form__left">
+                                  <p class="subscribe-form__text">Подпишитесь на e-mail рассылку <span>и узнавайте об обновлениях первыми</span></p>
+                              </div>
+                              <div class="subscribe-form__right">
+                                  <form action="/" method="POST" class="subscribe-form__form" novalidate="">
+                                      <div class="subscribe-form__row">
+                                          <div class="subscribe-form__fields">
+                                              <div class="subscribe-form__field">
+                                                  <div class="subscribe-form__input-wrapper">
+                                                      <input type="text" name="your-email" class="subscribe-form__input" required="" placeholder="E-mail" inputmode="email">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <button class="subscribe-form__submit" type="submit">
+                                              Подписаться
+                                          </button>
                                       </div>
-                                      <div class="contacts__card-schedule-card-value">
-                                          10:00 - 19:00
+                                      <div class="subscribe-form__policy">
+                                          Нажимая "Подписаться", вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
                                       </div>
-                                  </div>
-                              </li>
-                              <li class="contacts__card-schedule-list-item">
-                                  <div class="contacts__card-schedule-card">
-                                      <div class="contacts__card-schedule-card-key">
-                                          сб-вс
-                                      </div>
-                                      <div class="contacts__card-schedule-card-value">
-                                          10:00 - 17:00
-                                      </div>
-                                  </div>
-                              </li>
-                          </ul>
-                          <div class="contacts__card-remark">
-                              Режим работы в праздничные дни уточняйте по телефону
+                                  </form>
+                              </div>
                           </div>
-      
-                      </div>
-                  </div>
-                  <div class="contacts__card">
-                      <h2 class="contacts__card-title">
-                          Мы в соц. сетях
-                      </h2>
-                      <div class="contacts__card-content">
-                          <ul class="contacts__card-social-list">
-                              <li class="contacts__card-social-list-item">
-                                  <a href="#" class="contacts__card-social-link">
-                                      <svg width="14" height="14" aria-hidden="true">
-                                          <use xlink:href="#vk"></use>
-                                      </svg>
-                                  </a>
-                              </li>
-                              <li class="contacts__card-social-list-item">
-                                  <a href="#" class="contacts__card-social-link">
-                                      <svg width="14" height="14" aria-hidden="true">
-                                          <use xlink:href="#telegram"></use>
-                                      </svg>
-                                  </a>
-                              </li>
-                              <li class="contacts__card-social-list-item">
-                                  <a href="#" class="contacts__card-social-link">
-                                      <svg width="14" height="14" aria-hidden="true">
-                                          <use xlink:href="#ok"></use>
-                                      </svg>
-                                  </a>
-                              </li>
-                          </ul>
-      
                       </div>
                   </div>
               </div>
           </div>
-      </section>      <section class="offices">
+        </div>
+      </section>
+      <div class="news-detail__modal">
+          <div class="news-detail__modal-inner">
+              <div class="news-detail__modal-video-wrapper">
+                  <button class="news-detail__modal-close" type="button">
+                      <svg width="14" height="14" aria-hidden="true">
+                          <use xlink:href="#modal-close"></use>
+                      </svg>
+                  </button>
+                  <div class="news-detail__iframe-wrapper">
+                      <iframe src="https://vk.com/video_ext.php?oid=-129992179&id=456240434&hd=2&autoplay=0" width="1280"
+                              height="720"
+                              allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+                              frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+      
+              </div>
+          </div>
+      </div>
+      <section class="news-more">
+          <div class="news-more__content">
+              <div class="news-more__top-row">
+                  <h2 class="news-more__heading">
+                      Читайте далее
+                  </h2>
+                  <div class="news-more__arrows">
+                      <button class="news-more__arrow news-more__arrow--prev">
+                          <svg width="14" height="14" aria-hidden="true">
+                              <use xlink:href="#slider-arrow-left"></use>
+                          </svg>
+                      </button>
+                      <button class="news-more__arrow news-more__arrow--next">
+                          <svg width="14" height="14" aria-hidden="true">
+                              <use xlink:href="#slider-arrow-right"></use>
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+      
+              <div class="swiper news-more__slider">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide news-more__slide">
+                          <a href="#" class="news-card">
+                              <div class="news-card__image-container">
+                                  <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                              </div>
+                              <div class="news-card__content">
+                                  <h3 class="news-card__title">
+                                      Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                                  </h3>
+                                  <div class="news-card__bottom-row">
+                                      <div class="news-card__date">
+                                          11.01.2024
+                                      </div>
+                                      <div class="news-card__arrow">
+                                          <svg width="14" height="14" aria-hidden="true">
+                                              <use xlink:href="#arrow-right"></use>
+                                          </svg>
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="swiper-slide news-more__slide">
+                          <a href="#" class="news-card">
+                              <div class="news-card__image-container">
+                                  <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                              </div>
+                              <div class="news-card__content">
+                                  <h3 class="news-card__title">
+                                      Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                                  </h3>
+                                  <div class="news-card__bottom-row">
+                                      <div class="news-card__date">
+                                          11.01.2024
+                                      </div>
+                                      <div class="news-card__arrow">
+                                          <svg width="14" height="14" aria-hidden="true">
+                                              <use xlink:href="#arrow-right"></use>
+                                          </svg>
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="swiper-slide news-more__slide">
+                          <a href="#" class="news-card">
+                              <div class="news-card__image-container">
+                                  <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                              </div>
+                              <div class="news-card__content">
+                                  <h3 class="news-card__title">
+                                      Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                                  </h3>
+                                  <div class="news-card__bottom-row">
+                                      <div class="news-card__date">
+                                          11.01.2024
+                                      </div>
+                                      <div class="news-card__arrow">
+                                          <svg width="14" height="14" aria-hidden="true">
+                                              <use xlink:href="#arrow-right"></use>
+                                          </svg>
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="swiper-slide news-more__slide">
+                          <a href="#" class="news-card">
+                              <div class="news-card__image-container">
+                                  <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                              </div>
+                              <div class="news-card__content">
+                                  <h3 class="news-card__title">
+                                      Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                                  </h3>
+                                  <div class="news-card__bottom-row">
+                                      <div class="news-card__date">
+                                          11.01.2024
+                                      </div>
+                                      <div class="news-card__arrow">
+                                          <svg width="14" height="14" aria-hidden="true">
+                                              <use xlink:href="#arrow-right"></use>
+                                          </svg>
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="swiper-slide news-more__slide">
+                          <a href="#" class="news-card">
+                              <div class="news-card__image-container">
+                                  <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                              </div>
+                              <div class="news-card__content">
+                                  <h3 class="news-card__title">
+                                      Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                                  </h3>
+                                  <div class="news-card__bottom-row">
+                                      <div class="news-card__date">
+                                          11.01.2024
+                                      </div>
+                                      <div class="news-card__arrow">
+                                          <svg width="14" height="14" aria-hidden="true">
+                                              <use xlink:href="#arrow-right"></use>
+                                          </svg>
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="offices">
           <div class="offices__content">
               <h2 class="offices__heading">
                   Офисы продаж
@@ -520,52 +862,6 @@
       
                       </div>
                   </div>
-              </div>
-          </div>
-      </section>      <section class="excursion">
-          <div class="excursion__content">
-              <div class="excursion__card">
-                  <div class="excursion__card-image-container">
-                      <img src="/images/excursion-author.webp" alt="" class="excursion__card-image">
-                  </div>
-                  <div class="excursion__card-text-content">
-                      <h2 class="excursion__card-heading">
-                          Запишитесь на&nbsp;экскурсию
-                      </h2>
-                      <div class="excursion__card-text">
-                          Ждем вас в офисе продаж на объекте, с радостью ответим на все ваши вопросы
-                      </div>
-                      <div class="excursion__card-author">
-                          <div class="excursion__card-author-name">
-                              Питер Друкер
-                          </div>
-                          <div class="excursion__card-author-role">
-                              Руководитель отдела продаж
-                          </div>
-                      </div>
-                  </div>
-                  <form action="/" class="excursion__card-form" method="POST">
-                      <div class="excursion__card-fields">
-                          <div class="excursion__card-field">
-                              <div class="excursion__card-input-wrapper">
-                                  <input type="text" name="your-name" class="excursion__card-input" placeholder="Имя"
-                                      required="">
-                              </div>
-                          </div>
-                          <div class="excursion__card-field">
-                              <div class="excursion__card-input-wrapper">
-                                  <input type="tel" name="your-phone" class="excursion__card-input" placeholder="Телефон"
-                                      required="">
-                              </div>
-                          </div>
-                      </div>
-                      <button class="excursion__card-submit" type="submit">
-                          Отставить заявку
-                      </button>
-                      <div class="excursion__card-policy">
-                          Нажимая "Отставить заявку", вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
-                      </div>
-                  </form>
               </div>
           </div>
       </section>    </main>
@@ -911,7 +1207,7 @@
     <script src="/assets/js/backend.js"></script>
     <script src="https://api-maps.yandex.ru/v3/?apikey=f02ed68d-66b3-4bd2-b8eb-c88edc899a8f&lang=ru_RU"></script>
     <script src="/js/offices-map.js"></script>
-
+    <script src="/js/infra-map.js"></script>
   </body>
 
 </html>
