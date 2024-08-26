@@ -199,6 +199,7 @@
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
   z-index: 50;
+  .news-head__sort.active &,
   .catalog__sort.active &,
   .filters__form-select.active & {
     opacity: 1;

@@ -1,23 +1,27 @@
-.similar-flats {
+.news-more {
   @include blockWrapper;
-  background-color: #fff;
+  background-color: var(--light-gray);
   padding-bottom: 12rem;
+  border-radius: 3.2rem 3.2rem 0 0;
+  padding-top: 8rem;
 
   @include breakpoint(mobile) {
-    padding-bottom: 7rem;
+    padding-bottom: 5.6rem;
+    padding-top: 4rem;
     width: 100%;
     display: block;
   }
-}
 
-.similar-flats__content {
-  @include blockContent;
-  @include breakpoint(mobile) {
-
+  & ~ section {
+    background: var(--light-gray);
   }
 }
 
-.similar-flats__top-row {
+.news-more__content {
+  @include blockContent;
+}
+
+.news-more__top-row {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -34,7 +38,7 @@
   }
 }
 
-.similar-flats__heading {
+.news-more__heading {
   display: flex;
   gap: 0.6rem;
   font-style: normal;
@@ -53,7 +57,7 @@
     font-size: 3rem;
     line-height: 110%;
     letter-spacing: -0.05em;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   &::after {
     content: "";
@@ -70,7 +74,7 @@
   }
 }
 
-.similar-flats__arrows {
+.news-more__arrows {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -80,7 +84,7 @@
   }
 }
 
-.similar-flats__arrow {
+.news-more__arrow {
   flex-shrink: 0;
   width: 7rem;
   height: 7rem;
@@ -117,32 +121,17 @@
     }
   }
 }
-
-.similar-flats__slider {
+.news-more {
   .swiper-slide {
-    &.similar-flats__slide {
-      display: flex;
-      flex-direction: column;
-      height: auto;
-      box-sizing: border-box;
-      width: calc((100% / 5) - 2rem);
-      margin-right: 2.4rem;
-      overflow: visible;
-      transform: unset;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      @include breakpoint(mobile) {
-        width: 30.4rem;
-        margin-right: 1.6rem;
-        &:last-child {
-          margin-right: 0;
-        }
-      }
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+    width: calc(25% - 1.8rem);
+    margin-right: 2.4rem;
+    @include breakpoint(mobile) {
+      width: 30.4rem;
+      margin-right: 1.6rem;
     }
   }
 }
-
-

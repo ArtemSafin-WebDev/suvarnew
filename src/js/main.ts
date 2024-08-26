@@ -19,11 +19,15 @@ import plan from "./plan";
 import catalog from "./catalog";
 import gallery from "./gallery";
 import flatPlan from "./flatPlan";
-import similarFlats from "./similar-flats";
+import similarFlats from "./similarFlats";
 import faq from "./faq";
 import mortgageModal from "./mortgageModal";
 import excursion from "./excursion";
 import mortgageVariants from "./mortgageVariants";
+import newsList from "./newsList";
+import subscribeForm from "./subscribeForm";
+import newsDetail from "./newsDetail";
+import newsMore from "./newsMore";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -50,6 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
   mortgageModal();
   excursion();
   mortgageVariants();
+  newsList();
+  subscribeForm();
+  newsDetail();
+  newsMore();
 });
 
 window.addEventListener("load", () => {

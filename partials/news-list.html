@@ -1,0 +1,386 @@
+<section class="breadcrumbs bg-white">
+    <ul class="breadcrumbs-nav">
+        <li class="breadcrumbs__item">
+            <a href="/" class="breadcrumbs__link">
+                Главная
+            </a>
+            <span class="breadcrumbs__divider">
+                <svg width="6" height="10" aria-hidden="true">
+                     <use xlink:href="#breadcrumbs-arrow-right"></use>
+                </svg>
+            </span>
+        </li>
+        <li class="breadcrumbs__item">
+            <span class="breadcrumbs__text">
+                Новости и акции
+            </span>
+        </li>
+    </ul>
+</section>
+<section class="news">
+    <div class="news__head news-head">
+        <div class="news-head__content">
+            <div class="news-head__titles">
+                <a href="#" class="news-head__title active">Новости</a>
+                <a href="#" class="news-head__title">Акции</a>
+                <a href="#" class="news-head__title">СМИ о нас</a>
+            </div>
+            <div class="news-head__filters">
+                <div class="news-head__filters-fields">
+                    <div class="news-head__form-fields filters__form-fields">
+                        <div class="filters__form-field news-head__form-field">
+                            <div class="filters__form-select" data-placeholder="Все проекты">
+                                <button class="filters__form-select-btn" type="button">
+                                    <span class="filters__form-select-btn-text js-btn-text">
+                                        Все проекты
+                                    </span>
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#select-arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="filters__form-select-dropdown">
+                                    <div class="filters__form-select-dropdown-inner">
+                                        <button class="filters__form-reset-btn js-reset-btn" type="button">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#reset-btn"></use>
+                                            </svg>
+                                            Все проекты
+                                        </button>
+                                        <ul class="filters__form-select-list">
+
+                                            <li class="filters__form-select-list-item">
+                                                <label class="filters__form-select-radio">
+                                                    <input type="checkbox" name="project"
+                                                           class="filters__form-select-radio-input" value="Станция Спортивная">
+                                                    <span class="filters__form-select-radio-mark"></span>
+                                                    <span class="filters__form-select-radio-text">
+                                                        Станция Спортивная
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li class="filters__form-select-list-item">
+                                                <label class="filters__form-select-radio">
+                                                    <input type="checkbox" name="project"
+                                                           class="filters__form-select-radio-input" value="Времена года">
+                                                    <span class="filters__form-select-radio-mark"></span>
+                                                    <span class="filters__form-select-radio-text">
+                                                        Времена года
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li class="filters__form-select-list-item">
+                                                <label class="filters__form-select-radio">
+                                                    <input type="checkbox" name="project"
+                                                           class="filters__form-select-radio-input" value="Отражение">
+                                                    <span class="filters__form-select-radio-mark"></span>
+                                                    <span class="filters__form-select-radio-text">
+                                                        Отражение
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-head__sort">
+                                <button class="news-head__sort-btn" type="button">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#sort"></use>
+                                    </svg>
+                                     <span class="news-head__sort-btn-text js-btn-text">
+                                         Сначала новые
+                                     </span>
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#accordion-arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="filters__form-select-dropdown">
+                                    <div class="filters__form-select-dropdown-inner">
+
+                                        <ul class="filters__form-select-list">
+
+                                            <li class="filters__form-select-list-item">
+                                                <label class="filters__form-select-radio">
+                                                    <input type="radio" name="sort" class="filters__form-select-radio-input"
+                                                           value="Сначала новые" checked="">
+                                                    <span class="filters__form-select-radio-mark"></span>
+                                                    <span class="filters__form-select-radio-text">
+                                                Сначала новые
+                                            </span>
+                                                </label>
+                                            </li>
+                                            <li class="filters__form-select-list-item">
+                                                <label class="filters__form-select-radio">
+                                                    <input type="radio" name="sort" class="filters__form-select-radio-input"
+                                                           value="Сначала старые">
+                                                    <span class="filters__form-select-radio-mark"></span>
+                                                    <span class="filters__form-select-radio-text">
+                                                Сначала старые
+                                            </span>
+                                                </label>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="news__content">
+        <div class="news-content__wrapper">
+            <div class="news__list news-list">
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {{> subscribe-form}}
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="news-card">
+                    <div class="news-card__image-container">
+                        <img src="/images/home-news/1.webp" alt="" class="news-card__image">
+                    </div>
+                    <div class="news-card__content">
+                        <h3 class="news-card__title">
+                            Субсидированная процентная ставка 5,5% по программе “Господдержка 2020”
+                        </h3>
+                        <div class="news-card__bottom-row">
+                            <div class="news-card__date">
+                                11.01.2024
+                            </div>
+                            <div class="news-card__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <a href="#" class="news__show-more">
+                Показать еще 16 из 214
+            </a>
+            <div class="news__bottom">
+            {{> subscribe-form}}
+            </div>
+        </div>
+    </div>
+</section>
