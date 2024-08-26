@@ -23,6 +23,7 @@ import similarFlats from "./similar-flats";
 import faq from "./faq";
 import mortgageModal from "./mortgageModal";
 import excursion from "./excursion";
+import mortgageVariants from "./mortgageVariants";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   faq();
   mortgageModal();
   excursion();
+  mortgageVariants();
 });
 
 window.addEventListener("load", () => {
