@@ -28,6 +28,9 @@ import newsList from "./newsList";
 import subscribeForm from "./subscribeForm";
 import newsDetail from "./newsDetail";
 import newsMore from "./newsMore";
+import awards from "./awards";
+import aboutTeam from "./aboutTeam";
+import aboutCompany from "./aboutCompany";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -58,6 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
   subscribeForm();
   newsDetail();
   newsMore();
+  awards();
+  aboutTeam();
+  aboutCompany();
 });
 
 window.addEventListener("load", () => {

@@ -1,0 +1,118 @@
+.about-numbers {
+  @include blockWrapper;
+  background-color: #fff;
+  padding-bottom: 18rem;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+}
+
+.about-numbers__content {
+  @include blockContent;
+}
+
+.about-numbers__row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.about-numbers__heading {
+  grid-column: 1 / 6;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    gap: 0.6rem;
+  }
+
+  &::after {
+    content: "";
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    background-color: #cf000c;
+
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.about-numbers__list {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-gap: 2.4rem;
+  grid-row-gap: 8rem;
+  padding-left: 2.8rem;
+  grid-column: 6 / -1;
+  margin-top: -1rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    margin: 0;
+    grid-gap: 0.8rem;
+    grid-row-gap: 1.8rem;
+    padding: 0;
+  }
+}
+
+.about-numbers__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-numbers__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.about-numbers__card-amount {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+
+  @include breakpoint(mobile) {
+    font-size: 5rem;
+  }
+}
+
+.about-numbers__card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 125%;
+  letter-spacing: -0.02em;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 120%;
+  }
+}

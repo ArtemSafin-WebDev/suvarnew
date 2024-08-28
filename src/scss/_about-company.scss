@@ -1,0 +1,241 @@
+.about-company {
+  @include blockWrapper;
+  padding-bottom: 20rem;
+  padding-top: 10rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  border-top-left-radius: 2.4rem;
+  border-top-right-radius: 2.4rem;
+  margin-top: -2.4rem;
+  @include breakpoint(mobile) {
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    margin-top: -1.2rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.about-company__content {
+  @include blockContent;
+}
+
+.about-company__top-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  align-items: flex-start;
+  margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.about-company__heading {
+  grid-column: 1 / 6;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    gap: 0.6rem;
+  }
+
+  &::after {
+    content: "";
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    background-color: #cf000c;
+
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.about-company__text {
+  grid-column: 6 / 11;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  b {
+    font-weight: inherit;
+    color: var(--primary-color);
+  }
+}
+
+.about-company__text-hidden {
+  display: none;
+
+  .content-shown & {
+    display: block;
+  }
+}
+
+.about-company__text-default {
+  .content-shown & {
+    display: none;
+  }
+}
+
+.about-company__text-toggle {
+  gap: 0.6rem;
+  display: flex;
+  align-items: flex-start;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+  margin-top: 2rem;
+  color: #101038;
+  transition: color 0.2s;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 100%;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: #cf000c;
+    }
+  }
+
+  span {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    flex-shrink: 0;
+    fill: currentColor;
+    transition: transform 0.2s;
+
+    @include breakpoint(mobile) {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
+  .content-shown & {
+    span {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: inline;
+      }
+    }
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.about-company__slider {
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+    margin-right: 2.4rem;
+
+    @include breakpoint(mobile) {
+      margin-right: 0.8rem;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.about-company__slider-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.8rem;
+  }
+}
+
+.about-company__slider-card-image-wrapper {
+  width: max-content;
+}
+
+.about-company__slider-card-image {
+  display: block;
+  height: 42.4rem;
+  width: auto;
+  max-width: none;
+  border-radius: 2rem;
+  @include breakpoint(mobile) {
+    height: 20rem;
+    border-radius: 1.2rem;
+  }
+}
+
+.about-company__slider-card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  max-width: 31rem;
+  width: 100%;
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    white-space: normal;
+  }
+}
