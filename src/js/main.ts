@@ -31,6 +31,9 @@ import newsMore from "./newsMore";
 import awards from "./awards";
 import aboutTeam from "./aboutTeam";
 import aboutCompany from "./aboutCompany";
+import companyProjects from "./companyProjects";
+import aboutIntro from "./aboutIntro";
+import aboutHistory from "./aboutHistory";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -64,6 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
   awards();
   aboutTeam();
   aboutCompany();
+  companyProjects();
+  aboutIntro();
+  aboutHistory();
 });
 
 window.addEventListener("load", () => {

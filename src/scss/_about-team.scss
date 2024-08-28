@@ -2,10 +2,8 @@
   @include blockWrapper;
   background-color: #f5f5f5;
   padding-bottom: 15rem;
-  padding-top: 20rem;
 
   @include breakpoint(mobile) {
-    padding-top: 4rem;
     padding-bottom: 6rem;
   }
 }

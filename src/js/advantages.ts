@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
+
 import { Navigation } from "swiper/modules";
 import gsap from "gsap";
 import { Flip } from "gsap/Flip";

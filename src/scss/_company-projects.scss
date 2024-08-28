@@ -206,6 +206,17 @@
       }
     }
   }
+  @include breakpoint(mobile) {
+    &.info-shown {
+      .company-projects__card-info-wrapper {
+        grid-template-rows: 1fr;
+      }
+
+      .company-projects__card-info-btn svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
 
 .company-projects__card-wrapper {
@@ -397,6 +408,10 @@
   display: flex;
   flex-direction: column;
   padding-top: 2.8rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 1rem;
+  }
 }
 
 .company-projects__card-info-list-item {
@@ -412,6 +427,10 @@
   justify-content: space-between;
   gap: 2rem;
   padding: 1.6rem 0;
+
+  @include breakpoint(mobile) {
+    padding: 1.2rem 0;
+  }
 }
 
 .company-projects__card-info-card-key {
@@ -420,6 +439,10 @@
   font-size: 1.6rem;
   line-height: 150%;
   color: rgba(#020202, 0.5);
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+  }
 }
 
 .company-projects__card-info-card-value {
@@ -427,6 +450,9 @@
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 130%;
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+  }
 }
 
 .company-projects__show-more {
