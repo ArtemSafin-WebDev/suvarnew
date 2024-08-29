@@ -34,6 +34,8 @@ import aboutCompany from "./aboutCompany";
 import companyProjects from "./companyProjects";
 import aboutIntro from "./aboutIntro";
 import aboutHistory from "./aboutHistory";
+import fav from "./fav";
+import recent from "./recent";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -70,6 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
   companyProjects();
   aboutIntro();
   aboutHistory();
+  fav();
+  recent();
 });
 
 window.addEventListener("load", () => {

@@ -124,7 +124,7 @@
   padding: 2px;
   background: #101038;
   border-radius: 100px;
-  width: 38px;
+  width: 40px;
 
   &::before {
     content: "";
@@ -140,7 +140,7 @@
 
 .company-projects__toggle-input:checked ~ .company-projects__toggle-box {
   &::before {
-    transform: translateX(1.8rem);
+    transform: translateX(18px);
   }
 }
 

@@ -1,0 +1,134 @@
+.recent {
+  @include blockWrapper;
+  padding-bottom: 12rem;
+  background-color: #f5f5f5;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+}
+
+.recent__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.recent__top-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.recent__heading {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  align-items: baseline;
+
+  @include breakpoint(mobile) {
+    justify-content: flex-start;
+    gap: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+  }
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.recent__arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: auto;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.recent__arrow {
+  flex-shrink: 0;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 1px solid rgba(2, 2, 2, 0.1);
+  transition: border-color 0.2s, background-color 0.2s;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+    transition: fill 0.2s;
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  @media (hover: hover) {
+    &:not(.swiper-button-disabled) {
+      &:hover {
+        background-color: var(--white-hover);
+        border-color: var(--white-hover);
+        svg {
+          fill: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+.recent__slider {
+  & > .swiper {
+    @include breakpoint(mobile) {
+      overflow: visible;
+    }
+    & > .swiper-wrapper {
+      & > .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        box-sizing: border-box;
+        width: calc(20% - 2.4rem * 4 / 5);
+        margin-right: 2.4rem;
+
+        @include breakpoint(mobile) {
+          width: 30.4rem;
+          margin-right: 1.6rem;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
