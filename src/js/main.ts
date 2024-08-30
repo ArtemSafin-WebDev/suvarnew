@@ -36,6 +36,7 @@ import aboutIntro from "./aboutIntro";
 import aboutHistory from "./aboutHistory";
 import fav from "./fav";
 import recent from "./recent";
+import projectMenu from "./projectMenu";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -74,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   aboutHistory();
   fav();
   recent();
+  projectMenu();
 });
 
 window.addEventListener("load", () => {

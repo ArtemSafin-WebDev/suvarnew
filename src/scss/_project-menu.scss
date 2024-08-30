@@ -1,0 +1,120 @@
+.project-menu {
+  @include blockWrapper;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 90;
+  min-height: 6.8rem;
+  background-color: #f5f5f5;
+  display: none;
+}
+
+.project-menu__inner {
+  @include blockContent;
+
+  display: flex;
+
+  gap: 4rem;
+}
+
+.project-menu__list {
+  display: flex;
+
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  row-gap: 1.6rem;
+  align-self: stretch;
+  &:first-child {
+    margin-right: auto;
+  }
+}
+
+.project-menu__list-item {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-menu__dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 1.2rem;
+  width: max-content;
+}
+
+.project-menu__dropdown-inner {
+  background-color: #fff;
+  box-shadow: 0px 0.2rem 2rem rgba(0, 0, 0, 0.06);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.project-menu__dropdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-menu__dropdown-link {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 100%;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.project-menu__link {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: rgba(2, 2, 2, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  &:link,
+  &:visited {
+    color: rgba(2, 2, 2, 0.5);
+  }
+}
+
+.project-menu__btn {
+  flex-shrink: 0;
+  user-select: none;
+  white-space: nowrap;
+  padding: 1.5rem 1.8rem;
+  background: var(--primary-color);
+  border-radius: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: white;
+  transition: background-color 0.2s, color 0.2s;
+  align-self: center;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+}
