@@ -1,12 +1,17 @@
 .similar-flats {
   @include blockWrapper;
-  background-color: #fff;
+  background-color: #F5F5F5;
+  padding-top: 6rem;
+  border-radius: 3.2rem 3.2rem 0 0;
   padding-bottom: 12rem;
+  margin-top: -3.2rem;
 
   @include breakpoint(mobile) {
     padding-bottom: 7rem;
+    padding-top: 4rem;
     width: 100%;
     display: block;
+    border-radius: 1.2rem 1.2rem 0 0;
   }
 }
 

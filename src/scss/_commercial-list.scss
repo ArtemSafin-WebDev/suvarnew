@@ -1,0 +1,62 @@
+.commercial {
+  ~ section {
+    background: #F5F5F5;
+  }
+  .catalog__table-card {
+    @include breakpoint(mobile) {
+      padding: 2rem 1.6rem;
+    }
+    &:focus,
+    &:hover {
+      border: 1px solid var(--primary-color-hover);
+
+      .catalog__table-list-card-wrapper & {
+        border: 1px solid var(--primary-color-hover);
+      }
+    }
+  }
+
+  .catalog__table-view-header {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 0.54fr) minmax(0, 0.7fr) minmax(0, 0.64fr) minmax(0, 1.4fr) minmax(0, 0.3fr) minmax(0, 0.42fr) minmax(0, 2fr);
+  }
+
+  .catalog__table-list-card-main-wrapper {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.6fr) minmax(0, 0.7fr) minmax(0, 0.74fr) minmax(0, 1.5fr) minmax(0, 0.3fr) minmax(0, 0.42fr) minmax(0, 2fr);
+    @include breakpoint(mobile) {
+      gap: 1rem;
+    }
+  }
+
+  .catalog__sort-btn {
+    justify-content: space-between;
+    @include breakpoint(mobile) {
+      justify-content: center;
+      color: #212173;
+    }
+  }
+
+  .catalog__sort {
+    width: 22.6rem;
+    @include breakpoint(mobile) {
+      width: 5rem;
+    }
+  }
+
+  .catalog__sort-area {
+    width: 32.7rem;
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  .catalog__view-modes {
+    @include breakpoint(mobile) {
+      order: 31;
+    }
+  }
+  .catalog__view-mode-btn svg {
+    @include breakpoint(mobile) {
+      fill: #212173;
+    }
+  }
+}
