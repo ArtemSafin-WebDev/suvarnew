@@ -28,6 +28,7 @@ import newsList from "./newsList";
 import subscribeForm from "./subscribeForm";
 import newsDetail from "./newsDetail";
 import newsMore from "./newsMore";
+import commercial from "./commercial";
 import awards from "./awards";
 import aboutTeam from "./aboutTeam";
 import aboutCompany from "./aboutCompany";
@@ -37,6 +38,8 @@ import aboutHistory from "./aboutHistory";
 import fav from "./fav";
 import recent from "./recent";
 import projectMenu from "./projectMenu";
+import parking from "./parking";
+import boxrooms from "./boxrooms";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -76,6 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
   fav();
   recent();
   projectMenu();
+  commercial();
+  parking();
+  boxrooms();
 });
 
 window.addEventListener("load", () => {

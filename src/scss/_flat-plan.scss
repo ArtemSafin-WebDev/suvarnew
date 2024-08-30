@@ -4,6 +4,11 @@
   grid-gap: var(--content-padding, 0);
   padding-bottom: 11rem;
   padding-top: 6rem;
+  background: var(--white);
+
+  @include breakpoint(mobile) {
+    padding-bottom: 7.2rem;
+  }
 
   &__content {
     grid-column-start: content-start;

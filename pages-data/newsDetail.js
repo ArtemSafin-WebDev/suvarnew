@@ -1,8 +1,8 @@
-const project = {
+const newsDetail = {
     "/news-detail.html": {
         title: "Страница Новости детальная",
         transparentHeader: true,
     },
 };
 
-export default project;
+export default newsDetail;
