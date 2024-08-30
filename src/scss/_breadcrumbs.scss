@@ -3,6 +3,8 @@
   display: grid;
   grid-template-columns: [main-start] 1fr [content-start] minmax(0, var(--container-width, 0)) [content-end] 1fr [main-end];
   grid-gap: var(--content-padding, 0);
+  background: #FFF;
+
   @include breakpoint(mobile) {
     padding-top: 10rem;
   }
