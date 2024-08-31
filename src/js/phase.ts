@@ -13,6 +13,18 @@ export default function phase() {
       btn?.addEventListener("click", (event) => {
         event.preventDefault();
         const target = event.target as HTMLElement;
+
+        const currentWrapper = target.closest(".phase__card-wrapper");
+
+        const allWrappers = Array.from(
+          document.querySelectorAll(".phase__card-wrapper")
+        );
+
+        allWrappers.forEach((wrapper) => {
+          if (wrapper !== currentWrapper) {
+            wrapper.classList.remove("open");
+          }
+        });
         target.closest(".phase__card-wrapper")?.classList.toggle("open");
       });
     });

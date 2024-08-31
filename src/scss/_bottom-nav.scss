@@ -9,6 +9,13 @@
     background: #ffffff;
     box-shadow: 0px -0.6rem 10rem rgba(0, 0, 0, 0.07);
     @include blockWrapper;
+    transition: opacity 0.4s, visibility 0.4s;
+
+    body:has(.project-menu__mobile.active) & {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s, visibility 0s linear 0.4s;
+    }
   }
 }
 

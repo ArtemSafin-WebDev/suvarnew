@@ -7,7 +7,16 @@ gsap.registerPlugin(ScrollTrigger);
 export default function projectMenu() {
   const projectMenu = document.querySelector<HTMLElement>(".project-menu");
   const pageHeader = document.querySelector<HTMLElement>(".page-header");
-
+  const toggleMenu = document.querySelector<HTMLButtonElement>(
+    ".project-menu__mobile-toggle-btn"
+  );
+  const toggleDropdown = document.querySelector<HTMLElement>(
+    ".project-menu__mobile"
+  );
+  const overlay = document.querySelector<HTMLElement>(".project-menu-overlay");
+  const mobileLinks = Array.from(
+    document.querySelectorAll<HTMLElement>(".project-menu__mobile-card-link")
+  );
   if (!pageHeader || !projectMenu) return;
 
   let headerHeight = pageHeader.offsetHeight;
@@ -93,4 +102,23 @@ export default function projectMenu() {
       }
     },
   });
+
+  if (toggleDropdown && toggleMenu) {
+    toggleMenu.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleDropdown.classList.toggle("active");
+    });
+
+    if (overlay) {
+      overlay.addEventListener("click", () => {
+        toggleDropdown.classList.remove("active");
+      });
+    }
+
+    mobileLinks.forEach((link) =>
+      link.addEventListener("click", () => {
+        toggleDropdown.classList.remove("active");
+      })
+    );
+  }
 }

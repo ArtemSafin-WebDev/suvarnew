@@ -40,6 +40,7 @@ import recent from "./recent";
 import projectMenu from "./projectMenu";
 import parking from "./parking";
 import boxrooms from "./boxrooms";
+import applyClick from "./applyClick";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -82,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   commercial();
   parking();
   boxrooms();
+  applyClick();
 });
 
 window.addEventListener("load", () => {
