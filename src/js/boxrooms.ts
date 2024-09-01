@@ -102,8 +102,12 @@ export default function boxrooms() {
         })
     );
 
-    const mapElement = element.querySelector<HTMLElement>(".boxrooms-projects__map");
-    const rightColumn = element.querySelector<HTMLElement>(".boxrooms-projects__right");
+    const mapElement = element.querySelector<HTMLElement>(
+        ".boxrooms-projects__map"
+    );
+    const rightColumn = element.querySelector<HTMLElement>(
+        ".boxrooms-projects__right"
+    );
 
     let scrollTriggerInstance: ScrollTrigger | null = null;
 
@@ -123,15 +127,22 @@ export default function boxrooms() {
         if (scrollTriggerInstance) {
           scrollTriggerInstance.kill();
           scrollTriggerInstance = null;
-          mapElement?.style.removeProperty('position');
-          mapElement?.style.removeProperty('top');
-          mapElement?.style.removeProperty('width');
+          mapElement?.style.removeProperty("position");
+          mapElement?.style.removeProperty("top");
+          mapElement?.style.removeProperty("width");
         }
       }
     };
 
-    enableScrollTrigger();
+    const onScroll = () => {
+      if (!scrollTriggerInstance) {
+        enableScrollTrigger();
+        window.addEventListener("resize", enableScrollTrigger);
+        window.removeEventListener("scroll", onScroll);
+      }
+    };
 
+    window.addEventListener("scroll", onScroll);
     window.addEventListener('resize', enableScrollTrigger);
   });
 }

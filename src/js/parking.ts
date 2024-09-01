@@ -130,8 +130,15 @@ export default function parking() {
       }
     };
 
-    enableScrollTrigger();
+    const onScroll = () => {
+      if (!scrollTriggerInstance) {
+        enableScrollTrigger();
+        window.addEventListener("resize", enableScrollTrigger);
+        window.removeEventListener("scroll", onScroll);
+      }
+    };
 
+    window.addEventListener("scroll", onScroll);
     window.addEventListener('resize', enableScrollTrigger);
   });
 }

@@ -1763,14 +1763,7 @@
 }
 
 .boxrooms-card-options-item__text {
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 150%;
-  display: inline-flex;
-  width: 8rem;
-  @include breakpoint(mobile) {
-    font-size: 1.4rem;
-  }
+  display: none;
 }
 
 a.boxrooms-card-options-item__link {
