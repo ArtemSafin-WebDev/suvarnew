@@ -5,7 +5,22 @@ import "nouislider/dist/nouislider.css";
 export default function filters() {
   const elements = Array.from(
     document.querySelectorAll<HTMLElement>(
-      ".filters, .catalog__short-filters, .catalog__all-filters-modal-form, .commercial__short-filters, .commercial__all-filters-modal-form, .parking__short-filters, .parking__all-filters-modal-form"
+      ".filters, .catalog__short-filters, " +
+        ".catalog__all-filters-modal-form, " +
+        ".commercial__short-filters, " +
+        ".commercial__all-filters-modal-form, " +
+        ".parking__short-filters, " +
+        ".parking__all-filters-modal-form, " +
+        ".parking-project__short-filters , " +
+        ".parking-project__all-filters-modal-form, " +
+        ".parking-house__short-filters, " +
+        ".parking-house__all-filters-modal-form, " +
+        ".boxrooms__all-filters-modal-form, " +
+        ".boxrooms__short-filters," +
+        ".boxrooms-project__short-filters, " +
+        ".boxrooms-project__all-filters-modal-form, " +
+        ".boxrooms-house__short-filters, " +
+        ".boxrooms-house__all-filters-modal-form"
     )
   );
 

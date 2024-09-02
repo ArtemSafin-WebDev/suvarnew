@@ -41,6 +41,11 @@ import projectMenu from "./projectMenu";
 import parking from "./parking";
 import boxrooms from "./boxrooms";
 import applyClick from "./applyClick";
+import parkingProject from "./parkingProject";
+import parkingHouse from "./parkingHouse";
+import boxroomsProject from "./boxroomsProject";
+import boxroomsHouse from "./boxroomsHouse";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -84,6 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
   parking();
   boxrooms();
   applyClick();
+  parkingProject();
+  parkingHouse();
+  boxroomsHouse();
+  boxroomsProject();
 });
 
 window.addEventListener("load", () => {

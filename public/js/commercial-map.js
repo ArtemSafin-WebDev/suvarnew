@@ -140,9 +140,7 @@ async function initMap() {
       <div class="cm-projects__card">
         <div class="cm-projects__card-image-container">
           <div class="cm-projects__card-image">
-            <a href="${item.link}" class="cm-projects__list-link">
               <img src="${item.image.src}" alt="" class="cm-projects__card-image-src">
-            </a>
           </div>
           <div class="cm-projects__card-tags">
             <ul class="cm-projects__card-tags-list">

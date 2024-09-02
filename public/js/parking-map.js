@@ -137,9 +137,7 @@ async function initMap() {
       <div class="parking-projects__card">
         <div class="parking-projects__card-image-container">
           <div class="parking-projects__card-image">
-            <a href="${item.link}" class="parking-projects__list-link">
               <img src="${item.image.src}" alt="" class="parking-projects__card-image-src">
-            </a>
           </div>
           <div class="parking-projects__card-tags">
             <ul class="parking-projects__card-tags-list">

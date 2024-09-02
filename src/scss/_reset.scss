@@ -64,6 +64,18 @@ body.sharing-card-shown {
   }
 }
 
+body.plan-show {
+  @include breakpoint(mobile) {
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  .bottom-nav {
+    display: none;
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;
