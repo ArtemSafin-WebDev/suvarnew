@@ -11,7 +11,7 @@
     @include blockWrapper;
     transition: opacity 0.4s, visibility 0.4s;
 
-    body:has(.project-menu__mobile.active) & {
+    body:not(.menu-open):has(.project-menu__mobile.active) & {
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.4s, visibility 0s linear 0.4s;

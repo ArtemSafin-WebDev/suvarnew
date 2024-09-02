@@ -4,7 +4,6 @@ async function initMap() {
   if (!ourProjects) return;
   const listElement = ourProjects.querySelector(".cm-projects__list");
   if (!listElement) {
-    console.error("Element with class '.cm-projects__list' not found.");
     return;
   }
   const mapElement = ourProjects.querySelector(".cm-projects__map-inner");
@@ -78,8 +77,26 @@ async function initMap() {
   let markers = [];
   let activeMarker = null;
 
-  // Функция для создания элементов списка
-  const createProjectListItem = (item) => {
+  const showMarkerLabel = (markerElement) => {
+    if (activeMarker && activeMarker !== markerElement) {
+      const prevLabel = activeMarker.querySelector(
+          ".cm-projects__map-marker-price-label"
+      );
+      if (prevLabel) {
+        prevLabel.style.display = "none";
+      }
+    }
+
+    const currentLabel = markerElement.querySelector(
+        ".cm-projects__map-marker-price-label"
+    );
+    if (currentLabel) {
+      currentLabel.style.display = "block";
+      activeMarker = markerElement;
+    }
+  };
+
+  const createProjectListItem = (item, markerElement) => {
     const listItem = document.createElement("li");
     listItem.className = "cm-projects__list-item";
     listItem.setAttribute("data-title", item.title);
@@ -88,10 +105,16 @@ async function initMap() {
     item.tags.forEach((tag) => {
       tagsHTML += `
         <li class="cm-projects__card-tags-list-item">
-          <div class="cm-projects__card-tag ${tag.dark ? 'cm-projects__card-tag--dark' : ''}">
-            ${tag.icon ? `<svg width="15" height="16" aria-hidden="true" class="cm-projects__card-tag-icon">
+          <div class="cm-projects__card-tag ${
+          tag.dark ? "cm-projects__card-tag--dark" : ""
+      }">
+            ${
+          tag.icon
+              ? `<svg width="15" height="16" aria-hidden="true" class="cm-projects__card-tag-icon">
                             <use xlink:href="#${tag.icon}"></use>
-                          </svg>` : ''}
+                          </svg>`
+              : ""
+      }
             ${tag.text}
           </div>
         </li>
@@ -117,9 +140,7 @@ async function initMap() {
       <div class="cm-projects__card">
         <div class="cm-projects__card-image-container">
           <div class="cm-projects__card-image">
-            <a href="${item.link}" class="cm-projects__list-link">
               <img src="${item.image.src}" alt="" class="cm-projects__card-image-src">
-            </a>
           </div>
           <div class="cm-projects__card-tags">
             <ul class="cm-projects__card-tags-list">
@@ -151,7 +172,9 @@ async function initMap() {
       </div>
     `;
 
-    listItem.addEventListener("click", () => {
+    listItem.addEventListener("click", (event) => {
+      event.stopPropagation();
+
       map.update({
         location: {
           center: [item.coords.lng, item.coords.lat],
@@ -159,13 +182,13 @@ async function initMap() {
           duration: 1000,
         },
       });
+
+      showMarkerLabel(markerElement);
     });
 
-    console.log("Adding list item:", listItem);
     return listItem;
   };
 
-  // Получение данных и создание списка
   const createProjectList = async () => {
     let data = [];
     try {
@@ -180,11 +203,6 @@ async function initMap() {
     }
 
     data.forEach((item) => {
-      const listItem = createProjectListItem(item);
-      listElement.appendChild(listItem);
-      console.log("Appended item to list:", listItem);
-
-      // Добавление маркера на карту
       const markerElement = document.createElement("div");
       markerElement.className = "cm-projects__map-marker";
       markerElement.innerHTML = `
@@ -207,46 +225,33 @@ async function initMap() {
       );
 
       markerElement.addEventListener("click", (event) => {
-        event.stopPropagation(); // Останавливаем всплытие события
-
-        if (activeMarker && activeMarker !== markerElement) {
-          const prevLabel = activeMarker.querySelector(
-              ".cm-projects__map-marker-price-label"
-          );
-          if (prevLabel) {
-            prevLabel.style.display = "none";
-          }
-        }
-
-        const currentLabel = markerElement.querySelector(
-            ".cm-projects__map-marker-price-label"
-        );
-        if (currentLabel) {
-          const isVisible = currentLabel.style.display === "block";
-          currentLabel.style.display = isVisible ? "none" : "block";
-          activeMarker = markerElement;
-        }
+        event.stopPropagation();
+        showMarkerLabel(markerElement);
       });
 
       markers.push({ marker, data: item });
       map.addChild(marker);
+
+      const listItem = createProjectListItem(item, markerElement);
+      listElement.appendChild(listItem);
     });
   };
 
   await createProjectList();
 
   document.addEventListener("click", (event) => {
-    if (activeMarker) {
-      if (!activeMarker.contains(event.target)) {
-        const currentLabel = activeMarker.querySelector(
-            ".cm-projects__map-marker-price-label"
-        );
-        if (currentLabel) {
-          currentLabel.style.display = "none";
-          activeMarker = null;
-        }
+    if (
+        activeMarker &&
+        !activeMarker.contains(event.target) &&
+        !event.target.closest(".cm-projects__list-item")
+    ) {
+      const currentLabel = activeMarker.querySelector(
+          ".cm-projects__map-marker-price-label"
+      );
+      if (currentLabel) {
+        currentLabel.style.display = "none";
+        activeMarker = null;
       }
     }
   });
-  console.log(listElement.innerHTML);
 }
