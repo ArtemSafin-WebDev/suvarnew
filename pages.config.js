@@ -10,6 +10,10 @@ import commercialListTable from "./pages-data/commercialListTable";
 import commercialDetail from "./pages-data/commercialDetail";
 import parking from "./pages-data/parking";
 import boxrooms from "./pages-data/boxrooms";
+import parkingProject from "./pages-data/parkingProject";
+import parkingHouse from "./pages-data/parkingHouse";
+import boxroomsProject from "./pages-data/boxroomsProject";
+import boxroomsHouse from "./pages-data/boxroomsHouse";
 
 
 const pagesConfig = {
@@ -25,6 +29,10 @@ const pagesConfig = {
   ...commercialDetail,
   ...parking,
   ...boxrooms,
+  ...parkingProject,
+  ...parkingHouse,
+  ...boxroomsProject,
+  ...boxroomsHouse,
 };
 
 export default pagesConfig;

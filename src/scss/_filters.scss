@@ -201,6 +201,11 @@
   z-index: 50;
   .news-head__sort.active &,
   .catalog__sort.active &,
+  .parking-project__sort.active &,
+  .parking-house__sort.active &,
+  .boxrooms-project__sort.active &,
+  .boxrooms__sort.active &,
+  .boxrooms-house__sort.active &,
   .filters__form-select.active & {
     opacity: 1;
     visibility: inherit;

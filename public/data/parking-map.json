@@ -1,0 +1,314 @@
+[
+  {
+    "title": "Южный парк",
+    "price": "от 14,34 млн руб.",
+    "link": "#",
+    "image": {
+      "src": "/images/commercial/1.png"
+    },
+    "icon": {
+      "src": "/images/commercial/1.png"
+    },
+    "coords": {
+      "lat": 55.69014,
+      "lng": 49.201732
+    },
+    "description": "Жилой комплекс «Южный парк» — это комплекс жилых домов внутри большой лесопарковой территории.",
+    "tags": [
+      {
+        "dark": false,
+        "icon": false,
+        "text": "Комфорт"
+      },
+      {
+        "dark": false,
+        "icon": "key",
+        "text": "Сдача в 2026"
+      }
+    ],
+    "location": "Уютная ул., 6, село Усады",
+    "actions": [
+      {
+        "icon": "car",
+        "count": {
+          "number": 220,
+          "text": "машино-мест"
+        },
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "title": "Станция Спортивная",
+    "price": "от 14,34 млн руб.",
+    "link": "#",
+    "image": {
+      "src": "/images/commercial/2.png"
+    },
+    "icon": {
+      "src": "/images/commercial/2.png"
+    },
+    "coords": {
+      "lat": 55.680684,
+      "lng": 49.199525
+    },
+    "description": "Жилой комплекс «Станция Спортивная» — это комплекс жилых домов внутри большой лесопарковой территории.",
+    "tags": [
+      {
+        "dark": false,
+        "icon": false,
+        "text": "Комфорт"
+      },
+      {
+        "dark": false,
+        "icon": "key",
+        "text": "Сдача в 2026"
+      }
+    ],
+    "location": "Казань, Детский проезд",
+    "actions": [
+      {
+        "icon": "car",
+        "count": {
+          "number": 124,
+          "text": "машино-места"
+        },
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "title": "Времена года",
+    "price": "от 14,34 млн руб.",
+    "link": "#",
+    "image": {
+      "src": "/images/commercial/3.png"
+    },
+    "icon": {
+      "src": "/images/commercial/3.png"
+    },
+    "coords": {
+      "lat": 55.681539,
+      "lng": 49.192938
+    },
+    "description": "Жилой комплекс «Времена года» — это комплекс жилых домов внутри большой лесопарковой территории.",
+    "tags": [
+      {
+        "dark": false,
+        "icon": false,
+        "text": "Комфорт"
+      },
+      {
+        "dark": false,
+        "icon": "key",
+        "text": "Сдача в 2026"
+      }
+    ],
+    "location": "Приволжский р-н, ул. Генерала Ерина, 13",
+    "actions": [
+      {
+        "icon": "car",
+        "count": {
+          "number": 678,
+          "text": "машино-мест"
+        },
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "title": "Сказочный лес",
+    "price": "от 14,34 млн руб.",
+    "link": "#",
+    "image": {
+      "src": "/images/commercial/4.png"
+    },
+    "icon": {
+      "src": "/images/commercial/4.png"
+    },
+    "coords": {
+      "lat": 55.724565,
+      "lng": 49.174004
+    },
+    "description": "Жилой комплекс «Сказочный лес» — это комплекс жилых домов внутри большой лесопарковой территории.",
+    "tags": [
+      {
+        "dark": true,
+        "icon": false,
+        "text": "Бизнес класс"
+      },
+      {
+        "dark": false,
+        "icon": "key",
+        "text": "Сдача в 2026"
+      }
+    ],
+    "location": "ул. Рауиса Гареева, 109",
+    "actions": [
+      {
+        "icon": "car",
+        "count": {
+          "number": 76,
+          "text": "машино-мест"
+        },
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "title": "Палитра",
+    "price": "от 14,34 млн руб.",
+    "link": "#",
+    "image": {
+      "src": "/images/commercial/5.png"
+    },
+    "icon": {
+      "src": "/images/commercial/5.png"
+    },
+    "coords": {
+      "lat": 55.721516,
+      "lng": 49.187663
+    },
+    "description": "Жилой комплекс «Палитра» — это комплекс жилых домов внутри большой лесопарковой территории.",
+    "tags": [
+      {
+        "dark": false,
+        "icon": false,
+        "text": "Комфорт"
+      },
+      {
+        "dark": false,
+        "icon": "key",
+        "text": "Сдача в 2026"
+      }
+    ],
+    "location": "Приволжский район, ул. Братьев Батталовых",
+    "actions": [
+      {
+        "icon": "car",
+        "count": {
+          "number": 345,
+          "text": "машино-мест"
+        },
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "title": "Отражение",
+    "price": "от 14,34 млн руб.",
+    "link": "#",
+    "image": {
+      "src": "/images/commercial/6.png"
+    },
+    "icon": {
+      "src": "/images/commercial/6.png"
+    },
+    "coords": {
+      "lat": 55.721788,
+      "lng": 49.184488
+    },
+    "description": "Жилой комплекс «Отражение» — это комплекс жилых домов внутри большой лесопарковой территории.",
+    "tags": [
+      {
+        "dark": false,
+        "icon": false,
+        "text": "Комфорт"
+      },
+      {
+        "dark": false,
+        "icon": "key",
+        "text": "Сдача в 2026"
+      }
+    ],
+    "location": "Приволжский район, ул. Братьев Батталовых",
+    "actions": [
+      {
+        "icon": "car",
+        "count": {
+          "number": 765,
+          "text": "машино-места"
+        },
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "title": "Столичный",
+    "price": "от 14,34 млн руб.",
+    "link": "#",
+    "image": {
+      "src": "/images/commercial/7.png"
+    },
+    "icon": {
+      "src": "/images/commercial/7.png"
+    },
+    "coords": {
+      "lat": 55.819012,
+      "lng": 49.146547
+    },
+    "description": "Жилой комплекс «Столичный» — это комплекс жилых домов внутри большой лесопарковой территории.",
+    "tags": [
+      {
+        "dark": true,
+        "icon": false,
+        "text": "Бизнес класс"
+      },
+      {
+        "dark": false,
+        "icon": "key",
+        "text": "Сдача в 2026"
+      }
+    ],
+    "location": "Чистопольская улица, 86/10",
+    "actions": [
+      {
+        "icon": "car",
+        "count": {
+          "number": 126,
+          "text": "машино-места"
+        },
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "title": "Батталовский",
+    "price": "от 14,34 млн руб.",
+    "link": "#",
+    "image": {
+      "src": "/images/commercial/8.png"
+    },
+    "icon": {
+      "src": "/images/commercial/8.png"
+    },
+    "coords": {
+      "lat": 55.723846,
+      "lng": 49.181179
+    },
+    "description": "Жилой комплекс «Батталовский» — это комплекс жилых домов внутри большой лесопарковой территории.",
+    "tags": [
+      {
+        "dark": false,
+        "icon": false,
+        "text": "Комфорт"
+      },
+      {
+        "dark": false,
+        "icon": "key",
+        "text": "Сдача в 2026"
+      }
+    ],
+    "location": "Приволжский район, ул. Братьев Батталовых",
+    "actions": [
+      {
+        "icon": "car",
+        "count": {
+          "number": 435,
+          "text": "машино-мест"
+        },
+        "link": "#"
+      }
+    ]
+  }
+]
