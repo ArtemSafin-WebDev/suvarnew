@@ -27,12 +27,15 @@
     height: 100%;
     z-index: 90;
     background-color: rgba(black, 0.4);
-    transition: opacity 0.4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
     opacity: 0;
     display: block;
+    visibility: hidden;
 
     body:has(.project-menu__mobile.active) & {
       opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
     }
   }
 }

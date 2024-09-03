@@ -2,6 +2,8 @@ import Swiper from "swiper";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import Select from "./classes/Select";
+import Plyr from "plyr";
+import "plyr/dist/plyr.css";
 
 export default function constructionProgress() {
   const elements = Array.from(
@@ -66,5 +68,49 @@ export default function constructionProgress() {
     element.addEventListener("reinitSlider", () => {
       initSlider;
     });
+
+    const videoModal = element.querySelector<HTMLElement>(
+      ".construction-progress__modal"
+    );
+    if (videoModal) {
+      const modalClose = videoModal.querySelector<HTMLElement>(
+        ".construction-progress__modal-close"
+      );
+      const openModal = () => {
+        document.body.classList.add("modal-open");
+        videoModal?.classList.add("active");
+      };
+      const closeModal = () => {
+        document.body.classList.remove("modal-open");
+        videoModal?.classList.remove("active");
+        const iframe = videoModal?.querySelector("iframe");
+        if (iframe) {
+          let iframeSrc = iframe.src;
+          iframe.src = iframeSrc;
+        }
+      };
+
+      element.addEventListener("click", (event) => {
+        const target = event.target as HTMLElement;
+        if (
+          target.matches(".construction-progress__slider-card") ||
+          target.closest(".construction-progress__slider-card")
+        ) {
+          event.preventDefault();
+          openModal();
+        }
+      });
+
+      modalClose?.addEventListener("click", (event) => {
+        event.preventDefault();
+        closeModal();
+      });
+
+      videoModal?.addEventListener("click", (event) => {
+        if (event.target === videoModal) {
+          closeModal();
+        }
+      });
+    }
   });
 }
