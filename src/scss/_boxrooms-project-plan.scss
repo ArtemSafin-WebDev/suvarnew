@@ -1,0 +1,958 @@
+.boxrooms-project__plan-card {
+  display: flex;
+  grid-gap: 2rem;
+  padding: 3rem 3rem 4rem;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  border: 1px solid white;
+  transition: background-color 0.2s, border-color 0.2s;
+  border-radius: 2rem;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    background-color: #fff;
+    border-radius: 1.6rem;
+    padding: 0;
+    position: relative;
+  }
+}
+
+.boxrooms-project__plan-view-header {
+  margin-bottom: 2.4rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0 3rem;
+  padding-right: 4rem;
+  border: 1px solid transparent;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.boxrooms-project__plan-view-header-item {
+  &:first-child {
+    width: 28.5rem;
+  }
+
+  &:nth-child(2) {
+    width: 11.5rem;
+  }
+
+  &:nth-child(3) {
+    width: 21.1rem;
+  }
+
+  &:nth-child(4) {
+    width: 28rem;
+  }
+
+  &:nth-child(5) {
+    width: 8rem;
+  }
+
+  &:nth-child(6) {
+    width: 15rem;
+  }
+  &:nth-child(7) {
+    width: 36rem;
+  }
+}
+
+.boxrooms-project__plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  @include breakpoint(mobile) {
+    gap: 2.4rem;
+  }
+}
+
+.boxrooms-project__plan-list-card-main-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8rem;
+  width: 100%;
+  @include breakpoint(mobile) {
+    gap: 2.2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.boxrooms-project__plan-card-mobile-not-price-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 47rem);
+  gap: 5.8rem;
+  @include breakpoint(mobile) {
+    width: 100%;
+    padding-right: 4.8rem;
+  }
+}
+
+.boxrooms-project__plan-card-mobile-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 6rem;
+}
+
+.boxrooms-project__plan-card-mobile-section-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8rem;
+  margin-left: auto;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.boxrooms-project__plan-card-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  margin-bottom: auto;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 130%;
+    letter-spacing: 0;
+  }
+}
+
+.boxrooms-project__plan-card-area {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+  min-width: 5.6rem;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.boxrooms-project__plan-card-date {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+  min-width: 7.9rem;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.boxrooms-project__plan-card-condition {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.boxrooms-project__plan-card-project {
+  min-width: 22.4rem;
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    flex-direction: column;
+    min-height: 8.89rem;
+    padding-left: 2.4rem;
+    border-left: 1px solid rgba(#020202, 0.1);
+    gap: 0.4rem;
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.boxrooms-project__plan-card-project-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 130%;
+  }
+}
+
+.boxrooms-project__plan-card-project-stage {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+  color: #212173;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 130%;
+    color: rgba(#020202, 0.5);
+
+    &::after {
+      content: ", ";
+    }
+  }
+}
+
+.boxrooms-project__plan-card-section {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+  min-width: 2rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 130%;
+    color: rgba(#020202, 0.5);
+    &::before {
+      content: "Секция ";
+    }
+  }
+}
+.boxrooms-project__plan-card-floor {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 130%;
+  min-width: 4.6rem;
+  padding-left: 30.2rem;
+  padding-right: 30rem;
+  padding-top: 9.7rem;
+  display: none;
+  @include breakpoint(mobile) {
+    padding-top: 5.4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+.boxrooms-project__plan-list-card-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.boxrooms-project__plan-card-price-wrapper {
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 38.8rem;
+    padding-left: 2.4rem;
+    min-height: 8.89rem;
+    gap: 3.8rem;
+    border-left: 1px solid rgba(#020202, 0.1);
+  }
+
+  @include breakpoint(mobile) {
+    flex-shrink: 0;
+    padding-right: 4.8rem;
+  }
+}
+
+.boxrooms-project__plan-card-price-wrapper-content {
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    width: 30%;
+    flex-grow: 1;
+  }
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: flex-end;
+  }
+}
+
+.boxrooms-project__plan-card-price {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: var(--blue);
+
+  .boxrooms-project__plan-card.boxrooms-project__discount & {
+    color: var(--primary-color);
+  }
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 100%;
+  }
+}
+
+.boxrooms-project__plan-card-discount {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 120%;
+  color: rgba(#020202, 0.4);
+  text-decoration: line-through;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 120%;
+  }
+}
+
+
+.boxrooms-project__plan-list-item.active .button-accordion-arrow svg {
+  transform: rotate(180deg);
+}
+
+
+.boxrooms-project__plan-card-content {
+  display: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  @include breakpoint(mobile) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    background: #F5F5F5;
+    z-index: 150;
+    flex-direction: column;
+  }
+}
+.boxrooms-project__plan-list-item {
+  @include breakpoint(mobile) {
+    cursor: pointer;
+  }
+}
+
+.boxrooms-project__plan-list-item.active .boxrooms-project__plan-card-content  {
+  display: flex;
+  border-top: 1px solid rgba(2, 2, 2, 0.1);
+  padding-top: 4rem;
+  gap: 2.4rem;
+  @include breakpoint(mobile) {
+    display: flex;
+    padding: 8rem 2rem 9rem;
+    gap: 1.2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+}
+
+.boxrooms-project__plan-card-content-left {
+  width: 99.2rem;
+  height: 64rem;
+  position: relative;
+  background: #F5F5F5;
+  border-radius: 2rem;
+  padding: 12.2rem 12.2rem 3rem 3rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(mobile) {
+    width: 100%;
+    height: 100%;
+    order: 2;
+    padding: 6rem 0 0 0;
+    flex-direction: column;
+    border-radius: 1.2rem;
+    justify-content: flex-start;
+  }
+}
+
+.boxrooms-project__plan-card-content-right {
+  width: 54rem;
+  height: 100%;
+  padding-top: 0.8rem;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @include breakpoint(mobile) {
+    padding: 0;
+    width: 100%;
+    order: 1;
+    height: auto;
+    margin-top: 2rem;
+  }
+}
+
+.boxrooms-project__plan-card-content-button-back {
+  display: none;
+  @include breakpoint(mobile) {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E0E0E0;
+    border-radius: 100%;
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+  }
+}
+
+.boxrooms-project__plan-card-content-right-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  @include breakpoint(mobile) {
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 1.2rem;
+    gap: 0.8rem;
+    padding: 1.2rem 5.6rem 1.2rem 6.4rem;
+    height: 6.4rem;
+  }
+}
+
+.boxrooms-project__plan-card-content-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 61.1rem;
+  position: relative;
+  @include breakpoint(mobile) {
+    height: calc(100% - 2rem);
+    width: 100%;
+    flex-direction: column;
+    min-height: 34.4rem;
+  }
+
+  .boxrooms-project__zoom {
+    @include breakpoint(mobile) {
+      border-radius: 0;
+    }
+  }
+}
+
+.boxrooms-project__plan-card-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 21.5rem;
+  min-height: 8.89rem;
+  @include breakpoint(mobile) {
+    min-height: unset;
+    min-width: unset;
+
+  }
+}
+
+
+.boxrooms-project__plan-card-content-right {
+  .boxrooms-project__add-to-fav {
+    display: none;
+    @include breakpoint(mobile) {
+      position: absolute;
+      right: 1.2rem;
+      top: 50%;
+      display: flex;
+      margin-top: -1.6rem;
+    }
+  }
+}
+
+.boxrooms-project__plan-card-content-title {
+  font-weight: 400;
+  font-size: 3.4rem;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  margin-bottom: 3.2rem;
+  @include breakpoint(mobile) {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-bottom: 0;
+  }
+}
+
+.boxrooms-project__plan-card-content-options {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.boxrooms-project__plan-card-content-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4.2rem;
+  border-bottom: 1px solid rgba(2, 2, 2, 0.1);
+
+  span {
+    &:first-child {
+      font-size: 1.6rem;
+      line-height: 150%;
+      color: rgba(2, 2, 2, 0.5);
+    }
+
+    &:last-child {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 130%;
+    }
+  }
+}
+
+.boxrooms-project__plan-card-content-price {
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 115%;
+  letter-spacing: -0.03em;
+  color: #212173;
+  margin-bottom: 3.2rem;
+  margin-top: auto;
+  @include breakpoint(mobile) {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 130%;
+    color: #000000;
+  }
+}
+
+
+.boxrooms-project__modal-more {
+  .boxrooms-project__plan-card-content-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.9rem;
+  }
+
+  .boxrooms-project__plan-card-content-options {
+    display: flex;
+  }
+
+  .boxrooms-project__plan-card-content-title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    min-height: 4.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .boxrooms-project__price-popup {
+    display: flex;
+  }
+
+  .boxrooms-project__plan-card-content-price-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.6rem;
+
+    &:nth-child(2) {
+      gap: 0.2em;
+    }
+  }
+
+  .boxrooms-project__plan-card-content-price-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .boxrooms-project__plan-card-content-option span:first-child {
+    font-size: 1.4rem;
+  }
+
+  .boxrooms-project__plan-card-content-option span:last-child {
+    font-size: 1.4rem;
+  }
+}
+
+.boxrooms-project__plan-status {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1.8rem 2rem;
+  gap: 1.6rem;
+}
+
+.boxrooms-project__plan-status-free {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #020202;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: flex-start;
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  &:before {
+    content:"";
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: rgba(2, 2, 2, 0.3);
+    border: 1px solid transparent;
+    border-radius: 100%;
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.boxrooms-project__plan-status-reserved {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #020202;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: flex-start;
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  &:before {
+    content:"";
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: transparent;
+    border: 1px solid rgba(2, 2, 2, 0.3);
+    border-radius: 100%;
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.boxrooms-project__plan-status-selected {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #020202;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: flex-start;
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 130%;
+    display: none;
+  }
+
+  &:before {
+    content:"";
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #CF000C;
+    border: 1px solid #CF000C;
+    border-radius: 100%;
+    @include breakpoint(mobile) {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.boxrooms-project__plan-popup {
+  display: none;
+  &.active {
+    display: flex;
+  }
+}
+
+.boxrooms-project__plan-popup-inner {
+  display: flex;
+  width: 45.4rem;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(2, 2, 2, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 1.2rem;
+}
+
+
+.boxrooms-project__plan-card-bottom {
+  position: relative;
+}
+.boxrooms-project__plan-card-floor-switch {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 2;
+  transform: translate(0, -50%);
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.boxrooms-project__plan-card-floor-switch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.boxrooms-project__plan-card-floor-switch-item {
+  display: flex;
+  gap: 1.2rem;
+  .boxrooms-project__plan-card-floor-switch-round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 4rem;
+    height: 4rem;
+    background: #FFFFFF;
+    border: 1px solid #F5F5F5;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #020202;
+    cursor: pointer;
+  }
+
+  .boxrooms-project__plan-card-floor-switch-text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    align-items: center;
+    color: #020202;
+    opacity: 0.5;
+    display: none;
+  }
+
+  &.active {
+    .boxrooms-project__plan-card-floor-switch-round {
+      background: #212173;
+      color: #FFFFFF;
+    }
+
+    .boxrooms-project__plan-card-floor-switch-text {
+      display: flex;
+    }
+  }
+}
+
+.boxrooms-project__plan-card-header {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  right: 3rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  @include breakpoint(mobile) {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.boxrooms-project__zoom-control {
+  border: 1px solid rgba(2, 2, 2, 0.1);
+}
+
+.boxrooms-project__plan-list-item-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: #020202;
+  margin-bottom: 3.2rem;
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+  }
+}
+
+.boxrooms-project__plan-mobile {
+  display: none;
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+
+.boxrooms-project__plan-short-filters {
+
+  @include breakpoint(mobile) {
+    display: none;
+    .boxrooms-project__plan-mobile &  {
+      display: block;
+      margin-bottom: 1.2rem;
+    }
+
+    .filters__form-select-btn {
+      background: #FFFFFF;
+    }
+
+    .filters__form-reset-btn {
+      font-size: 1.4rem;
+      gap: 1rem;
+    }
+  }
+}
+
+.boxrooms-project__plan-short-filters-fields {
+  width: 27rem;
+  @include breakpoint(mobile) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.9rem;
+
+    .filters__form-field {
+      width: 50%;
+    }
+  }
+}
+
+.boxrooms-project__svg {
+  pointer-events: unset;
+  z-index: 10;
+}
+
+.boxrooms-project__plan-popup-content-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 110%;
+  color: #020202;
+  margin-bottom: 2.4rem;
+}
+
+
+.boxrooms-project__plan-popup-content-options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+
+.boxrooms-project__plan-popup-content-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4.2rem;
+  border-bottom: 1px solid rgba(2, 2, 2, 0.1);
+
+  span {
+    &:first-child {
+      font-size: 1.6rem;
+      line-height: 150%;
+      color: rgba(2, 2, 2, 0.5);
+    }
+
+    &:last-child {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 130%;
+    }
+  }
+}
+
+.boxrooms-project__plan-popup__price-text {
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 115%;
+  letter-spacing: -0.03em;
+  color: #212173;
+}
+
+.boxrooms-project__plan-popup__price {
+  margin-bottom: 3.2rem;
+}
+
+.boxrooms-project__plan-popup__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+
+svg polygon {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.boxrooms-project__plan-sort {
+  width: 50%;
+  .boxrooms-project__sort-btn {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .boxrooms-project__sort-btn-text {
+    display: flex;
+    color: #020202;
+    font-size: 1.4rem;
+  }
+}
