@@ -14,7 +14,8 @@ import parkingProject from "./pages-data/parkingProject";
 import parkingHouse from "./pages-data/parkingHouse";
 import boxroomsProject from "./pages-data/boxroomsProject";
 import boxroomsHouse from "./pages-data/boxroomsHouse";
-
+import parkingProjectPlan from "./pages-data/parkingProjectPlan";
+import boxroomsProjectPlan from "./pages-data/boxroomsProjectPlan";
 
 const pagesConfig = {
   ...home,
@@ -33,6 +34,8 @@ const pagesConfig = {
   ...parkingHouse,
   ...boxroomsProject,
   ...boxroomsHouse,
+  ...parkingProjectPlan,
+  ...boxroomsProjectPlan,
 };
 
 export default pagesConfig;

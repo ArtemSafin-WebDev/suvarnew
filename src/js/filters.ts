@@ -20,7 +20,9 @@ export default function filters() {
         ".boxrooms-project__short-filters, " +
         ".boxrooms-project__all-filters-modal-form, " +
         ".boxrooms-house__short-filters, " +
-        ".boxrooms-house__all-filters-modal-form"
+        ".boxrooms-house__all-filters-modal-form," +
+        ".parking-project__plan-short-filters," +
+        ".boxrooms-project__plan-short-filters"
     )
   );
 

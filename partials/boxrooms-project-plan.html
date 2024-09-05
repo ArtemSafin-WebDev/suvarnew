@@ -1,0 +1,987 @@
+<section class="boxrooms-project" id="boxrooms-project">
+  <div class="boxrooms-project__top">
+    <div class="boxrooms-project__top-content">
+
+      <h2 class="boxrooms-project__heading">
+        Паркинг
+      </h2>
+      <form action="/" method="GET" class="boxrooms-project__short-filters">
+        <div class="boxrooms-project__short-filters-fields">
+          <div class="filters__form-field">
+            <h3 class="filters__form-field-label">
+              Дом
+            </h3>
+            <div class="filters__form-select" data-placeholder="Все дома">
+              <button class="filters__form-select-btn" type="button">
+                                        <span class="filters__form-select-btn-text js-btn-text">
+                                            Все дома
+                                        </span>
+                <svg width="14" height="14" aria-hidden="true">
+                  <use xlink:href="#select-arrow"></use>
+                </svg>
+              </button>
+              <div class="filters__form-select-dropdown">
+                <div class="filters__form-select-dropdown-inner">
+                  <button class="filters__form-reset-btn js-reset-btn" type="button">
+                    Не выбрано
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#reset-btn"></use>
+                    </svg>
+                  </button>
+                  <ul class="filters__form-select-list">
+                    <li class="filters__form-select-list-item">
+                      <label class="filters__form-select-radio">
+                        <input type="checkbox" name="project"
+                               class="filters__form-select-radio-input" value="Дом 1">
+                        <span class="filters__form-select-radio-mark"></span>
+                        <span class="filters__form-select-radio-text">
+                                                            Дом 1
+                                                        </span>
+                      </label>
+                    </li>
+                    <li class="filters__form-select-list-item">
+                      <label class="filters__form-select-radio">
+                        <input type="checkbox" name="project"
+                               class="filters__form-select-radio-input" value="Дом 2">
+                        <span class="filters__form-select-radio-mark"></span>
+                        <span class="filters__form-select-radio-text">
+                                                             Дом 2
+                                                        </span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filters__form-field">
+            <h3 class="filters__form-field-label">
+              Уровень
+            </h3>
+            <div class="filters__form-select" data-placeholder="Все уровни">
+              <button class="filters__form-select-btn" type="button">
+                                    <span class="filters__form-select-btn-text js-btn-text">
+                                    </span>
+                <svg width="14" height="14" aria-hidden="true">
+                  <use xlink:href="#select-arrow"></use>
+                </svg>
+              </button>
+              <div class="filters__form-select-dropdown">
+                <div class="filters__form-select-dropdown-inner">
+                  <button class="filters__form-reset-btn js-reset-btn" type="button">
+                    Все уровни
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#reset-btn"></use>
+                    </svg>
+                  </button>
+                  <ul class="filters__form-select-list">
+                    <li class="filters__form-select-list-item">
+                      <label class="filters__form-select-radio">
+                        <input type="checkbox" name="date"
+                               class="filters__form-select-radio-input" value="Первый уровень">
+                        <span class="filters__form-select-radio-mark"></span>
+                        <span class="filters__form-select-radio-text">
+                                                        Первый уровень
+                                                    </span>
+                      </label>
+                    </li>
+                    <li class="filters__form-select-list-item">
+                      <label class="filters__form-select-radio">
+                        <input type="checkbox" name="date"
+                               class="filters__form-select-radio-input" value="Второй уровень">
+                        <span class="filters__form-select-radio-mark"></span>
+                        <span class="filters__form-select-radio-text">
+                                                        Второй уровень
+                                                    </span>
+                      </label>
+                    </li>
+                    <li class="filters__form-select-list-item">
+                      <label class="filters__form-select-radio">
+                        <input type="checkbox" name="date"
+                               class="filters__form-select-radio-input" value="Третий уровень">
+                        <span class="filters__form-select-radio-mark"></span>
+                        <span class="filters__form-select-radio-text">
+                                                        Третий уровень
+                                                    </span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filters__form-field">
+            <h3 class="filters__form-field-label">
+              Стоимость, руб.
+            </h3>
+            <div class="filters__form-range-slider" data-min="0" data-max="20000000" data-step="1">
+              <div class="filters__form-range-slider-wrapper">
+                <div class="filters__form-range-slider-input-wrapper">
+                  <label class="filters__form-range-slider-input-label">
+                                                <span class="filters__form-range-slider-input-label-text">
+                                                    от
+                                                </span>
+                    <input type="text" class="filters__form-range-slider-numeric-input" value=""
+                           inputmode="numeric">
+                  </label>
+                </div>
+                <div class="filters__form-range-slider-input-wrapper">
+                  <label class="filters__form-range-slider-input-label">
+                                                <span class="filters__form-range-slider-input-label-text">
+                                                    до
+                                                </span>
+                    <input type="text" class="filters__form-range-slider-numeric-input" value=""
+                           inputmode="numeric">
+                  </label>
+                </div>
+              </div>
+              <div class="filters__form-range-slider-element">
+                <div class="filters__form-range-slider-element-inner">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filters__form-field">
+            <h3 class="filters__form-field-label">
+              Площадь, м2
+            </h3>
+            <div class="filters__form-range-slider" data-min="0" data-max="400" data-step="1">
+              <div class="filters__form-range-slider-wrapper">
+                <div class="filters__form-range-slider-input-wrapper">
+                  <label class="filters__form-range-slider-input-label">
+                                                <span class="filters__form-range-slider-input-label-text">
+                                                    от
+                                                </span>
+                    <input type="text" class="filters__form-range-slider-numeric-input" value=""
+                           inputmode="numeric">
+                  </label>
+                </div>
+                <div class="filters__form-range-slider-input-wrapper">
+                  <label class="filters__form-range-slider-input-label">
+                                                <span class="filters__form-range-slider-input-label-text">
+                                                    до
+                                                </span>
+                    <input type="text" class="filters__form-range-slider-numeric-input" value=""
+                           inputmode="numeric">
+                  </label>
+                </div>
+              </div>
+              <div class="filters__form-range-slider-element">
+                <div class="filters__form-range-slider-element-inner">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="boxrooms-project__short-filters-all-filters js-open-all-filters" type="button">
+          Все фильтры
+        </button>
+        <div class="boxrooms-project__short-filters-found">
+          Найдено 123 объекта
+        </div>
+        <button class="boxrooms-project__short-filters-reset" type="reset">
+          Сбросить фильтры
+          <svg width="14" height="14" aria-hidden="true">
+            <use xlink:href="#reset"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="boxrooms-project__all-filters-modal">
+    <div class="boxrooms-project__all-filters-modal-inner">
+      <form action="/" method="GET" class="boxrooms__all-filters-modal-form">
+        <div class="boxrooms-project__all-filters-modal-top-row">
+          <h3 class="boxrooms-project__all-filters-modal-heading">
+                                <span class="boxrooms-project__all-filters-modal-heading-desktop-text">
+                                    Все фильтры
+                                </span>
+            <span class="boxrooms-project__all-filters-modal-heading-mobile-text">
+                                    Фильтры
+                                </span>
+          </h3>
+          <button class="boxrooms-project__all-filters-modal-close js-close-all-filters">
+            <svg width="14" height="14" aria-hidden="true">
+              <use xlink:href="#modal-close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="boxrooms-project__all-filters-modal-blocks">
+          <div class="boxrooms-project__all-filters-modal-block boxrooms-project__all-filters-modal-block--fullwidth">
+            <h4 class="boxrooms-project__all-filters-modal-block-heading">
+              Основные параметры
+            </h4>
+            <div class="boxrooms-project__all-filters-modal-fields">
+              <div class="filters__form-field">
+                <h3 class="filters__form-field-label">
+                  Количество комнат
+                </h3>
+                <div class="filters__form-checkboxes-group">
+                  <label class="filters__form-checkboxes-group-item">
+                    <input type="checkbox" name="rooms" value="Студия"
+                           class="filters__form-checkboxes-group-item-input">
+                    <span class="filters__form-checkboxes-group-item-content">
+                                                    Ст.
+                                                </span>
+                  </label>
+                  <label class="filters__form-checkboxes-group-item">
+                    <input type="checkbox" name="rooms" value="1"
+                           class="filters__form-checkboxes-group-item-input">
+                    <span class="filters__form-checkboxes-group-item-content">
+                                                    1
+                                                </span>
+                  </label>
+                  <label class="filters__form-checkboxes-group-item">
+                    <input type="checkbox" name="rooms" value="2"
+                           class="filters__form-checkboxes-group-item-input">
+                    <span class="filters__form-checkboxes-group-item-content">
+                                                    2
+                                                </span>
+                  </label>
+                  <label class="filters__form-checkboxes-group-item">
+                    <input type="checkbox" name="rooms" value="3"
+                           class="filters__form-checkboxes-group-item-input">
+                    <span class="filters__form-checkboxes-group-item-content">
+                                                    3
+                                                </span>
+                  </label>
+                  <label class="filters__form-checkboxes-group-item">
+                    <input type="checkbox" name="rooms" value="4+"
+                           class="filters__form-checkboxes-group-item-input">
+                    <span class="filters__form-checkboxes-group-item-content">
+                                                    4+
+                                                </span>
+                  </label>
+                </div>
+              </div>
+              <div class="filters__form-field">
+                <h3 class="filters__form-field-label">
+                  Площадь, м2
+                </h3>
+                <div class="filters__form-range-slider" data-min="0" data-max="400"
+                     data-step="1">
+                  <div class="filters__form-range-slider-wrapper">
+                    <div class="filters__form-range-slider-input-wrapper">
+                      <label class="filters__form-range-slider-input-label">
+                                                        <span class="filters__form-range-slider-input-label-text">
+                                                            от
+                                                        </span>
+                        <input type="text"
+                               class="filters__form-range-slider-numeric-input" value=""
+                               inputmode="numeric">
+                      </label>
+                    </div>
+                    <div class="filters__form-range-slider-input-wrapper">
+                      <label class="filters__form-range-slider-input-label">
+                                                        <span class="filters__form-range-slider-input-label-text">
+                                                            до
+                                                        </span>
+                        <input type="text"
+                               class="filters__form-range-slider-numeric-input" value=""
+                               inputmode="numeric">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filters__form-range-slider-element">
+                    <div class="filters__form-range-slider-element-inner">
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="filters__form-field">
+                <h3 class="filters__form-field-label">
+                  Стоимость квартиры, руб.
+                </h3>
+                <div class="filters__form-range-slider" data-min="0" data-max="20000000"
+                     data-step="1">
+                  <div class="filters__form-range-slider-wrapper">
+                    <div class="filters__form-range-slider-input-wrapper">
+                      <label class="filters__form-range-slider-input-label">
+                                                        <span class="filters__form-range-slider-input-label-text">
+                                                            от
+                                                        </span>
+                        <input type="text"
+                               class="filters__form-range-slider-numeric-input" value=""
+                               inputmode="numeric">
+                      </label>
+                    </div>
+                    <div class="filters__form-range-slider-input-wrapper">
+                      <label class="filters__form-range-slider-input-label">
+                                                        <span class="filters__form-range-slider-input-label-text">
+                                                            до
+                                                        </span>
+                        <input type="text"
+                               class="filters__form-range-slider-numeric-input" value=""
+                               inputmode="numeric">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filters__form-range-slider-element">
+                    <div class="filters__form-range-slider-element-inner">
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="filters__form-field">
+                <h3 class="filters__form-field-label">
+                  Проект
+                </h3>
+                <div class="filters__form-select" data-placeholder="Все проекты">
+                  <button class="filters__form-select-btn" type="button">
+                                                <span class="filters__form-select-btn-text js-btn-text">
+                                                    Все проекты
+                                                </span>
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#select-arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="filters__form-select-dropdown">
+                    <div class="filters__form-select-dropdown-inner">
+                      <button class="filters__form-reset-btn js-reset-btn" type="button">
+                        Не выбрано
+                        <svg width="14" height="14" aria-hidden="true">
+                          <use xlink:href="#reset-btn"></use>
+                        </svg>
+
+                      </button>
+                      <ul class="filters__form-select-list">
+
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="project"
+                                   class="filters__form-select-radio-input"
+                                   value="ЖК «Столичный»">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    ЖК «Столичный»
+                                                                </span>
+                          </label>
+                        </li>
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="project"
+                                   class="filters__form-select-radio-input"
+                                   value="ЖК «Южный парк»">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    ЖК «Южный парк»
+                                                                </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filters__form-field">
+                <h3 class="filters__form-field-label">
+                  Корпус
+                </h3>
+                <div class="filters__form-select" data-placeholder="Любой">
+                  <button class="filters__form-select-btn" type="button">
+                                                <span class="filters__form-select-btn-text js-btn-text">
+                                                    Любой
+                                                </span>
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#select-arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="filters__form-select-dropdown">
+                    <div class="filters__form-select-dropdown-inner">
+                      <button class="filters__form-reset-btn js-reset-btn" type="button">
+                        Любой
+                        <svg width="14" height="14" aria-hidden="true">
+                          <use xlink:href="#reset-btn"></use>
+                        </svg>
+
+                      </button>
+                      <ul class="filters__form-select-list">
+
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="block"
+                                   class="filters__form-select-radio-input"
+                                   value="Корпус 1">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    Корпус 1
+                                                                </span>
+                          </label>
+                        </li>
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="block"
+                                   class="filters__form-select-radio-input"
+                                   value="Корпус 2">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    Корпус 2
+                                                                </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filters__form-field">
+                <h3 class="filters__form-field-label">
+                  Класс жилья
+                </h3>
+                <div class="filters__form-select" data-placeholder="Любой">
+                  <button class="filters__form-select-btn" type="button">
+                                                <span class="filters__form-select-btn-text js-btn-text">
+                                                    Любой
+                                                </span>
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#select-arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="filters__form-select-dropdown">
+                    <div class="filters__form-select-dropdown-inner">
+                      <button class="filters__form-reset-btn js-reset-btn" type="button">
+                        Любой
+                        <svg width="14" height="14" aria-hidden="true">
+                          <use xlink:href="#reset-btn"></use>
+                        </svg>
+
+                      </button>
+                      <ul class="filters__form-select-list">
+
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="class"
+                                   class="filters__form-select-radio-input"
+                                   value="Комфорт класс">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    Комфорт класс
+                                                                </span>
+                          </label>
+                        </li>
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="class"
+                                   class="filters__form-select-radio-input"
+                                   value="Бизнес класс">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    Бизнес класс
+                                                                </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filters__form-field">
+                <h3 class="filters__form-field-label">
+                  Этаж
+                </h3>
+                <div class="filters__form-range-slider" data-min="1" data-max="30"
+                     data-step="1">
+                  <div class="filters__form-range-slider-wrapper">
+                    <div class="filters__form-range-slider-input-wrapper">
+                      <label class="filters__form-range-slider-input-label">
+                                                        <span class="filters__form-range-slider-input-label-text">
+                                                            от
+                                                        </span>
+                        <input type="text"
+                               class="filters__form-range-slider-numeric-input" value=""
+                               inputmode="numeric">
+                      </label>
+                    </div>
+                    <div class="filters__form-range-slider-input-wrapper">
+                      <label class="filters__form-range-slider-input-label">
+                                                        <span class="filters__form-range-slider-input-label-text">
+                                                            до
+                                                        </span>
+                        <input type="text"
+                               class="filters__form-range-slider-numeric-input" value=""
+                               inputmode="numeric">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filters__form-range-slider-element">
+                    <div class="filters__form-range-slider-element-inner">
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="filters__form-field">
+                <h3 class="filters__form-field-label">
+                  Срок сдачи проекта
+                </h3>
+                <div class="filters__form-select" data-placeholder="Любой">
+                  <button class="filters__form-select-btn" type="button">
+                                                <span class="filters__form-select-btn-text js-btn-text">
+
+                                                </span>
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#select-arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="filters__form-select-dropdown">
+                    <div class="filters__form-select-dropdown-inner">
+                      <button class="filters__form-reset-btn js-reset-btn" type="button">
+                        Любой
+                        <svg width="14" height="14" aria-hidden="true">
+                          <use xlink:href="#reset-btn"></use>
+                        </svg>
+
+                      </button>
+                      <ul class="filters__form-select-list">
+
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="date"
+                                   class="filters__form-select-radio-input"
+                                   value="Сдан">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    Сдан
+                                                                </span>
+                          </label>
+                        </li>
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="date"
+                                   class="filters__form-select-radio-input"
+                                   value="II кв. 2024">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    II кв. 2024
+                                                                </span>
+                          </label>
+                        </li>
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="date"
+                                   class="filters__form-select-radio-input"
+                                   value="III кв. 2024">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    III кв. 2024
+                                                                </span>
+                          </label>
+                        </li>
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="checkbox" name="date"
+                                   class="filters__form-select-radio-input"
+                                   value="I кв. 2025">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    I кв. 2025
+                                                                </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filters__form-field">
+                <h3 class="filters__form-field-label">
+                  Выдача ключей
+                </h3>
+                <div class="filters__form-select" data-placeholder="Не важно">
+                  <button class="filters__form-select-btn" type="button">
+                                                <span class="filters__form-select-btn-text js-btn-text">
+
+                                                </span>
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#select-arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="filters__form-select-dropdown">
+                    <div class="filters__form-select-dropdown-inner">
+                      <button class="filters__form-reset-btn js-reset-btn" type="button">
+                        Не важно
+                        <svg width="14" height="14" aria-hidden="true">
+                          <use xlink:href="#reset-btn"></use>
+                        </svg>
+
+                      </button>
+                      <ul class="filters__form-select-list">
+
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="radio" name="keys"
+                                   class="filters__form-select-radio-input"
+                                   value="Сразу">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    Сразу
+                                                                </span>
+                          </label>
+                        </li>
+                        <li class="filters__form-select-list-item">
+                          <label class="filters__form-select-radio">
+                            <input type="radio" name="keys"
+                                   class="filters__form-select-radio-input"
+                                   value="Потом">
+                            <span class="filters__form-select-radio-mark"></span>
+                            <span class="filters__form-select-radio-text">
+                                                                    Потом
+                                                                </span>
+                          </label>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boxrooms-project__grouping boxrooms-project__grouping--modal">
+            <label class="boxrooms-project__grouping-checkbox">
+              <input type="checkbox" class="boxrooms-project__grouping-checkbox-input" name="group-similar"
+                     value="Y">
+              <span class="boxrooms-project__grouping-checkbox-text">
+                                        Сруппировать похожие планировки
+                                    </span>
+              <span class="boxrooms-project__grouping-checkbox-toggle">
+
+                                    </span>
+            </label>
+          </div>
+          <div class="boxrooms-project__all-filters-modal-block">
+            <h4 class="boxrooms-project__all-filters-modal-block-heading">
+              Отделка
+            </h4>
+            <div class="boxrooms-project__all-filters-modal-checkboxes">
+              <ul class="boxrooms-project__all-filters-modal-checkboxes-list">
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="otdelka"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="White box">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    White box
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="otdelka"
+                           class="boxrooms-project__all-filters-modal-checkbox-input"
+                           value="Без отделки">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    Без отделки
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="otdelka"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="Чистовая">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    Чистовая
+                                                </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="boxrooms-project__all-filters-modal-block ">
+            <h4 class="boxrooms-project__all-filters-modal-block-heading">
+              Вид из окна
+            </h4>
+            <div class="boxrooms-project__all-filters-modal-checkboxes">
+              <ul class="boxrooms-project__all-filters-modal-checkboxes-list">
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="view"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="Во двор">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    Во двор
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="view"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="На город">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    На город
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="view"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="На лес">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    На лес
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="view"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="На парк">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    На парк
+                                                </span>
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="boxrooms-project__all-filters-modal-block boxrooms-project__all-filters-modal-block--fullwidth">
+            <h4 class="boxrooms-project__all-filters-modal-block-heading">
+              Преимущества
+            </h4>
+            <div class="boxrooms-project__all-filters-modal-checkboxes">
+              <ul class="boxrooms-project__all-filters-modal-checkboxes-list">
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="Со скидкой"
+                           checked="">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#lightning"></use>
+                                                    </svg>
+                                                    Со скидкой
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input"
+                           value="Видовая квартира" checked="">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+
+                                                    Видовая квартира
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input"
+                           value="С террасой">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    С террасой
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input"
+                           value="С террасой">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    Двухуровневые
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input"
+                           value="Мастер-спальня">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    Мастер-спальня
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input"
+                           value="Гардеробная">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    Гардеробная
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input"
+                           value="2+ санузла">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    2+ санузла
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input"
+                           value="Кухня-гостиная">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    Кухня-гостиная
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input"
+                           value="С мебелировкой кухни">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    С мебелировкой кухни
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="С лоджией">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    С лоджией
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="Рассрочка">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    Рассрочка
+                                                </span>
+                  </label>
+                </li>
+                <li class="boxrooms-project__all-filters-modal-checkboxes-list-item">
+                  <label class="boxrooms-project__all-filters-modal-checkbox">
+                    <input type="checkbox" name="advantages"
+                           class="boxrooms-project__all-filters-modal-checkbox-input" value="Рассрочка">
+                    <span class="boxrooms-project__all-filters-modal-checkbox-content">
+                                                    Ипотека
+                                                </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="boxrooms-project__all-filters-modal-exit js-close-all-filters" type="button">
+          Свернуть
+          <svg width="14" height="14" aria-hidden="true">
+            <use xlink:href="#fat-arrow"></use>
+          </svg>
+        </button>
+        <div class="boxrooms-project__all-filters-modal-controls">
+          <button class="boxrooms-project__all-filters-modal-submit" type="submit">
+            Показать 562 квартиры
+          </button>
+          <button class="boxrooms-project__all-filters-modal-reset" type="reset">
+            Сбросить фильтры
+            <svg width="14" height="14" aria-hidden="true">
+              <use xlink:href="#reset"></use>
+            </svg>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="boxrooms-project__bottom bg-gray">
+    <div class="boxrooms-project__bottom-content">
+      <div class="boxrooms-project__content">
+        <div class="boxrooms-project__controls">
+          <div class="boxrooms-project__sort">
+            <button class="boxrooms-project__sort-btn" type="button">
+                                <span class="boxrooms-project__sort-btn-text js-btn-text">
+                                    Сначала дешевые
+                                </span>
+              <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#sort"></use>
+              </svg>
+            </button>
+            <div class="filters__form-select-dropdown">
+              <div class="filters__form-select-dropdown-inner">
+                <ul class="filters__form-select-list">
+                  <li class="filters__form-select-list-item">
+                    <label class="filters__form-select-radio">
+                      <input type="radio" name="sort" class="filters__form-select-radio-input"
+                             value="Сначала дешевые" checked="">
+                      <span class="filters__form-select-radio-mark"></span>
+                      <span class="filters__form-select-radio-text">
+                                              Сначала дешевые
+                                          </span>
+                    </label>
+                  </li>
+                  <li class="filters__form-select-list-item">
+                    <label class="filters__form-select-radio">
+                      <input type="radio" name="sort" class="filters__form-select-radio-input"
+                             value="Сначала дорогие">
+                      <span class="filters__form-select-radio-mark"></span>
+                      <span class="filters__form-select-radio-text">
+                                              Сначала дорогие
+                                          </span>
+                    </label>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="boxrooms-project__grouping">
+            <label class="boxrooms-project__grouping-checkbox">
+              <input type="checkbox" class="boxrooms-project__grouping-checkbox-input" name="electro" value="Y">
+              <span class="boxrooms-project__grouping-checkbox-text">
+                                 Только места с электрозарядкой
+                                </span>
+              <span class="boxrooms-project__grouping-checkbox-toggle">
+                                </span>
+            </label>
+          </div>
+          <div class="boxrooms-project__desktop-btns">
+            <button class="boxrooms-project__desktop-btn ">
+              <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#table-view"></use>
+              </svg>
+              <span>Списком</span>
+            </button>
+            <button class="boxrooms-project__desktop-btn active">
+              <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#map-list"></use>
+              </svg>
+              <span>На плане</span>
+            </button>
+          </div>
+          <div class="boxrooms-project__mobile-btns">
+            <button class="boxrooms-project__mobile-btn active">
+              <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#mobile-table-view"></use>
+              </svg>
+              <span>Списком</span>
+            </button>
+            <button class="boxrooms-project__mobile-btn ">
+              <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#map-list-view"></use>
+              </svg>
+              <span>На плане</span>
+            </button>
+          </div>
+          <button class="boxrooms-project__mobile-open-filters js-open-all-filters" type="button">
+            Фильтр
+            <svg width="14" height="14" aria-hidden="true">
+              <use xlink:href="#filter"></use>
+            </svg>
+
+          </button>
+        </div>
+        <div class="boxrooms-project-list">
+          {{> boxrooms-project-p }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
