@@ -266,10 +266,10 @@ export default function boxroomsHouse() {
             if (!listItem) return;
 
             const modal = document.createElement("div");
-            modal.classList.add("boxrooms__modal-more");
+            modal.classList.add("boxrooms-house__modal-more");
 
             const modalWrapper = document.createElement("div");
-            modalWrapper.classList.add("boxrooms__modal-more-wrapper");
+            modalWrapper.classList.add("boxrooms-house__modal-more-wrapper");
             modal.appendChild(modalWrapper);
 
             const title = listItem.querySelector<HTMLElement>(".boxrooms-house__table-card-content-title");
@@ -281,7 +281,7 @@ export default function boxroomsHouse() {
             if (options) modalWrapper.appendChild(options.cloneNode(true));
 
             const closeButton = document.createElement("button");
-            closeButton.classList.add("boxrooms__modal-more-close", "js-close-modal-mores");
+            closeButton.classList.add("boxrooms-house__modal-more-close", "js-close-modal-mores");
             closeButton.innerHTML = `
                 <svg width="14" height="14" aria-hidden="true">
                     <use xlink:href="#modal-close"></use>
