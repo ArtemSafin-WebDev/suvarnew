@@ -1,0 +1,26 @@
+.ui-sharing-btn {
+  border: 1px solid rgba(2, 2, 2, 0.1);
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-grid;
+  place-items: center;
+  transition: background-color 0.2s, border-color 0.2s;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: black;
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) {
+    border-color: transparent;
+    &:hover {
+      svg {
+        fill: #cf000c;
+      }
+    }
+  }
+}

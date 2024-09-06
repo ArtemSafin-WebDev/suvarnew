@@ -1,0 +1,26 @@
+.ui-next-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: grid;
+  place-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: black;
+    transition: fill 0.2s;
+  }
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        fill: #cf000c;
+      }
+    }
+  }
+}

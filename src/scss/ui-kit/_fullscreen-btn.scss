@@ -1,0 +1,33 @@
+.ui-fullscreen-btn {
+  display: inline-grid;
+  vertical-align: top;
+  place-items: center;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(24, 24, 35, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  text-decoration: none;
+
+  @media (max-width: 576px) {
+    width: 50px;
+    height: 50px;
+  }
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: white;
+      svg {
+        fill: #020202;
+      }
+    }
+  }
+}

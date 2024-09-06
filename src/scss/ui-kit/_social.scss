@@ -1,0 +1,50 @@
+.ui-social {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.2s, border-color 0.2s;
+  background-clip: padding-box;
+  width: 48px;
+  height: 48px;
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: white;
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &--large {
+    width: 60px;
+    height: 60px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--filled {
+    border: 1px solid rgba(2, 2, 2, 0.1);
+    background-color: #fff;
+    background-clip: border-box;
+
+    svg {
+      fill: #cf000c;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: white;
+        border-color: white;
+      }
+    }
+  }
+}

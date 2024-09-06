@@ -1,0 +1,64 @@
+.ui-fav-btn {
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(2, 2, 2, 0.1);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+
+  text-decoration: none;
+  color: transparent;
+  transition: background-color 0.2s, border-color 0.2s;
+  user-select: none;
+  &:link,
+  &:visited {
+    color: transparent;
+  }
+
+  svg {
+    fill: #020202;
+    transition: fill 0.2s;
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: rgba(207, 0, 12, 0.15);
+
+      svg {
+        fill: #cf000c;
+      }
+    }
+  }
+
+  &:active {
+    background-color: #fae5e7;
+    border-color: #fae5e7;
+    color: #cf000c;
+    svg {
+      fill: #cf000c;
+    }
+  }
+
+  &.active {
+    background-color: #fae5e7;
+    border-color: #fae5e7;
+    color: #cf000c;
+    svg {
+      fill: #cf000c;
+    }
+  }
+
+  @media (max-width: 576px) {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

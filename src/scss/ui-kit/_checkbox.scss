@@ -1,0 +1,37 @@
+.ui-checkbox {
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  vertical-align: top;
+  align-items: center;
+  gap: 4px;
+}
+
+.ui-checkbox__input {
+  display: none;
+}
+
+.ui-checkbox__mark {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #cf000c;
+  border-radius: 4px;
+  transition: border-color 0.2s, background-color 0.2s;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
+    transition: opacity 0.2s;
+    opacity: 0;
+  }
+}
+
+.ui-checkbox__input:checked ~ .ui-checkbox__mark {
+  background-color: #cf000c;
+  svg {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,36 @@
+@import "media";
+@import "utils";
+@import "fontface";
+@import "variables";
+@import "ui-kit/btn";
+@import "ui-kit/download";
+@import "ui-kit/sharing";
+@import "ui-kit/plus-minus";
+@import "ui-kit/fullscreen-btn";
+@import "ui-kit/fav-btn";
+@import "ui-kit/slider-arrow";
+@import "ui-kit/checkbox";
+@import "ui-kit/switch";
+@import "ui-kit/next-arrow";
+@import "ui-kit/add-btn";
+@import "ui-kit/sharing-btn";
+@import "ui-kit/add-btn";
+@import "ui-kit/social";
+@import "ui-kit/all-filters";
+@import "ui-kit/text-input";
+@import "ui-kit/switch-box";
+@import "ui-kit/switch-box-dobule";
+@import "ui-kit/checkboxes-group";
+@import "ui-kit/ui-categories";
+@import "ui-kit/ui-tabs-nav";
+
+.ui-kit-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}

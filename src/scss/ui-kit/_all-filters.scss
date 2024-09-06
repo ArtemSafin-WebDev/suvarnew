@@ -1,0 +1,33 @@
+.ui-all-filters {
+  display: inline-flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  user-select: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  transition: color 0.2s;
+  color: #020202;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 5px;
+  font-family: "Core Sans", sans-serif;
+  background-color: transparent;
+  border: none;
+  &:link,
+  &:visited {
+    color: #020202;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: #212173;
+    }
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+    text-underline-offset: 4px;
+  }
+}

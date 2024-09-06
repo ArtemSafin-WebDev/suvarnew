@@ -1,0 +1,309 @@
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  border-radius: 12px;
+  background-color: #cf000c;
+  color: white;
+
+  padding: 20px 32px;
+  text-decoration: none;
+  border: 1px solid #cf000c;
+  font-family: "Core Sans", sans-serif;
+  gap: 4px;
+  -webkit-tap-highlight-color: transparent;
+
+  svg {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    fill: var(--primary-color);
+    transition: fill 0.2s;
+    @media (max-width: 576px) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &--wide {
+    width: 280px;
+    @media (max-width: 576px) {
+      width: auto;
+    }
+  }
+
+  &--small {
+    padding: 15px 32px;
+  }
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #b7000b;
+      border-color: #b7000b;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+
+  &:active {
+    background-color: white;
+    color: rgba(2, 2, 2, 0.3);
+    border-color: white;
+
+    svg {
+      fill: rgba(2, 2, 2, 0.3);
+    }
+  }
+
+  &--white {
+    background-color: white;
+    border-color: white;
+    color: #020202;
+    &:link,
+    &:visited {
+      color: #020202;
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: #fae5e7;
+        border-color: #fae5e7;
+        color: #cf000c;
+
+        svg {
+          fill: #cf000c;
+        }
+      }
+    }
+
+    &:active {
+      background-color: white;
+      border-color: white;
+      color: rgba(2, 2, 2, 0.3);
+
+      svg {
+        fill: rgba(2, 2, 2, 0.3);
+      }
+    }
+  }
+
+  &--white-outline {
+    background-color: transparent;
+    border-color: rgba(white, 0.3);
+    color: white;
+
+    svg {
+      fill: white;
+    }
+    &:link,
+    &:visited {
+      color: white;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: white;
+        border-color: white;
+        color: #020202;
+
+        svg {
+          fill: #020202;
+        }
+      }
+    }
+
+    &:active {
+      background-color: white;
+      color: rgba(2, 2, 2, 0.3);
+
+      svg {
+        fill: rgba(2, 2, 2, 0.3);
+      }
+    }
+  }
+  &--white-outline-transparent {
+    background-color: transparent;
+    border-color: rgba(white, 0.3);
+    color: white;
+    &:link,
+    &:visited {
+      color: white;
+    }
+
+    svg {
+      fill: white;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: white;
+        color: white;
+        background-color: transparent;
+        svg {
+          fill: white;
+        }
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+      color: rgba(white, 0.4);
+      border-color: rgba(white, 0.4);
+      svg {
+        fill: rgba(white, 0.4);
+      }
+    }
+  }
+
+  &--red-outline {
+    border-color: rgba(207, 0, 12, 1);
+    color: rgba(207, 0, 12, 1);
+    background-color: transparent;
+    &:link,
+    &:visited {
+      color: rgba(207, 0, 12, 1);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgba(207, 0, 12, 1);
+        color: white;
+        border-color: rgba(207, 0, 12, 1);
+
+        svg {
+          fill: white;
+        }
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: rgba(#cf000c, 0.4);
+      color: rgba(#cf000c, 0.4);
+
+      svg {
+        fill: rgba(#cf000c, 0.4);
+      }
+    }
+  }
+  &--red-outline-transparent {
+    border-color: rgba(#cf000c, 0.2);
+    color: rgba(207, 0, 12, 1);
+    background-color: transparent;
+    &:link,
+    &:visited {
+      color: rgba(207, 0, 12, 1);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: transparent;
+        color: rgba(207, 0, 12, 1);
+        border-color: rgba(207, 0, 12, 1);
+
+        svg {
+          fill: rgba(207, 0, 12, 1);
+        }
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: rgba(#cf000c, 0.4);
+      color: rgba(#cf000c, 0.4);
+
+      svg {
+        fill: rgba(#cf000c, 0.4);
+      }
+    }
+  }
+
+  &--blue-outline {
+    border-color: #101038;
+    color: #101038;
+    background-color: transparent;
+
+    &:link,
+    &:visited {
+      color: #101038;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #101038;
+        color: white;
+        border-color: #101038;
+        svg {
+          fill: white;
+        }
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: rgba(#101038, 0.4);
+      color: rgba(#101038, 0.4);
+
+      svg {
+        fill: rgba(#101038, 0.4);
+      }
+    }
+  }
+
+  &--blue {
+    background-color: #101038;
+    border-color: #101038;
+    color: white;
+
+    svg {
+      fill: white;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #212173;
+        border-color: #212173;
+        color: white;
+
+        svg {
+          fill: white;
+        }
+      }
+    }
+
+    &:active {
+      background-color: #212173;
+      border-color: #212173;
+      color: white;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 17px 36px;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    align-self: stretch;
+  }
+}
