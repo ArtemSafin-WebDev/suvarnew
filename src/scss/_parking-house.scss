@@ -1659,7 +1659,8 @@
   position: relative;
   @include breakpoint(mobile) {
     position: fixed;
-    top: 0;
+    right: 0;
+    height: 100%;
     left: 0;
     bottom:0;
     background: #F5F5F5;
@@ -1680,11 +1681,11 @@
   gap: 2.4rem;
   @include breakpoint(mobile) {
     display: flex;
-    padding: 8rem 2rem 9.5rem;
+    padding: 8rem 2rem 9rem;
     gap: 1.2rem;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100vh;
+    height: 100%;
   }
 }
 
@@ -1705,6 +1706,7 @@
     order: 2;
     padding: 6rem 0 0 0;
     flex-direction: column;
+    justify-content: flex-start;
     border-radius: 1.2rem;
   }
 }
@@ -1766,7 +1768,8 @@
   height: 49.8rem;
   position: relative;
   @include breakpoint(mobile) {
-    height: 100%;
+    height: calc(100% - 2rem);
+    margin-top: 1rem;
     width: 100%;
     flex-direction: column;
     &:before {
@@ -1905,12 +1908,8 @@
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 49.8rem;
     overflow: hidden;
     border-radius: 1.2rem;
-    @include breakpoint(mobile) {
-      min-height: 30.5rem;
-    }
 }
 
 .parking-house__section-label {

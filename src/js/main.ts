@@ -45,6 +45,8 @@ import parkingProject from "./parkingProject";
 import parkingHouse from "./parkingHouse";
 import boxroomsProject from "./boxroomsProject";
 import boxroomsHouse from "./boxroomsHouse";
+import parkingProjectPlan from "./parkingProjectPlan";
+import boxroomsProjectPlan from "./boxroomsProjectPlan";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -93,6 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
   parkingHouse();
   boxroomsHouse();
   boxroomsProject();
+  parkingProjectPlan();
+  boxroomsProjectPlan();
 });
 
 window.addEventListener("load", () => {
