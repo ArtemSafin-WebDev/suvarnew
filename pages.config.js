@@ -16,9 +16,11 @@ import boxroomsProject from "./pages-data/boxroomsProject";
 import boxroomsHouse from "./pages-data/boxroomsHouse";
 import parkingProjectPlan from "./pages-data/parkingProjectPlan";
 import boxroomsProjectPlan from "./pages-data/boxroomsProjectPlan";
+import homeTwo from "./pages-data/home-2";
 
 const pagesConfig = {
   ...home,
+  ...homeTwo,
   ...project,
   ...catalog,
   ...flat,

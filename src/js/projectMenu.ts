@@ -121,4 +121,79 @@ export default function projectMenu() {
       })
     );
   }
+
+  const desktopSelector = projectMenu.querySelector<HTMLElement>(
+    ".project-menu__selector"
+  )!;
+  const desktopSelectorText = desktopSelector?.querySelector<HTMLElement>(
+    ".js-project-menu-selector-text"
+  )!;
+  const desktopSelectorOptions = Array.from(
+    desktopSelector.querySelectorAll<HTMLElement>(
+      ".js-project-menu-selector-option"
+    )
+  );
+
+  const desktopSelectorBtn = desktopSelector.querySelector<HTMLElement>(
+    ".project-menu__selector-btn"
+  );
+
+  const mobileBtnText = projectMenu.querySelector<HTMLElement>(
+    ".project-menu__mobile-toggle-btn-text"
+  )!;
+
+  const mobileOptions = Array.from(
+    projectMenu.querySelectorAll<HTMLElement>(".js-mobile-option")
+  );
+
+  desktopSelectorBtn?.addEventListener("mouseenter", () => {
+    desktopSelector.classList.add("active");
+  });
+  desktopSelectorBtn?.addEventListener("click", () => {
+    desktopSelector.classList.add("active");
+  });
+
+  desktopSelector.addEventListener("mouseleave", () => {
+    desktopSelector.classList.remove("active");
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    if (
+      target.matches(".js-project-menu-selector") ||
+      target.closest(".js-project-menu-selector")
+    )
+      return;
+    desktopSelector.classList.remove("active");
+  });
+
+  desktopSelectorOptions.forEach((option, optionIndex) => {
+    option.addEventListener("click", () => {
+      desktopSelectorOptions.forEach((option) =>
+        option.classList.remove("active")
+      );
+      option.classList.add("active");
+      mobileOptions.forEach((option) => option.classList.remove("active"));
+      mobileOptions[optionIndex].classList.add("active");
+      desktopSelectorText.textContent = option.textContent!.trim();
+      mobileBtnText.textContent = option.textContent!.trim();
+      desktopSelector.classList.remove("active");
+    });
+  });
+
+  mobileOptions.forEach((option, optionIndex) => {
+    option.addEventListener("click", (event) => {
+      desktopSelectorOptions.forEach((option) =>
+        option.classList.remove("active")
+      );
+      desktopSelectorOptions[optionIndex].classList.add("active");
+      mobileOptions.forEach((option) => option.classList.remove("active"));
+      mobileOptions[optionIndex].classList.add("active");
+      desktopSelectorText.textContent = option.textContent!.trim();
+      mobileBtnText.textContent = option.textContent!.trim();
+      desktopSelector.classList.remove("active");
+
+      console.log("Mobile option click");
+    });
+  });
 }

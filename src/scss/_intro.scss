@@ -18,7 +18,7 @@
 
 .intro__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.5fr) minmax(0, 0.5fr);
   grid-gap: 2.4rem;
   min-height: 70rem;
 
@@ -442,6 +442,10 @@
     }
   }
 
+  @include breakpointMF(small-tablet) {
+    grid-column: span 2;
+  }
+
   @include breakpoint(mobile) {
     padding: 1.2rem;
     border-radius: 0.8rem;
@@ -513,6 +517,10 @@
   flex-direction: column;
   flex-grow: 1;
   box-sizing: border-box;
+
+  @include breakpointMF(small-tablet) {
+    grid-column: span 2;
+  }
 
   @include breakpoint(mobile) {
     min-height: 10rem;

@@ -461,10 +461,12 @@
   border-radius: 0.8rem;
   flex-shrink: 0;
   align-self: flex-start;
+  min-width: 100%;
 }
 
 .phase__nav-list-item {
   flex-shrink: 0;
+  flex-grow: 1;
 }
 
 .phase__nav-link {
