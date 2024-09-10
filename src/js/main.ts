@@ -47,7 +47,7 @@ import boxroomsProject from "./boxroomsProject";
 import boxroomsHouse from "./boxroomsHouse";
 import parkingProjectPlan from "./parkingProjectPlan";
 import boxroomsProjectPlan from "./boxroomsProjectPlan";
-
+import blueIntro from "./blueIntro";
 
 document.addEventListener("DOMContentLoaded", () => {
   footer();
@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   boxroomsProject();
   parkingProjectPlan();
   boxroomsProjectPlan();
+  blueIntro();
 });
 
 window.addEventListener("load", () => {

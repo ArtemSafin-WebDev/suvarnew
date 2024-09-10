@@ -21,6 +21,7 @@
   grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.5fr) minmax(0, 0.5fr);
   grid-gap: 2.4rem;
   min-height: 70rem;
+  grid-auto-rows: 1fr;
 
   @include breakpoint(mobile) {
     min-height: auto;
@@ -227,6 +228,10 @@
     padding-bottom: 4.8rem;
     min-height: 55rem;
     gap: 2rem;
+
+    .intro__slider-item--mobile-short & {
+      min-height: 42rem;
+    }
   }
 }
 
@@ -711,5 +716,79 @@
       width: 0.4rem;
       height: 0.4rem;
     }
+  }
+}
+
+.intro__small-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+  border-radius: 2rem;
+  position: relative;
+  z-index: 1;
+  color: white;
+  min-height: 35.8rem;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    .intro__small-card-arrow {
+      opacity: 1;
+    }
+  }
+}
+
+.intro__small-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.intro__card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro__small-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2rem;
+  padding: 3.2rem;
+}
+
+.intro__small-card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+
+.intro__small-card-arrow {
+  margin-top: auto;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: #cf000c;
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
   }
 }
