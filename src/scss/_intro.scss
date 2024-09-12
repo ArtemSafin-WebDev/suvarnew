@@ -46,6 +46,10 @@
     opacity: 0;
   }
 
+  &--wide {
+    grid-column: 1 / -1;
+  }
+
   @include breakpoint(mobile) {
     border-radius: 1.2rem;
   }
@@ -222,6 +226,10 @@
   padding-top: 4.8rem;
   gap: 3rem;
 
+  picture {
+    display: contents;
+  }
+
   @include breakpoint(mobile) {
     padding: 2rem;
     padding-top: 3.2rem;
@@ -233,6 +241,17 @@
       min-height: 42rem;
     }
   }
+
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-gap: 2rem;
+      grid-template-areas: "titlewrapper tags" "link domrf";
+      gap: 1.8rem;
+      grid-template-rows: 1fr auto;
+    }
+  }
 }
 
 .intro__slider-card-row {
@@ -240,6 +259,12 @@
   align-items: flex-start;
   gap: 3rem;
   justify-content: space-between;
+
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      display: contents;
+    }
+  }
 
   @include breakpoint(mobile) {
     display: contents;
@@ -250,8 +275,27 @@
   display: flex;
   flex-direction: column;
 
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      display: contents;
+    }
+  }
+
   @include breakpoint(mobile) {
     margin-bottom: auto;
+  }
+}
+
+.intro__slider-card-title-wrapper {
+  display: contents;
+
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      grid-area: titlewrapper;
+    }
   }
 }
 
@@ -261,6 +305,17 @@
   font-size: 5.4rem;
   line-height: 100%;
   letter-spacing: -0.03em;
+
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 11rem;
+      line-height: 100%;
+      letter-spacing: -0.03em;
+      margin-top: -1rem;
+    }
+  }
 
   @include breakpoint(mobile) {
     font-style: normal;
@@ -279,6 +334,17 @@
   font-size: 1.6rem;
   line-height: 115%;
 
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 2.4rem;
+      max-width: 50.2rem;
+      line-height: 130%;
+      margin: 0;
+    }
+  }
+
   @include breakpoint(mobile) {
     font-style: normal;
     font-weight: 400;
@@ -295,6 +361,14 @@
   gap: 0.6rem;
   flex-wrap: wrap;
   margin-top: 2.4rem;
+
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      grid-area: tags;
+      align-self: flex-start;
+      justify-self: flex-end;
+    }
+  }
 
   @include breakpoint(mobile) {
     margin-top: 2rem;
@@ -368,6 +442,19 @@
     }
   }
 
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      padding-top: 2.2rem;
+      padding-bottom: 2.2rem;
+      padding-left: 3.2rem;
+      padding-right: 3.2rem;
+      grid-area: link;
+      margin: 0;
+      align-self: flex-end;
+      justify-self: flex-start;
+    }
+  }
+
   @include breakpoint(mobile) {
     align-self: stretch;
     padding: 1.8rem 3.6rem;
@@ -384,6 +471,15 @@
   width: 16.9rem;
   margin-left: auto;
   height: auto;
+
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      margin: 0;
+      grid-area: domrf;
+      align-self: flex-end;
+      justify-self: flex-end;
+    }
+  }
 
   @include breakpoint(mobile) {
     margin: 0;
@@ -670,6 +766,16 @@
   align-items: center;
   justify-content: flex-end;
   gap: 0.8rem;
+
+  @include breakpointMF(small-tablet) {
+    .intro__slider-item--wide & {
+      bottom: 7.6rem;
+      justify-content: center;
+      left: 4rem;
+      right: 4rem;
+      pointer-events: none;
+    }
+  }
   @include breakpoint(mobile) {
     justify-content: center;
     left: 0;
@@ -686,7 +792,7 @@
     border-radius: 50%;
     background-color: rgba(white, 0.4);
     transition: background-color 0.2s, transform 0.2s;
-
+    pointer-events: all;
     &.large {
       background-color: white;
       transform: scale(1.1);
