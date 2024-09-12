@@ -16,6 +16,11 @@
   flex-direction: column;
 }
 
+.intro__content--fullwidth {
+  grid-column-start: main-start;
+  grid-column-end: main-end;
+}
+
 .intro__grid {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.5fr) minmax(0, 0.5fr);
@@ -23,11 +28,19 @@
   min-height: 70rem;
   grid-auto-rows: 1fr;
 
+  .intro__content--fullwidth & {
+    min-height: calc(100vh - 8rem);
+  }
+
   @include breakpoint(mobile) {
     min-height: auto;
     gap: 1.2rem;
     display: flex;
     flex-direction: column;
+
+    .intro__content--fullwidth & {
+      min-height: auto;
+    }
   }
 }
 
@@ -48,6 +61,11 @@
 
   &--wide {
     grid-column: 1 / -1;
+  }
+
+  .intro__content--fullwidth & {
+    border-radius: 0;
+    flex-grow: 1;
   }
 
   @include breakpoint(mobile) {
@@ -216,6 +234,12 @@
     height: auto;
     box-sizing: border-box;
   }
+
+  .intro__content--fullwidth & {
+    .swiper-slide {
+      @include blockWrapper;
+    }
+  }
 }
 
 .intro__slider-card {
@@ -230,6 +254,13 @@
     display: contents;
   }
 
+  .intro__content--fullwidth & {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include blockContent;
+  }
+
   @include breakpoint(mobile) {
     padding: 2rem;
     padding-top: 3.2rem;
@@ -239,6 +270,11 @@
 
     .intro__slider-item--mobile-short & {
       min-height: 42rem;
+    }
+
+    .intro__content--fullwidth & {
+      min-height: calc(100vh - 16rem);
+      min-height: calc(100svh - 16rem);
     }
   }
 
@@ -250,6 +286,10 @@
       grid-template-areas: "titlewrapper tags" "link domrf";
       gap: 1.8rem;
       grid-template-rows: 1fr auto;
+    }
+
+    .intro__content--fullwidth & {
+      grid-template-areas: "titlewrapper tags" "domrf link";
     }
   }
 }
@@ -453,6 +493,10 @@
       align-self: flex-end;
       justify-self: flex-start;
     }
+
+    .intro__content--fullwidth & {
+      justify-self: flex-end;
+    }
   }
 
   @include breakpoint(mobile) {
@@ -478,6 +522,11 @@
       grid-area: domrf;
       align-self: flex-end;
       justify-self: flex-end;
+    }
+
+    .intro__content--fullwidth & {
+      align-self: flex-end;
+      justify-self: flex-start;
     }
   }
 
@@ -796,6 +845,31 @@
     &.large {
       background-color: white;
       transform: scale(1.1);
+    }
+
+    .intro__content--fullwidth & {
+      flex-shrink: 0;
+      width: 0.8rem;
+      height: 0.8rem;
+      transition: background-color 0.2s, width 0.2s, height 0.2s;
+      border-radius: 10rem;
+      background-color: rgba(white, 0.7);
+
+      &.large {
+        background-color: white;
+        width: 2.4rem;
+        height: 0.8rem;
+      }
+
+      &.smaller {
+        width: 0.6rem;
+        height: 0.6rem;
+      }
+
+      &.small {
+        width: 0.4rem;
+        height: 0.4rem;
+      }
     }
   }
 
