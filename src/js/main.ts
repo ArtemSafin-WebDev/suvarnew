@@ -48,8 +48,10 @@ import boxroomsHouse from "./boxroomsHouse";
 import parkingProjectPlan from "./parkingProjectPlan";
 import boxroomsProjectPlan from "./boxroomsProjectPlan";
 import blueIntro from "./blueIntro";
+import loader from "./loader";
 
 document.addEventListener("DOMContentLoaded", () => {
+  loader();
   footer();
   homeNews();
   mortgage();
