@@ -7,6 +7,7 @@ class Select {
   private resetBtns: HTMLButtonElement[] = [];
   private multiSelect = false;
   private form: HTMLFormElement | null = null;
+  private handler: null | (() => void) = null;
   constructor(private element: HTMLElement) {
     this.element = element;
     this.btn = this.element.querySelector<HTMLButtonElement>(
@@ -31,13 +32,11 @@ class Select {
     document.documentElement.addEventListener("click", this.handleOutsideClick);
     this.btn?.addEventListener("click", this.handleBtnClick);
 
+    this.handler = this.multiSelect
+      ? this.handleMultipleSelection
+      : this.handleSingleSelection;
     this.choices.forEach((choice) =>
-      choice.addEventListener(
-        "change",
-        this.multiSelect
-          ? this.handleMultipleSelection
-          : this.handleSingleSelection
-      )
+      choice.addEventListener("change", this.handler!)
     );
 
     const dataPlaceholder = this.element.getAttribute("data-placeholder");
@@ -62,7 +61,28 @@ class Select {
     } else {
       this.handleSingleSelection();
     }
+
+    document.addEventListener("select:update", this.update);
   }
+
+  public update = () => {
+    this.choices.forEach((choice) =>
+      choice.removeEventListener("change", this.handler!)
+    );
+    this.choices = Array.from(
+      this.element.querySelectorAll<HTMLInputElement>(
+        'input[type="radio"], input[type="checkbox"]'
+      )
+    );
+    this.choices.forEach((choice) =>
+      choice.addEventListener("change", this.handler!)
+    );
+    if (this.multiSelect) {
+      this.handleMultipleSelection();
+    } else {
+      this.handleSingleSelection();
+    }
+  };
 
   public open = () => {
     if (this.isOpen) return;
